@@ -1,7 +1,9 @@
 # README
 
+
 ## Usersテーブル
 
+Things you may want to cover:
 | Column  | Type  |  Option |
 |---|---|---|---|---|---|---|---|
 | nickname  |  string | null: false, index: true  |
@@ -14,12 +16,11 @@
 | intro_text  | string  |
 | rating  | integer  |
 
+
 ### Association
 - has_many :products
 - has_one :card
 - has_many :comments
-
-
 
 ## Productsテーブル
 
@@ -37,11 +38,11 @@
 | place  | integer  | null: false  |
 | limit  | integer  | null: false  |
 
+
 ### Association
 - has_many :images
 - has_many :comments
 - belongs_to :user
-
 
 
 ## Commentsテーブル

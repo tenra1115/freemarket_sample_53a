@@ -11,7 +11,6 @@ Things you may want to cover:
 | password  |
 | name  | string  | null: false, index: true  |
 | birthday  | integer  | null: false  |
-| address  | string  | null: false  |
 | icon  | string  |
 | intro_text  | string  |
 | rating  | integer  |
@@ -81,3 +80,18 @@ Things you may want to cover:
 
 ### Association
 - belongs_to :product
+
+
+## Addressテーブル
+
+| post_code  | integer  | null: false  |
+| city  | string  | null: false  |
+| town  | string  | null: false  |
+| block  | integer  | null: false  |
+| building_name  | string  | null: false  |
+| user_id  | integer  | null: false, foreign_key: true  |
+| product_id | integer | null:  false, foreign_key: true |
+
+### Assosiation
+- belongs_to :product
+- belongs_to :user

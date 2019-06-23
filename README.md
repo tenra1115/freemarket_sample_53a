@@ -90,8 +90,6 @@ Things you may want to cover:
 | block  | integer  | null: false  |
 | building_name  | string  | null: false  |
 | user_id  | integer  | null: false, foreign_key: true  |
-| product_id | integer | null:  false, foreign_key: true |
 
 ### Assosiation
-- belongs_to :product
 - belongs_to :user

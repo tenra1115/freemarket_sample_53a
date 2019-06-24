@@ -7,7 +7,6 @@
 |---|---|---|
 | nickname  |  string | null: false, index: true  |
 | email  | string  | null: false  |
-| password  |
 | name  | string  | null: false, index: true  |
 | birthday  | integer  | null: false  |
 | icon  | string  |

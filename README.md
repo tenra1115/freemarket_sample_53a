@@ -4,7 +4,7 @@
 ## Usersテーブル
 
 | Column  | Type  |  Option |
-|---|---|---|---|---|---|---|---|
+|---|---|---|
 | nickname  |  string | null: false, index: true  |
 | email  | string  | null: false  |
 | password  |
@@ -23,7 +23,7 @@
 ## Productsテーブル
 
 | Columun  | type  | option  |
-|---|---|---|---|---|---|---|---|---|---|
+|---|---|---|
 | name  | string  | null: false, index: true  |
 | price  | integer  | null: false  |
 | condition  | integer  | null: false  |
@@ -59,7 +59,7 @@
 ## Cardsテーブル
 
 | Column  | Type  | Option  |
-|---|---|---|---|
+|---|---|---|
 | number  | integer  | null: false  |
 | cvc  | integer  | null: false  |
 | exp_month  | integer  | null: false  |

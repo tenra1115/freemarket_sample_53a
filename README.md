@@ -3,7 +3,6 @@
 
 ## Usersテーブル
 
-Things you may want to cover:
 | Column  | Type  |  Option |
 |---|---|---|---|---|---|---|---|
 | nickname  |  string | null: false, index: true  |
@@ -84,6 +83,8 @@ Things you may want to cover:
 
 ## Addressテーブル
 
+| Column  | Type  | Option  |
+|---|---|---|
 | post_code  | integer  | null: false  |
 | city  | string  | null: false  |
 | town  | string  | null: false  |

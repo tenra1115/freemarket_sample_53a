@@ -14,18 +14,18 @@ default: &default
 
 development:
   <<: *default
-  database: mercari
+  database: db/development
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: mercari
+  database: db/test
 
 production:
   <<: *default
-  database: mercari
+  database: db/production
   username: root
   password: <%= ENV['DATABASE_PASSWORD'] %>
  # socket: に続く部分を先ほど調べたパスに置き換える 

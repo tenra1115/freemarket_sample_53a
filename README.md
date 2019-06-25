@@ -3,12 +3,10 @@
 
 ## Usersテーブル
 
-Things you may want to cover:
 | Column  | Type  |  Option |
-|---|---|---|---|---|---|---|---|
+|---|---|---|
 | nickname  |  string | null: false, index: true  |
 | email  | string  | null: false  |
-| password  |
 | name  | string  | null: false, index: true  |
 | birthday  | integer  | null: false  |
 | icon  | string  |
@@ -24,7 +22,7 @@ Things you may want to cover:
 ## Productsテーブル
 
 | Columun  | type  | option  |
-|---|---|---|---|---|---|---|---|---|---|
+|---|---|---|
 | name  | string  | null: false, index: true  |
 | price  | integer  | null: false  |
 | condition  | integer  | null: false  |
@@ -60,7 +58,7 @@ Things you may want to cover:
 ## Cardsテーブル
 
 | Column  | Type  | Option  |
-|---|---|---|---|
+|---|---|---|
 | number  | integer  | null: false  |
 | cvc  | integer  | null: false  |
 | exp_month  | integer  | null: false  |
@@ -84,6 +82,8 @@ Things you may want to cover:
 
 ## Addressテーブル
 
+| Column  | Type  | Option  |
+|---|---|---|
 | post_code  | integer  | null: false  |
 | city  | string  | null: false  |
 | town  | string  | null: false  |

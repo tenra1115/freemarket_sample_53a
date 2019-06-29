@@ -9,8 +9,8 @@
         %p  お客さまの本人情報をご登録ください。
         %p 登録されたお名前・生年月日を変更する場合、本人確認書類の提出が必要になります。
         = link_to "https://www.mercari.com/jp/help_center/article/495/" do
-          %i.fab.fa-chevron-right
-          %h6 本人確認書類のアップロードについて
+          %l.fa.fa-chevron-right.upload2{"aria-hidden" => "true"}
+          %p.upload 本人確認書類のアップロードについて
             
         .confirm-name-birthday
           %label お名前 
@@ -92,5 +92,5 @@
           .form-send
             %p 登録する
           = link_to "https://www.mercari.com/jp/help_center/article/423/" do
-            %p.fab.fa-chevron-right
+            %p.fa.fa-chevron-right{"aria-hidden" => "true"}
             %h7 本人情報の登録について

@@ -47,18 +47,23 @@
           float: left;
         }
 
-        h6{
+        .upload2{
+          float: right;
+          padding-top: 28px;
+        }
+
+        .upload{
           float: right;
           padding-top: 7px;
           font-size: 13px;
           color: #1E90FF;
+          &:hover{
+            opacity: 0.6;
+            border-bottom: 2px solid #46EEFF;
+            cursor: pointer;
+          }
         }
 
-        h6:hover{
-          opacity: 0.6;
-          border-bottom: 2px solid #46EEFF;
-          cursor: pointer;
-        }
 
         i{
           float: right;
@@ -148,6 +153,7 @@
           .fa-chevron-right{
             float: right;
             font-size: 16px;
+                padding-top: 5px;
           }
 
           a{

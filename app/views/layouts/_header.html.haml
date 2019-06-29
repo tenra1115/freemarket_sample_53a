@@ -1,0 +1,32 @@
+.header-wrapper
+  .header-content
+    .header-top
+      = image_tag 'logo.svg',size:'134x36',class: 'header-log'
+      .header-serch
+        %input{type: 'serch',name:"keyword",placeholder:"何かお探しですか？",class:"header-serch_main"}
+        %i.fa.fa-search.icon-serch
+    .header-navi
+      %ul.navi-left
+        %li.navi-list
+          %a{href:"/"}
+            %i.fa.fa-list-ul
+            カテゴリーから探す
+        %li.brand-list
+          %i.fa.fa-tag
+          ブランドから探す
+      %ul.navi-right
+        %li.menu-news
+          %i.fa.fa-bell-o.fa-lg
+          %p
+            お知らせ
+        %li.menu-to-do
+          %i.fa.fa-check.fa-lg
+          %p
+            やることリスト
+        %li.menu-mypage
+          =image_tag 'member_photo_noimage_thumb.png',size:'32x32',class:'mypage-icon'
+          %p
+            マイページ
+
+
+

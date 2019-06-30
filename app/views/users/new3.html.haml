@@ -1,0 +1,28 @@
+.register-2
+  .register-both-2
+    .register-left-2
+      = image_tag("logo-mercari.svg")
+    .register-right-2
+      = image_tag("スクリーンショット 2019-06-30 17.33.10")
+    .register-call
+      .call-info
+        %h1 電話番号の入力
+      .call-register
+        %label.call-num 携帯電話の番号
+        %input.call-name{placeholder: "携帯電話の番号を入力"}
+        %p.call-messe 本人確認の為、携帯電話のSMS(ショートメッセージサービス)を利用して認証を行います。
+        .sms
+          %h1.sms-code SMSを送信する
+          %p.attention-call ※電話番号は本人確認や不正防止のために利用します。他のユーザーに公開されることはありません。
+          = link_to("https://www.mercari.com/jp/help_center/article/423/") do
+            = fa_icon "chevron-right", id: "attention-call-right"
+          %p.attention-call-2 電話番号の確認が必要な理由
+        .call-bottom1
+          %ul.call-bottom2
+            %a{:href => "https://www.mercari.com/jp/privacy/", class: "poli"} プライバシーポリシー
+            %a{:href => "https://www.mercari.com/jp/tos/", class: "rule"} メルカリ利用規約
+            %a{:href => "https://www.mercari.com/jp/tokutei/", class: "spe"} 特定商取引に関する表記
+        .back-to-mercari2
+          = link_to("https://www.mercari.com/jp/") do
+            = image_tag("logo-mercari3.svg")
+        %p.back-to-mercari-messe2 © 2019 Mercari

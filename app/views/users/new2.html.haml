@@ -1,0 +1,82 @@
+.register
+  .register-both
+    .register-left
+      = image_tag("logo-mercari.svg")
+    .register-right
+      = image_tag("スクリーンショット 2019-06-30 14.14.44")
+    .register-note
+      .member-info
+        %h1 会員情報入力
+      .note-register
+        %label ニックネーム
+        .note-nickname
+          %p.need 必須
+        %input.need-name{placeholder: "例) メルカリ太郎"}
+        %label メールアドレス
+        .note-nickname
+          %p.need 必須
+        %input.need-name{placeholder: "PC・携帯どちらでも可"}
+        %label パスワード
+        .note-nickname
+          %p.need 必須
+        %input.need-name{placeholder: "例) 6文字以上"}
+        %label パスワード(確認)
+        .note-nickname
+          %p.need 必須
+        %input.need-name{placeholder: "例) 6文字以上"}
+        .check-sentense
+          %h2.check-announce 本人確認
+          %p.announce-sentense 安心・安全にご利用いただくために、お客さまの本人情報の登録にご協力ください。他のお客さまに公開されることはありません。
+        %label 姓 (全角)
+        .note-nickname
+          %p.need 必須
+        %input.need-name{placeholder: "例) 山田"}
+        %label 名 (全角)
+        .note-nickname
+          %p.need 必須
+        %input.need-name{placeholder: "例) 綾"}
+        %label 姓カナ (全角)
+        .note-nickname
+          %p.need 必須
+        %input.need-name{placeholder: "例) ヤマダ"}
+        %label 名カナ (全角)
+        .note-nickname
+          %p.need 必須
+        %input.need-name{placeholder: "例) アヤ"}
+        %label 生年月日
+        .note-nickname
+          %p.need 必須
+        .year-big-date
+          = fa_icon "chevron-down" 
+          %select.year-need#year
+            %option{:value=>""} --
+          = fa_icon "chevron-down"
+          %select.year-need#month
+            %option{:value=>""} --
+          = fa_icon "chevron-down"
+          %select.year-need#date
+            %option{:value=>""} --
+          %p.attention-say ※ 本人情報は正しく入力してください。会員登録後、修正するにはお時間を頂く場合があります。
+          .get-recap
+            -# %button.recap.g-recaptcha{"data-callback" => "tenra", "data-sitekey" => "6LclSKsUAAAAAB_5mPAJ3p44_p2GioEcBbB58ywm"}
+            -#   Submit
+          %p.text-center 
+            「次へ進む」のボタンを押すことにより、
+            %a{:href => "https://www.mercari.com/jp/tos_list/"} 利用規約
+            に同意したものとみなします
+          .go-box
+            %p.go-go-box 次へ進む
+          .go-to-next
+            = fa_icon "chevron-right", id: "go-to-right"
+            %a{:href => "https://www.mercari.com/jp/help_center/article/423/"}  本人情報の登録について
+          %ul.policy 
+            %a{:href => "https://www.mercari.com/jp/privacy/"} プライバシーポリシー
+            %a{:href => "https://www.mercari.com/jp/tos/"} メルカリ利用規約
+            %a{:href => "https://www.mercari.com/jp/tokutei/"} 特定商取引に関する表記
+          .back-to-mercari
+            = link_to("https://www.mercari.com/jp/") do
+              = image_tag("logo-mercari3.svg")
+          %p.back-to-mercari-messe © 2019 Mercari
+            
+          
+ 

@@ -8,5 +8,8 @@ class UsersController < ApplicationController
 
   def new2
   end
+
+  def new3
+  end
   
 end

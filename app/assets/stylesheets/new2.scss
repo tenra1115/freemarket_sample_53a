@@ -121,6 +121,15 @@
           margin-left: 20px;
         }
 
+        form{
+          padding-left: 100px;
+          position: relative;
+
+          input{
+            position: absolute;
+          }
+        }
+
         .fa{
           position: absolute;
           z-index: 1;

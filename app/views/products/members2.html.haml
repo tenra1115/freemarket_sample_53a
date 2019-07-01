@@ -1,118 +1,15 @@
-%main.l-container.clearfix
-  .l-content
-    %section.l-chapter-container
-      %h2.l-chapter-head プロフィール
-      %form{:action => "https://www.mercari.com/jp/mypage/profile/", :method => "POST"}
-        %input{:name => "__csrf_value", :type => "hidden", :value => "1ad21b671bace71b3967c8a90c2563da20f0dc9bae16de70b1a2259589dff083e8534d68f2fa1af78e0f244d8e7ea0b92b4850aad37d4ffd9ae57495f55961f15"}/
+%main.l-container
+  .l-content.clearfix
+    %section.l-chapter__container
+      %h2.l-chapter__head プロフィール
+      %form{:action => "＃", :method => "POST"}
+        %input{:name => "__csrf_value", :type => "hidden", :value => "#"}/
         .setting-profile-icon
           %figure
-            %img{:height => "60", :src => "//static.mercdn.net/thumb/members/421878364.jpg?1479302524", :width => "60"}/
-          %input.input-default{:name => "nickname", :placeholder => "例)AYA☆セール中", :type => "text", :value => "char☆chan"}/
+            %img{:height => "60", :src => "＃", :width => "60"}/
+          %input.input-default{:name => "nickname", :placeholder => "例)AYA☆セール中", :type => "text", :value => "nonono"}/
         .setting-profile-content
-          %textarea.textarea-default{:name => "introduction", :placeholder => ""}
-            :preserve
-             
-              
-           %input{:name => "after_save_callback", :type => "hidden", :value => "https://www.mercari.com/jp/mypage/profile/"}/
-          %button.btn-default.btn-red{:type => "submit"} 変更する
-  .l-side
-    %nav.mypage-nav
-      %ul.mypage-nav-list
-        %li
-          %a.mypage-nav-list-item{:href => "/jp/mypage/"}
-            マイページ
-            %i.icon-arrow-right
-        %li
-          %a.mypage-nav-list-item{:href => "/jp/mypage/notification/"}
-            お知らせ
-            %span.mypage-nav-number
-              2
-            %i.icon-arrow-right
-        %li
-          %a.mypage-nav-list-item{:href => "/jp/mypage/todo/"}
-            やることリスト
-            %i.icon-arrow-right
-        %li
-          %a.mypage-nav-list-item{:href => "/jp/mypage/like/history/"}
-            いいね！一覧
-            %i.icon-arrow-right
-        %li
-          %a.mypage-nav-list-item{:href => "/jp/sell/"}
-            出品する
-            %i.icon-arrow-right
-        %li
-          %a.mypage-nav-list-item{:href => "/jp/mypage/listings/listing/"}
-            出品した商品 - 出品中
-            %i.icon-arrow-right
-        %li
-          %a.mypage-nav-list-item{:href => "/jp/mypage/listings/in_progress/"}
-            出品した商品 - 取引中
-            %i.icon-arrow-right
-        %li
-          %a.mypage-nav-list-item{:href => "/jp/mypage/listings/completed/"}
-            出品した商品 - 売却済み
-            %i.icon-arrow-right
-        %li
-          %a.mypage-nav-list-item{:href => "/jp/mypage/purchase/"}
-            購入した商品 - 取引中
-            %i.icon-arrow-right
-        %li
-          %a.mypage-nav-list-item{:href => "/jp/mypage/purchased/"}
-            購入した商品 - 過去の取引
-            %i.icon-arrow-right
-        %li
-          %a.mypage-nav-list-item{:href => "/jp/mypage/news/"}
-            ニュース一覧
-            %i.icon-arrow-right
-        %li
-          %a.mypage-nav-list-item{:href => "/jp/mypage/review/history/"}
-            評価一覧
-            %i.icon-arrow-right
-        %li
-          %a.mypage-nav-list-item{:href => "/jp/help_center/"}
-            ガイド
-            %i.icon-arrow-right
-        %li
-          %a.mypage-nav-list-item{:href => "/jp/mypage/support/"}
-            お問い合わせ
-            %i.icon-arrow-right
-      %h3.mypage-nav-head メルペイ
-      %ul.mypage-nav-list
-        %li
-          %a.mypage-nav-list-item{:href => "/jp/mypage/sales/"}
-            残高・振込申請
-            %i.icon-arrow-right
-        %li
-          %a.mypage-nav-list-item{:href => "/jp/mypage/point/"}
-            ポイント
-            %i.icon-arrow-right
-      %h3.mypage-nav-head 設定
-      %ul.mypage-nav-list
-        %li
-          %a.mypage-nav-list-item.active{:href => "/jp/mypage/profile/"}
-            プロフィール
-            %i.icon-arrow-right
-        %li
-          %a.mypage-nav-list-item{:href => "/jp/mypage/deliver_address/"}
-            発送元・お届け先住所変更
-            %i.icon-arrow-right
-        %li
-          %a.mypage-nav-list-item{:href => "/jp/mypage/card/"}
-            支払い方法
-            %i.icon-arrow-right
-        %li
-          %a.mypage-nav-list-item{:href => "/jp/mypage/email_password/"}
-            メール/パスワード
-            %i.icon-arrow-right
-        %li
-          %a.mypage-nav-list-item{:href => "/jp/mypage/identification/"}
-            本人情報
-            %i.icon-arrow-right
-        %li
-          %a.mypage-nav-list-item{:href => "/jp/mypage/sms_confirmation/"}
-            電話番号の確認
-            %i.icon-arrow-right
-        %li
-          %a.mypage-nav-list-item{:href => "/jp/logout/"}
-            ログアウト
-            %i.icon-arrow-right
+          %textarea.textarea-default{:name => "introduction", :placeholder => "#"}/
+          :preserve   
+            %input{:name => "after_save_callback", :type => "hidden", :value => "#"}/
+            %button.btn-default.btn-red{:type => "submit"} 変更する

@@ -13,7 +13,7 @@
       height: 128px;
       width: 30%;
 
-      img{
+      .register-left-image{
         width: 185px;
         height: 49px;
         float: right;
@@ -26,7 +26,7 @@
       height: 128px;
       width: 70%;
 
-      img{
+      .register-left-image2{
         padding-top: 30px;
         width: 70%;
         padding-left: 50px;
@@ -49,7 +49,7 @@
       border-bottom: 1px solid #cccccc;
       
 
-      h1{
+      .member-info-h1{
         font-size: 22px;
         text-align: center;
         
@@ -61,7 +61,7 @@
       margin: 0 auto;
       text-align: center;
 
-      label{
+      .note-register-nickname{
         width: 27%;
         float: left;
         padding-left: 75px;
@@ -92,7 +92,7 @@
       }
 
       .check-announce{
-        width: 45%;
+        width: 100%;
       }
 
       .announce-sentense{
@@ -121,15 +121,6 @@
           margin-left: 20px;
         }
 
-        form{
-          padding-left: 100px;
-          position: relative;
-
-          input{
-            position: absolute;
-          }
-        }
-
         .fa{
           position: absolute;
           z-index: 1;
@@ -142,6 +133,10 @@
           color: #888;
           font-size: 12px;
           margin: 10px auto;
+        }
+
+        .attention-say-image{
+          width: 65%;
         }
 
         .get-recap{
@@ -160,7 +155,7 @@
           width: 60%;
           margin: 15px auto;
 
-          a{
+          .text-center-say{
             color: #3399FF;
             text-decoration: none;
 
@@ -189,7 +184,7 @@
           display: flex;
           justify-content: flex-end;
 
-          a{
+          .go-to-next-link{
             width: 50%;
             font-size: 14px;
             float: left;
@@ -216,7 +211,7 @@
           display: flex;
           justify-content: space-around;
 
-          a{
+          .register-policy{
             font-size: 12px;
             text-decoration: none;
             color: #444444;

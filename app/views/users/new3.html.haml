@@ -1,12 +1,12 @@
 .register-2
   .register-both-2
     .register-left-2
-      = image_tag("logo-mercari.svg")
+      = image_tag "logo-mercari.svg", class:"register-left-2-image"
     .register-right-2
-      = image_tag("スクリーンショット 2019-06-30 17.33.10")
+      = image_tag "スクリーンショット 2019-06-30 17.33.10", class:"register-right-2-image"
     .register-call
       .call-info
-        %h1 電話番号の入力
+        %h1.call-info-say 電話番号の入力
       .call-register
         %label.call-num 携帯電話の番号
         %input.call-name{placeholder: "携帯電話の番号を入力"}
@@ -24,5 +24,5 @@
             %a{:href => "https://www.mercari.com/jp/tokutei/", class: "spe"} 特定商取引に関する表記
         .back-to-mercari2
           = link_to("https://www.mercari.com/jp/") do
-            = image_tag("logo-mercari3.svg")
+            = image_tag "logo-mercari3.svg", class:"back-to-mercari2-image"
         %p.back-to-mercari-messe2 © 2019 Mercari

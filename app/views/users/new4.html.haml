@@ -1,0 +1,82 @@
+.address-body
+  .address-cornor-top
+    = image_tag "スクリーンショット 2019-07-01 19.51.41", class: "address-cornor-top-image"
+    .address-main-load
+      .address-hopper
+        %h1.address-say 住所入力
+      .address-cornor-main
+        .address-user-name
+          .address-user-name-box-small
+            %p.address-name-name お名前
+            .address-need-say-box
+              %p.address-need-say 必須
+          .address-user-name-box
+            %input.name-address-input{placeholder: "例) 山田"}
+          .address-user-name-box
+            %input.name-address-input{placeholder: "例) アヤ"}
+        .address-user-name
+          .address-user-name-box-small
+            %p.address-name-name お名前カナ
+            .address-need-say-box
+              %p.address-need-say 必須
+          .address-user-name-box
+            %input.name-address-input{placeholder: "例) ヤマダ"}
+          .address-user-name-box
+            %input.name-address-input{placeholder: "例) アヤ"}
+        .address-user-name2
+          .address-user-name-box-small2
+            %p.address-name-name2 郵便番号
+            .address-need-say-box2
+              %p.address-need-say2 必須
+          .address-user-name-box2
+            %input.name-address-input2{placeholder: "例) 123-4567"}
+        .address-user-name2
+          .address-user-name-box-small2
+            %p.address-name-name2 都道府県
+            .address-need-say-box2
+              %p.address-need-say2 必須
+          .address-user-name-box2
+            %input.name-address-input2{placeholder: "例) 東京"}
+        .address-user-name2
+          .address-user-name-box-small2
+            %p.address-name-name2 市区町村
+            .address-need-say-box2
+              %p.address-need-say2 必須
+          .address-user-name-box2
+            %input.name-address-input2{placeholder: "例) 横浜市緑区"}
+        .address-user-name2
+          .address-user-name-box-small2
+            %p.address-name-name2 番地
+            .address-need-say-box2
+              %p.address-need-say2 必須
+          .address-user-name-box2
+            %input.name-address-input2{placeholder: "例) 青山1-3-1"}
+        .address-user-name2
+          .address-user-name-box-small2
+            %p.address-name-name2 建物名
+            .address-need-say-box2
+              %p.address-need-say2 任意
+          .address-user-name-box2
+            %input.name-address-input2{placeholder: "例) 柳ビル103"}
+        .address-user-name2
+          .address-user-name-box-small2
+            %p.address-name-name2 電話
+            .address-need-say-box2
+              %p.address-need-say2 任意
+          .address-user-name-box2
+            %input.name-address-input2{placeholder: "例) 09012345678"}
+        .address-send-box
+          %button.address-send-button
+            %p.address-send-button-say 次へ進む
+    %ul.policy-address
+      %a.address-privacy{:href => "https://www.mercari.com/jp/privacy/"} プライバシーポリシー
+      %a.address-privacy{:href => "https://www.mercari.com/jp/tos/"} メルカリ利用規約
+      %a.address-privacy{:href => "https://www.mercari.com/jp/tokutei/"} 特定商取引に関する表記
+    .back-to-mercari-address
+      = link_to "#", class:"link-to-address" do
+        = image_tag "logo-mercari3.svg", class: "link-to-address-image"
+    %p.back-to-mercari-messe-address © 2019 Mercari
+        
+
+
+

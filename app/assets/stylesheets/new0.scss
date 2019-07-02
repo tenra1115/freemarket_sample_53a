@@ -6,6 +6,12 @@
     width: 13%;
     margin: auto;
     padding: 40px 0;
+
+    .start-first-image{
+      width: 185px;
+        height: 49px;
+        float: right;
+    }
   }
 
   .start-second{
@@ -13,6 +19,7 @@
     margin: auto;
     background: white;
     height: 400px;
+    margin-top: 40px;
 
     .start-select-say{
       text-align: center;
@@ -96,7 +103,7 @@
         }
       }
 
-      img{
+      .start-select-gogo-image{
         position: $al;
         padding-top: 150px;
         padding-left: 13px;
@@ -108,7 +115,7 @@
       display: flex;
       justify-content: space-around;
 
-      a{
+      .policy-start{
         font-size: 12px;
         text-decoration: none;
         color: #444444;
@@ -125,7 +132,7 @@
       margin: 0 auto;
       margin-top: 30px;
 
-      img{
+      .back-to-mercari-start{
         color: #999999;
 
         &:hover{

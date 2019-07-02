@@ -1,0 +1,56 @@
+.image-content{
+  height:260px;
+  width:100%;
+  background-image: url("download_bg_pc.jpg");
+  .image-banner{
+    height: 260px;
+    width:750px;
+    position: relative;
+    margin: 0 auto;
+    .image-banner-txt{
+      position: absolute;
+      top:20%;
+      float: left;
+        & h2{
+        font-size: 24px;
+        font-family: sans-serif;
+        font-weight:bold;
+        color:white;
+        line-height: 1.4;
+        }
+        & p{
+          font-size: 35px;
+        font-family: sans-serif;
+        font-weight:400;
+        color:white;
+        }
+        .banner-icon{
+          float: left;
+          .logo-mercari{
+            border-radius: 15px;
+          }
+          .google-apple{
+            float: right;
+            height:68px;
+            width:282px;
+            position: relative;
+            margin-left:24px;
+            .app-store{
+              position: absolute;
+              top:17px;
+              float: left;
+            }
+            .google-store{
+              position: absolute;
+              top:17px;
+              right:0;
+              float: right;
+            }
+          }
+        }
+    }
+    .phone-image{
+      float: right;
+    }
+  }
+}

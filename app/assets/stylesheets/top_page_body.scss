@@ -1,0 +1,101 @@
+.top-page-wrapper{
+  background-color: #f5f5f5;
+  font-size:0;
+  .top-page-product{
+    width:calc(100% - 500px);
+    height:4150px;
+    margin:0 auto;
+    .top-page-category{
+      width:100%;
+      height: 500px;
+      padding:40px 0 40px 0;
+      text-align: center;
+      & h2{
+        font-size: 28px;
+        font-family: sans-serif;
+        font-weight: bold;
+        color:#333;
+      }
+      .text-center{
+        font-size: 22px;
+        font-family: sans-serif;
+        font-weight: bold;
+        margin:26px 11px;
+        & a{
+          text-decoration:none;
+          color:#0099E8;
+          a:hover{
+            text-decoration: #0099E8;
+          }
+        }
+      }
+      .category-items{
+        width:100%;
+        height:350px;
+        .category-item{
+          width:213px;
+          background-color:white;
+          height:350px;
+          float: left;
+          margin-left:20px;
+          text-align: left;
+          .item-text-box{
+            height:137px;
+            box-sizing: border-box;
+            padding:16px;
+            position: relative;
+            & h3{
+              font-size:16px;
+            }
+            .item-price-top{
+              font-family:sans-serif;
+              font-weight: 600;
+              font-size: 13px;
+              color:#333;
+              position: absolute;
+              left:16px;
+              bottom: 16px;
+            }  
+          }
+        }
+      }
+      .top-item-show-more{
+        // background-color:black;
+        height: 14px;
+        width: 100%;
+        float: right;
+        padding:20px 0 30px;
+        text-align: right;
+        clear: both;
+        & a{
+          font-size:14px;
+          font-family:sans-serif;
+          color:#0099E8;
+          text-decoration:none;    
+        } 
+      }
+      .clear{
+        clear: both;
+      }
+      .text-center-mens{
+        font-size: 22px;
+        font-family: sans-serif;
+        font-weight: bold;
+        margin:26px 11px;
+        height:22px;
+        & a{
+          text-decoration:none;
+          color:#0099E8;
+          a:hover{
+            text-decoration: #0099E8;
+          }
+            
+        }
+      }
+    }
+      .pickup-container{
+        padding-top:80px;
+        scroll-padding-bottom: 40px;
+      }
+  }
+}

@@ -10,8 +10,8 @@
     box-sizing: border-box;
     .header-top{
       width:100%;
-        display: block;
-        height:40px;
+      display: block;
+      height:40px;
       .header-log{
         float:left;
       }
@@ -29,15 +29,12 @@
           border: solid 1px rgb(206, 206, 206);
           width: 100%;
           box-sizing: border-box;
-
-          
         }
         .icon-serch{
           float: left;
           position: absolute;
           top:10px;
-          right:10px;
-          
+          right:10px; 
         }
       }
     }
@@ -57,13 +54,13 @@
           font-weight: bold;
           color:#333;
           float: left;
-          & a{
-          text-decoration:none;
-          color:#333;
-          }
-          & i{
-            color:red;
-          }
+            & a{
+              text-decoration:none;
+              color:#333;
+            }
+            & i{
+              color:red;
+            }
         }
         .brand-list{
           float: right;
@@ -71,9 +68,9 @@
           font-family:"sans-serif";
           font-weight: bold;
           color:#333;
-        & i{
-          color:red;
-        }
+          & i{
+            color:red;
+          }
         }
       }
       .navi-right{
@@ -90,8 +87,8 @@
           padding-left:14px;
           padding-right:14px;
           & a{
-          text-decoration:none;
-          color:#333;
+            text-decoration:none;
+            color:#333;
           }
           & i{
             color:rgb(175, 175, 175);
@@ -108,10 +105,6 @@
           color:#333;
           float: left;
           padding:0 14px 0px 14px;
-          & a{
-          text-decoration:none;
-          color:#333;
-          }
           & i{
             color:rgb(175, 175, 175); 
             float: left;
@@ -134,8 +127,8 @@
           & p{
             float:right;
           }
+        }
       }
-    }
     }
   }
 }

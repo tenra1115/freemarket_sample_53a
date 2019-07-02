@@ -54,11 +54,11 @@
           font-weight: bold;
           color:#333;
           float: left;
-            & a{
+            .navi-list-a{
               text-decoration:none;
               color:#333;
             }
-            & i{
+            .fa-list-ul{
               color:red;
             }
         }
@@ -68,7 +68,7 @@
           font-family:"sans-serif";
           font-weight: bold;
           color:#333;
-          & i{
+          .fa-tag{
             color:red;
           }
         }
@@ -86,15 +86,11 @@
           float: left;
           padding-left:14px;
           padding-right:14px;
-          & a{
-            text-decoration:none;
-            color:#333;
-          }
-          & i{
+          .fa-bell-o{
             color:rgb(175, 175, 175);
             font-weight: bold;
           }
-          & p{
+          .news-about-you{
             float:right;
             margin-left: 10px;
           }
@@ -105,12 +101,12 @@
           color:#333;
           float: left;
           padding:0 14px 0px 14px;
-          & i{
+          .fa-check{
             color:rgb(175, 175, 175); 
             float: left;
             line-height: 40px;
           }
-          & p{
+          .to-do-list{
             float:right;
             margin-left:10px;
           }
@@ -124,7 +120,7 @@
             border-radius: 100%;
             float: left;
           }
-          & p{
+          .mypage-title{
             float:right;
           }
         }

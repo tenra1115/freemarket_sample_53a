@@ -17,7 +17,7 @@
         width: 20%;
         height:240px;
         float:left;
-        & h2{
+        .footer-title-detail{
           font-size: 16px;
           color:white;
           font-family: sans-serif;
@@ -25,9 +25,9 @@
       .footer-cell-right{
         padding-top:25px;
       }
-      li{
+      .detail-show{
         margin-top:12px;
-        & a{
+        .detail-show-more{
           color:white;
           text-decoration:none;
           font-size:12px;
@@ -42,21 +42,21 @@
       .footer-cell-nation{
         padding: 18px 20px 0 0;
         width:auto;
-        & h2{
+        .nations{
           font-size: 16px;
           color:white;
           font-family: sans-serif; 
         }
-            & li{
-              margin-top:12px;
-              & a{
-                color:white;
-                  text-decoration:none;
-                  font-size:12px;
-                  opacity: 0.7;
-                  line-height:1.5rem;
-              }
+          .detail-nation{
+            margin-top:12px;
+            .detail-show-more-nation{
+              color:white;
+                text-decoration:none;
+                font-size:12px;
+                opacity: 0.7;
+                line-height:1.5rem;
             }
+          }
       }
       .clear{
         clear: both;
@@ -68,7 +68,7 @@
         .img-footer-logo{
           float: left;
         }
-        & p{
+        .mercari-company{
           display: inline-block;
          margin-left:350px;
           float: left;

@@ -10,7 +10,7 @@
       height: 500px;
       padding:40px 0 40px 0;
       text-align: center;
-      & h2{
+      .pickup-category{
         font-size: 28px;
         font-family: sans-serif;
         font-weight: bold;
@@ -21,10 +21,10 @@
         font-family: sans-serif;
         font-weight: bold;
         margin:26px 11px;
-        & a{
+        .new-item{
           text-decoration:none;
           color:#0099E8;
-          a:hover{
+          .new-item:hover{
             text-decoration: #0099E8;
           }
         }
@@ -44,7 +44,7 @@
             box-sizing: border-box;
             padding:16px;
             position: relative;
-            & h3{
+            .item-name{
               font-size:16px;
             }
             .item-price-top{
@@ -67,7 +67,7 @@
         padding:20px 0 30px;
         text-align: right;
         clear: both;
-        & a{
+        .item-show-more{
           font-size:14px;
           font-family:sans-serif;
           color:#0099E8;
@@ -83,10 +83,10 @@
         font-weight: bold;
         margin:26px 11px;
         height:22px;
-        & a{
+        .text-center-mens-a{
           text-decoration:none;
           color:#0099E8;
-          a:hover{
+          .text-center-mens-a:hover{
             text-decoration: #0099E8;
           }
             
@@ -96,6 +96,12 @@
       .pickup-container{
         padding-top:80px;
         scroll-padding-bottom: 40px;
+        .pickup-brand{
+          font-size: 28px;
+          font-family: sans-serif;
+          font-weight: bold;
+          color:#333;
+        }
       }
   }
 }

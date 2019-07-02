@@ -11,23 +11,23 @@
       position: absolute;
       top:20%;
       float: left;
-        & h2{
-        font-size: 24px;
-        font-family: sans-serif;
-        font-weight:bold;
-        color:white;
-        line-height: 1.4;
+        .banner-title{
+          font-size: 24px;
+          font-family: sans-serif;
+          font-weight:bold;
+          color:white;
+          line-height: 1.4;
         }
-        & p{
+        .banner-title-download{
           font-size: 35px;
-        font-family: sans-serif;
-        font-weight:400;
-        color:white;
+          font-family: sans-serif;
+          font-weight:400;
+          color:white;
         }
         .banner-icon{
           float: left;
           .logo-mercari{
-            border-radius: 15px;
+          border-radius: 15px;
           }
           .google-apple{
             float: right;

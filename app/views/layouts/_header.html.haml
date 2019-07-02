@@ -8,7 +8,7 @@
     .header-navi
       %ul.navi-left
         %li.navi-list
-          %a{href:"/"}
+          %a{href:"/",class:"navi-list-a"}
             %i.fa.fa-list-ul
             カテゴリーから探す
         %li.brand-list
@@ -17,15 +17,15 @@
       %ul.navi-right
         %li.menu-news
           %i.fa.fa-bell-o.fa-lg
-          %p
+          %p.news-about-you
             お知らせ
         %li.menu-to-do
           %i.fa.fa-check.fa-lg
-          %p
+          %p.to-do-list
             やることリスト
         %li.menu-mypage
           =image_tag 'member_photo_noimage_thumb.png',size:'32x32',class:'mypage-icon'
-          %p
+          %p.mypage-title
             マイページ
 
 

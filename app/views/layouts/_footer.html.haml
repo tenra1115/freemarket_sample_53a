@@ -2,83 +2,81 @@
   .global-footer
     .footer-size
       .footer-cell
-        %h2
+        %h2.footer-title-detail
           メルカリについて
         %ul
-          %li
-            %a{href:"/"} 会社概要（運営会社）
-              
-          %li
-            %a{href:"/"} 採用情報
-          %li
-            %a{href:"/"} プレスリリース
-          %li
-            %a{href:"/"} 公式ブログ
-          %li
-            %a{href:"/"} メルカリロゴ利用ガイドライン
-          %li
-            %a{href:"/"}
+          %li.detail-show
+            %a{href:"/",class:"detail-show-more"} 会社概要（運営会社） 
+          %li.detail-show
+            %a{href:"/",class:"detail-show-more"} 採用情報
+          %li.detail-show
+            %a{href:"/",class:"detail-show-more"} プレスリリース
+          %li.detail-show
+            %a{href:"/",class:"detail-show-more"} 公式ブログ
+          %li.detail-show
+            %a{href:"/",class:"detail-show-more"} メルカリロゴ利用ガイドライン
+          %li.detail-show
+            %a{href:"/",class:"detail-show-more"}
               %i.fa.fa-twitter.fa-3x
-            %a{href:"/"}
+            %a{href:"/",class:"detail-show-more"}
               %i.fa.fa-facebook-official.fa-3x
-
       .footer-cell
-        %h2
+        %h2.footer-title-detail
           ヘルプ＆ガイド
         %ul
-          %li
-            %a{href:"/"} メルカリガイド
+          %li.detail-show
+            %a{href:"/",class:"detail-show-more"} メルカリガイド
               
-          %li
-            %a{href:"/"} らくらくメルカリ便
-          %li
-            %a{href:"/"} ゆうゆうメルカリ便
-          %li
-            %a{href:"/"} 大型メルカリ便
-          %li
-            %a{href:"/"} 車体取引ガイド
-          %li
-            %a{href:"/"} メルカリあんしん・あんぜん宣言！
-          %li
-            %a{href:"/"} 偽ブランド品撲滅への取り組み
-          %li
-            %a{href:"/"}メルカリボックス
+          %li.detail-show
+            %a{href:"/",class:"detail-show-more"} らくらくメルカリ便
+          %li.detail-show
+            %a{href:"/",class:"detail-show-more"} ゆうゆうメルカリ便
+          %li.detail-show
+            %a{href:"/",class:"detail-show-more"} 大型メルカリ便
+          %li.detail-show
+            %a{href:"/",class:"detail-show-more"} 車体取引ガイド
+          %li.detail-show
+            %a{href:"/",class:"detail-show-more"} メルカリあんしん・あんぜん宣言！
+          %li.detail-show
+            %a{href:"/",class:"detail-show-more"} 偽ブランド品撲滅への取り組み
+          %li.detail-show
+            %a{href:"/",class:"detail-show-more"}メルカリボックス
       .footer-cell
-        %h2
+        %h2.footer-title-detail
           プライバシーと利用規約
           %ul
-            %li
-              %a{href:"/"} プライバシーポリシー
-            %li
-              %a{href:"/"} メルカリ利用規約
-            %li
-              %a{href:"/"} あんしんスマホサポート制度に関<br>する利用特約
-            %li
-              %a{href:"/"} コンプライアンスポリシー
+            %li.detail-show
+              %a{href:"/",class:"detail-show-more"} プライバシーポリシー
+            %li.detail-show
+              %a{href:"/",class:"detail-show-more"} メルカリ利用規約
+            %li.detail-show
+              %a{href:"/",class:"detail-show-more"} あんしんスマホサポート制度に関<br>する利用特約
+            %li.detail-show
+              %a{href:"/",class:"detail-show-more"} コンプライアンスポリシー
       .footer-cell
         %ul.footer-cell-right
-          %li
-            %a{href:"/"} 個人データの安全管理に係る基本<br>方針
-          %li
-            %a{href:"/"} 特定商取引に関する表記
-          %li
-            %a{href:"/"} 資金決済法に基づく表示
-          %li
-            %a{href:"/"} 法令順守と犯罪抑止のために
-          %li
-            %a{href:"/"} 返品・返金ポリシー
+          %li.detail-show
+            %a{href:"/",class:"detail-show-more"} 個人データの安全管理に係る基本<br>方針
+          %li.detail-show
+            %a{href:"/",class:"detail-show-more"} 特定商取引に関する表記
+          %li.detail-show
+            %a{href:"/",class:"detail-show-more"} 資金決済法に基づく表示
+          %li.detail-show
+            %a{href:"/",class:"detail-show-more"} 法令順守と犯罪抑止のために
+          %li.detail-show
+            %a{href:"/",class:"detail-show-more"} 返品・返金ポリシー
       .footer-cell-nation
-        %h2
+        %h2.nations
           国
         %ul
-          %li
-            %a{href:"/"} 日本
+          %li.detail-nation
+            %a{href:"/",class:"detail-show-more-nation"} 日本
               
-          %li
-            %a{href:"/"} United States
+          %li.detail-nation
+            %a{href:"/",class:"detail-show-more-nation"} United States
       .clear
       .logo-footer
         %a{href:'/'}
           = image_tag 'logo-white.svg',size:"124x33",class: "img-footer-logo"
-        %p
+        %p.mercari-company
           © 2019 Mercari

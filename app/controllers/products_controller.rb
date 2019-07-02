@@ -11,6 +11,9 @@ class ProductsController < ApplicationController
 
   def members3
   end
+
+  def members4
+  end
   
 
 end

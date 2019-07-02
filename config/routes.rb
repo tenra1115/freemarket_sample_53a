@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   root "products#index"
-  get 'products/_members'  =>  'products#_members' 
+  get 'products/members5'  =>  'products#members5' 
   get 'products/members2'  =>  'products#members2'
   get 'products/members3'  =>  'products#members3'
   get 'products/members4'  =>  'products#members4'  

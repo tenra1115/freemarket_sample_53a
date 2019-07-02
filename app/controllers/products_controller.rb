@@ -2,9 +2,6 @@ class ProductsController < ApplicationController
 
   def index
   end
-
-  def members
-  end
   
   def members2
   end
@@ -15,5 +12,7 @@ class ProductsController < ApplicationController
   def members4
   end
   
+  def members5
+  end
 
 end

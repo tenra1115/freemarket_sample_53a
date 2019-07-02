@@ -81,4 +81,31 @@
     }  
   }
 }
+.sell-btn-wrapper{
+  position: fixed;
+  bottom:32px; 
+  right:32px;
+  .sell-btn{
+    width:160px;
+    height:160px;
+    background-color: red;
+    border-radius: 50%;
+    color:white;
+    display: block;
+    position: relative;
+    text-decoration:none;
+    .sell-btn-label{
+      position: relative;
+      top:20px;
+      left:57px;
+      font-size:22px;
+    }
+    .fa-camera{
+      position: relative;
+      top:20px;
+      left:45px;
+    }
+  }
+}
+
 

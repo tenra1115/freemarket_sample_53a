@@ -56,13 +56,94 @@
       .pay-card-number{
         margin-top: 50px;
 
+        .pay-just-box{
+          margin-left: 30px;
+        
+
+          .pay-card-name-say{
+            float: left;
+            margin-right: 10px;
+          }
+
+          .pay-card-this-say{
+            float: left;
+            width: 8%;
+            background: red;
+            border-radius: 4px;
+
+            .pay-card-this-say2{
+              color: white;
+              font-size: 13px;
+              text-align: center;
+            }
+          }
+        }
+
+        .pay-just-for-select{
+          width: 100%;
+          height: 60px;
+          display: flex;
+          justify-content: space-around;
+
+          .pay-just-for-select-left{
+            width: 40%;
+            height: 50px;
+            height: 100%;
+            position: relative;
+
+            .select-card-month{
+              width: 87%;
+              height: 90%;
+              -webkit-appearance: none;
+              padding: 5px 15px;
+            }
+
+            .pay-chevron-down{
+              position: absolute;
+              top: 17px;
+              right: 30px;
+            }
+
+            .say-about-month{
+              float: right;
+              width: 10%;
+              line-height: 3;
+            }
+          }
+
+          .pay-just-for-select-right{
+            width: 40%;
+            height: 50px;
+            height: 100%;
+            position: relative;
+
+            .select-card-month{
+              width: 87%;
+              height: 90%;
+              -webkit-appearance: none;
+              padding: 5px 15px;
+            }
+
+            .pay-chevron-down{
+              position: absolute;
+              top: 17px;
+              right: 30px;
+            }
+
+            .say-about-year{
+              float: right;
+              width: 10%;
+              line-height: 3;
+            }
+          }
+        }
+
         .pay-card-name{
           width: 100%;
           margin-bottom: 7px;
           display: flex;
 
           .pay-card-name-say{
-            font-weight: bold;
             float: left;
             margin-right: 10px;
           }
@@ -113,37 +194,42 @@
 
         .pay-card-select-box{
           width: 35%;
-          
-          .pay-chevron-down{
-            position: absolute;
-            z-index: 1;
-            padding-left: 100px;
-            line-height: 3;
-          }
 
-          .select-card-month{
-            width: 80%;
+          .include-fa-icon{
+            width: 70%;
             height: 50px;
-            float: left;
-            margin-bottom: 10px;
-            -webkit-appearance: none;
-            padding: 5px 10px;
-            position: relative;
-          }
+          
+          
+            .pay-chevron-down{
+              position: absolute;
+              z-index: 1;
+              padding-left: 100px;
+              line-height: 3;
+            }
 
-          .pay-chevron-down2{
-            position: absolute;
+            .select-card-month{
+              width: 80%;
+              height: 50px;
+              float: left;
+              margin-bottom: 10px;
+              -webkit-appearance: none;
+              padding: 5px 10px;
+              position: relative;
+            }
           }
-
+            
+          
           .select-card-month2{
             width: 80%;
             height: 50px;
             float: left;
             margin-bottom: 50px;
             -webkit-appearance: none;
-            padding: 5px 10px;
-            position: relative;
+            padding: 5px 15px;
+            // position: relative;
           }
+            
+            
 
           .select-card-month-say{
             float: right;

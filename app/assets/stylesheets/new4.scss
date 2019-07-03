@@ -1,5 +1,5 @@
 .address-body{
-  background: #eeeeee;
+  background: #F5F5F5;
   height: 100%;
 
  .address-cornor-top{
@@ -61,7 +61,8 @@
               .address-need-say{
                 color: white;
                 font-size: 13px;
-                padding-top: 3px;
+                padding: 0 3px;
+                line-height: 2;
               }
             }    
           }
@@ -108,13 +109,14 @@
               .address-need-say2{
                 color: white;
                 font-size: 13px;
-                padding-top: 3px;
+                padding: 0 3px;
+                line-height: 2;
               }
             }    
           }
 
           .address-user-name-box2{
-            padding-left: 47px;
+            padding-left: 60px;
             width:80%;
             height: 35%;
             margin-bottom: 10px;
@@ -133,8 +135,8 @@
 
             .fa{
               position: absolute;
-              margin-left: 340px;
               margin-top: 15px;
+              margin-left: 450px;
             }
           }
         }

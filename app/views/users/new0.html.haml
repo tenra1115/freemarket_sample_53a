@@ -12,9 +12,12 @@
       %button.start-select-gogo Googleで登録する
       = image_tag "スクリーンショット 2019-06-30 17.07.34", class: "start-select-gogo-image"
     %ul.policy 
-      %a.policy-start{:href => "https://www.mercari.com/jp/privacy/"} プライバシーポリシー
-      %a.policy-start{:href => "https://www.mercari.com/jp/tos/"} メルカリ利用規約
-      %a.policy-start{:href => "https://www.mercari.com/jp/tokutei/"} 特定商取引に関する表記
+      = link_to "https://www.mercari.com/jp/privacy/", class: "policy-start" do
+        プライバシーポリシー
+      = link_to "https://www.mercari.com/jp/tos/", class: "policy-start" do
+        メルカリ利用規約
+      = link_to "https://www.mercari.com/jp/tokutei/", class: "policy-start" do
+        特定商取引に関する表記
     .back-to-mercari
       = link_to "https://www.mercari.com/jp/" do
         = image_tag "logo-mercari3.svg", class: "back-to-mercari-start"

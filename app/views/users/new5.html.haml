@@ -43,9 +43,12 @@
         %button.pay-card-button
           %p.pay-card-button-say 次へ進む
     %ul.policy-pay
-      %a.pay-privacy{:href => "https://www.mercari.com/jp/privacy/"} プライバシーポリシー
-      %a.pay-privacy{:href => "https://www.mercari.com/jp/tos/"} メルカリ利用規約
-      %a.pay-privacy{:href => "https://www.mercari.com/jp/tokutei/"} 特定商取引に関する表記
+      = link_to "#", class: "pay-privacy" do
+        プライバシーポリシー
+      = link_to "#", class: "pay-privacy" do
+        メルカリ利用規約
+      = link_to "#", class: "pay-privacy" do
+        特定商取引に関する表記
     .back-to-mercari-pay
       = link_to "#", class:"link-to-pay" do
         = image_tag "logo-mercari3.svg", class: "link-to-pay-image"

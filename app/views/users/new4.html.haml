@@ -71,9 +71,12 @@
           %button.address-send-button
             %p.address-send-button-say 次へ進む
     %ul.policy-address
-      %a.address-privacy{:href => "https://www.mercari.com/jp/privacy/"} プライバシーポリシー
-      %a.address-privacy{:href => "https://www.mercari.com/jp/tos/"} メルカリ利用規約
-      %a.address-privacy{:href => "https://www.mercari.com/jp/tokutei/"} 特定商取引に関する表記
+      = link_to "", class: "address-privacy" do
+        プライバシーポリシー
+      = link_to "", class: "address-privacy" do
+        メルカリ利用規約
+      = link_to "", class: "address-privacy" do
+        特定商取引に関する表記
     .back-to-mercari-address
       = link_to "#", class:"link-to-address" do
         = image_tag "logo-mercari3.svg", class: "link-to-address-image"

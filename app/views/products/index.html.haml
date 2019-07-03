@@ -1,5 +1,7 @@
+= render 'layouts/header'
 .top-page-wrapper
-  = image_tag 'banner-camp.jpg',class:"top-slide"
+  .camp-img
+    = image_tag 'banner-camp.jpg',class:"top-slide"
   .top-page-product
     .top-page-category
       %h2.pickup-category
@@ -9,24 +11,24 @@
           レディース新着アイテム
       .category-items
         .category-item
-          =image_tag "m99576633648_1.jpg",size:"213x213"
+          =image_tag "m27603844485_1.jpg",size:"213x213"
           .item-text-box
             %h3.item-name
-              茶色のパンツ
+              ジャケット
             .item-price-top
               ¥1,100
         .category-item
-          =image_tag "m99576633648_1.jpg",size:"213x213"
+          =image_tag "nanimositenai.jpg",size:"213x213"
           .item-text-box
             %h3.item-name
-              パンツ
+              何もしてないのにTシャツ
             .item-price-top
               ¥1,100
         .category-item
-          =image_tag "m99576633648_1.jpg",size:"213x213"
+          =image_tag "product_img_f_3974038.jpg",size:"213x213"
           .item-text-box
             %h3.item-name
-              パンツ
+              バグじゃないTシャツ
             .item-price-top
               ¥1,100
         .category-item
@@ -45,24 +47,24 @@
           メンズ新着アイテム
       .category-items
         .category-item
-          =image_tag "m99576633648_1.jpg",size:"213x213"
+          =image_tag "phpTshat.png",size:"213x213"
           .item-text-box
             %h3.item-name
-              茶色のパンツ
+              PHPシャツ
             .item-price-top
               ¥1,100
         .category-item
-          =image_tag "m99576633648_1.jpg",size:"213x213"
+          =image_tag "github.jpg",size:"213x213"
           .item-text-box
             %h3.item-name
-              パンツ
+              GithubTシャツ
             .item-price-top
               ¥1,100
         .category-item
-          =image_tag "m99576633648_1.jpg",size:"213x213"
+          =image_tag "LGTM.jpg",size:"213x213"
           .item-text-box
             %h3.item-name
-              パンツ
+              LGTM
             .item-price-top
               ¥1,100
         .category-item
@@ -296,5 +298,5 @@
         %a{href:"/",class:"item-show-more"}
           すべての商品を見る
 
-= render "products/banner"
+= render "layouts/banner"
 =render "layouts/footer"

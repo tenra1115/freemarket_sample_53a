@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root "products#index"
+  root "products#buy"
   resources :users, only: [:index]
   resources :products, only: [:index]
   resources :comments, only: [:index]

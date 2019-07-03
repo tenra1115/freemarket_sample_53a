@@ -7,5 +7,5 @@ Rails.application.routes.draw do
   resources :images, only: [:index]
   resources :cards, only: [:index]
   resources :addresses, only: [:index]
-  get "users/new5" => "users#new5"
+  get "users/new6" => "users#new6"
 end

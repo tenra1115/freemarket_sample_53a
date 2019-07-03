@@ -1,5 +1,4 @@
 $(function() {
-  'use strict';
 
   /*
     今日の日付データを変数todayに格納
@@ -32,4 +31,4 @@ $(function() {
    */
   optionLoop(2019, 2030, 'id_year', 2019);
   optionLoop(1, 12, 'id_month', 1);
-})();
+})

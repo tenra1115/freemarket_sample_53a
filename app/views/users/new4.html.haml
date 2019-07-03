@@ -36,7 +36,10 @@
             .address-need-say-box2
               %p.address-need-say2 必須
           .address-user-name-box2
-            %input.name-address-input2{placeholder: "例) 東京"}
+            %select#id_pref.name-address-input2
+              %option{:value=>""} --
+            = fa_icon "chevron-down"
+            -# %input.name-address-input2{placeholder: "例) 東京"}
         .address-user-name2
           .address-user-name-box-small2
             %p.address-name-name2 市区町村

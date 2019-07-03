@@ -113,12 +113,26 @@
 
         .pay-card-select-box{
           width: 35%;
+          
+          .pay-chevron-down{
+            position: absolute;
+            z-index: 1;
+            padding-left: 100px;
+            line-height: 3;
+          }
 
           .select-card-month{
             width: 80%;
             height: 50px;
             float: left;
             margin-bottom: 10px;
+            -webkit-appearance: none;
+            padding: 5px 10px;
+            position: relative;
+          }
+
+          .pay-chevron-down2{
+            position: absolute;
           }
 
           .select-card-month2{
@@ -126,6 +140,9 @@
             height: 50px;
             float: left;
             margin-bottom: 50px;
+            -webkit-appearance: none;
+            padding: 5px 10px;
+            position: relative;
           }
 
           .select-card-month-say{

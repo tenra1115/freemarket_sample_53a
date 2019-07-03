@@ -76,4 +76,4 @@ gem 'haml-rails'
 gem 'erb2haml'
 gem 'ed25519'
 gem 'bcrypt_pbkdf'
-gem 'font-awesome-rails'
+gem "font-awesome-rails"

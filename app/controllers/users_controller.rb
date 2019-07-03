@@ -17,5 +17,8 @@ class UsersController < ApplicationController
 
   def new5
   end
+
+  def new6
+  end
   
 end

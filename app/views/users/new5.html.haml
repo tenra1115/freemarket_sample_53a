@@ -23,10 +23,10 @@
           .pay-need-this-say
             %p.pay-need-this-say2 必須
         .pay-card-select-box
-          %select.select-card-month 
+          %select#id_month.select-card-month{:name => "year"}
           %p.select-card-month-say 月
         .pay-card-select-box
-          %select.select-card-month2 
+          %select#id_year.select-card-month{:name => "month"}
           %p.select-card-month-say 年
       .pay-card-number
         .pay-card-name

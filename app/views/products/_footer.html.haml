@@ -1,1 +1,111 @@
-
+.footer-content
+  .global-footer
+    .footer-size
+      .footer-cell
+        %h2.footer-title-detail
+          メルカリについて
+        %ul
+          %li.detail-show
+            = link_to"/",class:"detail-show-more" do
+              会社概要（運営会社） 
+          %li.detail-show
+            = link_to"/",class:"detail-show-more" do
+              採用情報
+          %li.detail-show
+            = link_to"/",class:"detail-show-more" do
+              プレスリリース
+          %li.detail-show
+            = link_to"/",class:"detail-show-more" do
+              公式ブログ
+          %li.detail-show
+            = link_to"/",class:"detail-show-more" do
+              メルカリロゴ利用ガイドライン
+          %li.detail-show
+            = link_to"/",class:"detail-show-more" do
+              %i.fa.fa-twitter.fa-3x
+            = link_to"/",class:"detail-show-more" do
+              %i.fa.fa-facebook-official.fa-3x
+      .footer-cell
+        %h2.footer-title-detail
+          ヘルプ＆ガイド
+        %ul
+          %li.detail-show
+            = link_to"/",class:"detail-show-more" do
+              メルカリガイド
+              
+          %li.detail-show
+            = link_to"/",class:"detail-show-more" do
+              らくらくメルカリ便
+          %li.detail-show
+            = link_to"/",class:"detail-show-more" do
+              ゆうゆうメルカリ便
+          %li.detail-show
+            = link_to"/",class:"detail-show-more" do
+              大型メルカリ便
+          %li.detail-show
+            = link_to"/",class:"detail-show-more" do
+              車体取引ガイド
+          %li.detail-show
+            = link_to"/",class:"detail-show-more" do
+              メルカリあんしん・あんぜん宣言！
+          %li.detail-show
+            = link_to"/",class:"detail-show-more" do
+              偽ブランド品撲滅への取り組み
+          %li.detail-show
+            = link_to"/",class:"detail-show-more" do
+              メルカリボックス
+      .footer-cell
+        %h2.footer-title-detail
+          プライバシーと利用規約
+          %ul
+            %li.detail-show
+              = link_to"/",class:"detail-show-more" do
+                プライバシーポリシー
+            %li.detail-show
+              = link_to"/",class:"detail-show-more" do
+                メルカリ利用規約
+            %li.detail-show
+              = link_to"/",class:"detail-show-more" do
+                あんしんスマホサポート制度に関<br>する利用特約
+            %li.detail-show
+              = link_to"/",class:"detail-show-more" do
+                コンプライアンスポリシー
+      .footer-cell
+        %ul.footer-cell-right
+          %li.detail-show
+            = link_to"/",class:"detail-show-more" do
+              個人データの安全管理に係る基本<br>方針
+          %li.detail-show
+            = link_to"/",class:"detail-show-more" do
+              特定商取引に関する表記
+          %li.detail-show
+            = link_to"/",class:"detail-show-more" do
+              資金決済法に基づく表示
+          %li.detail-show
+            = link_to"/",class:"detail-show-more" do
+              法令順守と犯罪抑止のために
+          %li.detail-show
+            = link_to"/",class:"detail-show-more" do
+              返品・返金ポリシー
+      .footer-cell-nation
+        %h2.nations
+          国
+        %ul
+          %li.detail-nation
+            = link_to"/",class:"detail-show-more-nation" do
+              日本
+              
+          %li.detail-nation
+            = link_to"/",class:"detail-show-more-nation" do
+              United States
+      .clear
+    .logo-footer
+      = link_to'/' do
+        = image_tag 'logo-white.svg',size:"124x33",class: "img-footer-logo"
+      %p.mercari-company
+        © 2019 Mercari
+.sell-btn-wrapper
+  = link_to"/",class:'sell-btn' do
+    %p.sell-btn-label
+      出品
+    %i.fa.fa-camera.fa-4x

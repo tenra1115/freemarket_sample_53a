@@ -1,111 +1,122 @@
-.footer-content
-  .global-footer
-    .footer-size
-      .footer-cell
-        %h2.footer-title-detail
-          メルカリについて
-        %ul
-          %li.detail-show
-            = link_to"/",class:"detail-show-more" do
-              会社概要（運営会社） 
-          %li.detail-show
-            = link_to"/",class:"detail-show-more" do
-              採用情報
-          %li.detail-show
-            = link_to"/",class:"detail-show-more" do
-              プレスリリース
-          %li.detail-show
-            = link_to"/",class:"detail-show-more" do
-              公式ブログ
-          %li.detail-show
-            = link_to"/",class:"detail-show-more" do
-              メルカリロゴ利用ガイドライン
-          %li.detail-show
-            = link_to"/",class:"detail-show-more" do
-              %i.fa.fa-twitter.fa-3x
-            = link_to"/",class:"detail-show-more" do
-              %i.fa.fa-facebook-official.fa-3x
-      .footer-cell
-        %h2.footer-title-detail
-          ヘルプ＆ガイド
-        %ul
-          %li.detail-show
-            = link_to"/",class:"detail-show-more" do
-              メルカリガイド
-              
-          %li.detail-show
-            = link_to"/",class:"detail-show-more" do
-              らくらくメルカリ便
-          %li.detail-show
-            = link_to"/",class:"detail-show-more" do
-              ゆうゆうメルカリ便
-          %li.detail-show
-            = link_to"/",class:"detail-show-more" do
-              大型メルカリ便
-          %li.detail-show
-            = link_to"/",class:"detail-show-more" do
-              車体取引ガイド
-          %li.detail-show
-            = link_to"/",class:"detail-show-more" do
-              メルカリあんしん・あんぜん宣言！
-          %li.detail-show
-            = link_to"/",class:"detail-show-more" do
-              偽ブランド品撲滅への取り組み
-          %li.detail-show
-            = link_to"/",class:"detail-show-more" do
-              メルカリボックス
-      .footer-cell
-        %h2.footer-title-detail
-          プライバシーと利用規約
-          %ul
-            %li.detail-show
-              = link_to"/",class:"detail-show-more" do
-                プライバシーポリシー
-            %li.detail-show
-              = link_to"/",class:"detail-show-more" do
-                メルカリ利用規約
-            %li.detail-show
-              = link_to"/",class:"detail-show-more" do
-                あんしんスマホサポート制度に関<br>する利用特約
-            %li.detail-show
-              = link_to"/",class:"detail-show-more" do
-                コンプライアンスポリシー
-      .footer-cell
-        %ul.footer-cell-right
-          %li.detail-show
-            = link_to"/",class:"detail-show-more" do
-              個人データの安全管理に係る基本<br>方針
-          %li.detail-show
-            = link_to"/",class:"detail-show-more" do
-              特定商取引に関する表記
-          %li.detail-show
-            = link_to"/",class:"detail-show-more" do
-              資金決済法に基づく表示
-          %li.detail-show
-            = link_to"/",class:"detail-show-more" do
-              法令順守と犯罪抑止のために
-          %li.detail-show
-            = link_to"/",class:"detail-show-more" do
-              返品・返金ポリシー
-      .footer-cell-nation
-        %h2.nations
-          国
-        %ul
-          %li.detail-nation
-            = link_to"/",class:"detail-show-more-nation" do
-              日本
-              
-          %li.detail-nation
-            = link_to"/",class:"detail-show-more-nation" do
-              United States
-      .clear
-    .logo-footer
-      = link_to'/' do
-        = image_tag 'logo-white.svg',size:"124x33",class: "img-footer-logo"
-      %p.mercari-company
-        © 2019 Mercari
-.sell-btn-wrapper
-  = link_to"/",class:'sell-btn' do
-    %p.sell-btn-label
-      出品
-    %i.fa.fa-camera.fa-4x
+.footer-content{
+  width:100%;
+  background-color:#212121;
+  box-sizing: border-box;
+  height: 400px;
+  .global-footer{
+    width:100%;
+    height: 380px;
+    box-sizing: border-box;
+    padding:0 20px 10px 20px;
+    .footer-size{
+      width:1020px;
+      margin: 0 auto;
+      height:298px;
+      box-sizing: border-box;
+      .footer-cell{
+        padding: 18px 20px 0 0;
+        width: 20%;
+        height:240px;
+        float:left;
+        .footer-title-detail{
+          font-size: 16px;
+          color:white;
+          font-family: sans-serif;
+        }
+        .footer-cell-right{
+          padding-top:25px;
+        }
+          .detail-show{
+            margin-top:7px;
+            .detail-show-more{
+              color:white;
+              text-decoration:none;
+              font-size:12px;
+              opacity: 0.7;
+              line-height:1.5rem;
+              .fa-facebook-official{
+                margin:14px;
+              }
+            } 
+          }
+      } 
+      .footer-cell-nation{
+        padding: 18px 20px 0 0;
+        width:auto;
+        .nations{
+          font-size: 16px;
+          color:white;
+          font-family: sans-serif; 
+        }
+          .detail-nation{
+            margin-top:12px;
+            .detail-show-more-nation{
+              color:white;
+                text-decoration:none;
+                font-size:12px;
+                opacity: 0.7;
+                line-height:1.5rem;
+            }
+          }
+      }
+    }
+      .clear{
+        clear: both;
+      }
+    .logo-footer{
+      width:1020px;
+      margin: 30px auto 20px;
+      box-sizing: border-box;
+      .img-footer-logo{
+        float: left;
+      }
+      .mercari-company{
+        display: inline-block;
+        width:745px;
+        margin-top:8px;
+        display: inline-block;
+        text-align: center;
+        color:white;
+        font-size: 12px;
+      }
+    }  
+  }
+}
+
+
+
+
+
+
+
+
+
+
+.sell-btn-wrapper{
+  position: fixed;
+  bottom:32px; 
+  right:32px;
+  .sell-btn{
+    width:160px;
+    height:160px;
+    background-color: red;
+    border-radius: 50%;
+    color:white;
+    display: block;
+    position: relative;
+    text-decoration:none;
+    .sell-btn-label{
+      position: relative;
+      top:20px;
+      left:57px;
+      font-size:22px;
+    }
+    .fa-camera{
+      position: relative;
+      top:20px;
+      left:45px;
+    }
+  }
+}
+
+

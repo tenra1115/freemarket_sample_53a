@@ -11,6 +11,4 @@ Rails.application.routes.draw do
   get "users/card" => "users#card"
   get "users/privacy" => "users#privacy"
   
-
 end
-

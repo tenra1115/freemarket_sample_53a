@@ -10,5 +10,7 @@ Rails.application.routes.draw do
   get "users/base" => "users#base"
   get "users/card" => "users#card"
   get "users/privacy" => "users#privacy"
+  get "products/profile_edit" => "products#profile_edit"
+
 end
 

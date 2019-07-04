@@ -3,7 +3,7 @@ $(function(){
   var time = new Date();
   var year = time.getFullYear();
   for (var i = year; i >= 1900; i--){
-    var giga = '<option value"' + i + '">' + i + '</option>';
+    var giga = `<option value"' i '">' i '</option>`;
     $('#year').append(giga);
   }
   for (var i = 1; i <= 12; i++){

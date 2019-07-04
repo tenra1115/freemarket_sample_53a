@@ -1,11 +1,6 @@
 Rails.application.routes.draw do
 
-  root "products#index"
-  get 'products/members1'  =>  'products#members1' 
-  get 'products/members5'  =>  'products#members5' 
-  get 'products/members2'  =>  'products#members2'
-  get 'products/members3'  =>  'products#members3'
-  get 'products/members4'  =>  'products#members4'  
+  root "products#index" 
   resources :users, only: [:index]
   resources :products, only: [:index]
   resources :comments, only: [:index]

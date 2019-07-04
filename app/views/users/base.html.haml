@@ -1,0 +1,53 @@
+.confirm-block
+  .confirm-both
+    .confirm-left
+      サイドバー
+    .confirm-right
+      .confirm-say 
+        %h1.say-confirm 本人情報の登録
+      .confirm-box
+        %p.box-confirm  お客さまの本人情報をご登録ください。
+        %p.box-confirm 登録されたお名前・生年月日を変更する場合、本人確認書類の提出が必要になります。
+        = link_to "https://www.mercari.com/jp/help_center/article/495/" do
+          %l.fa.fa-chevron-right.upload2{"aria-hidden" => "true"}
+          %p.upload 本人確認書類のアップロードについて
+        .confirm-name-birthday
+          %label.onamae お名前 
+          .confirm-name
+            %p.name-confirm 勝野 天欄
+          %label.onamae お名前カナ
+          .confirm-name-kana
+            %p.name-confirm カツノ テンラ
+          %label.onamae 生年月日
+          .confirm-birthday
+            %p.name-confirm 2000/11/15
+          .form-group
+            %p.name-confirm 郵便番号
+            %span.form 任意
+          %input{placeholder: "例) 12345678", class: "input-my-place"}
+          .form-group
+            %p.name-confirm 都道府県 
+            %span.form 任意
+          .name-box-name-box
+            %select.name-address-input
+              - @address.each do |address|
+                %option{:value=> ""} 
+                  = address.name
+            = fa_icon "chevron-down", class: "chevron-down-address-select2"
+          .form-group
+            %p.name-confirm 市区町村
+            %span.form 任意
+          %input{placeholder: "例) 横浜市緑区", class: "input-my-place"}
+          .form-group
+            %p.name-confirm 番地
+            %span.form 任意
+          %input{placeholder: "例) 青山1-1-1", class: "input-my-place"}
+          .form-group
+            %p.name-confirm 建物名
+            %span.form 任意
+          %input{placeholder: "例) 柳木ビル103", class: "input-my-place"}
+          .form-send
+            %p.name-confirm 登録する
+          = link_to "https://www.mercari.com/jp/help_center/article/423/", class: "go-to-check-myself" do
+            %p.fa.fa-chevron-right{"aria-hidden" => "true"}
+              本人情報の登録について

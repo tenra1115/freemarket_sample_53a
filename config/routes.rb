@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   resources :addresses, only: [:index]
   get "users/base" => "users#base"
   get "users/card" => "users#card"
+  get "users/privacy" => "users#privacy"
 end

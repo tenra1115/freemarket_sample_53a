@@ -36,9 +36,11 @@
             .address-need-say-box2
               %p.address-need-say2 必須
           .address-user-name-box2
-            %select#id_pref.name-address-input2
-              %option{:value=>""} --
-            = fa_icon "chevron-down"
+            %select.name-address-input2
+              - @address.each do |address|
+                %option{:value=> ""} 
+                  = address.name
+            = fa_icon "chevron-down", class: "chevron-down-address-select"
         .address-user-name2
           .address-user-name-box-small2
             %p.address-name-name2 市区町村
@@ -81,7 +83,3 @@
       = link_to "#", class:"link-to-address" do
         = image_tag "logo-mercari3.svg", class: "link-to-address-image"
     %p.back-to-mercari-messe-address © 2019 Mercari
-        
-
-
-

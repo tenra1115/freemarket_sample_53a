@@ -23,7 +23,7 @@ $(function() {
         opt += "<option value='" + i + "'>" + i + "</option>";
       }
     }
-    return document.getElementById(id).innerHTML = opt;
+    // return document.getElementById(id).innerHTML = opt;
   };
 
   /*

@@ -1,24 +1,26 @@
 class UsersController < ApplicationController
 
-  def index
+  def select
   end
 
-  def new
+  def base
+    @address = Prefecture.all
   end
 
-  def new2
+  def privacy
   end
 
-  def new3
+  def call
   end
 
-  def new4
+  def address
+    @address = Prefecture.all
   end
 
-  def new5
+  def card
   end
 
-  def new6
+  def finish
   end
   
 end

@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   get "users/base" => "users#base"
   get "users/card" => "users#card"
   get "users/privacy" => "users#privacy"
+  
 end

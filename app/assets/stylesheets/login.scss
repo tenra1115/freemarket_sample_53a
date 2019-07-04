@@ -1,0 +1,215 @@
+.login-body{
+  background: #f5f5f5;
+  height: 1200px;
+
+  .login-body-image{
+    width: 13%;
+    margin: auto;
+
+    .login-body-image-image{
+      width: 100%;
+      padding-top: 60px;
+    }
+  }
+
+  .login-note{
+    width: 30%;
+    margin: auto;
+    background: white;
+    height: 750px;
+
+    .login-new-make-box{
+      width: 100%;
+      margin: auto;
+      height: 140px;
+      border-bottom: 2px solid #f5f5f5;
+
+      .login-new-make-box-say{
+        text-align: center;
+        padding-top: 30px;
+        font-size: 15px;
+      }
+
+      .box-new-box{
+        width: 70%;
+        margin: auto;
+
+        .login-new-make-box-say-new{
+          border: 1px solid #0099e8;
+          background: #0099e8;
+          width: 100%;
+          height: 40px;
+          margin: auto;
+
+          .make-box-say-new{
+            text-align: center;
+            color: white;
+            cursor: pointer;
+            font-size: 15px;
+          }
+        }
+      }
+    }
+
+    .login-new-make-box2{
+      width: 100%;
+      height: 600px;
+      
+
+      .login-face-go{
+        width: 80%;
+        height: 170px;
+        margin: 10px auto;
+        padding-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        
+
+        .login-face-go-both{
+          width: 80%;
+          height: 60px;
+          background: #385185;
+          margin: auto;
+          display: flex;
+          justify-content: flex-start;
+          cursor: pointer;
+
+          .login-facebook{
+            line-height: 2;
+            padding-left: 15px;
+            font-size: 28px;
+            color: white;
+          }
+
+          .face-say{
+            width: 60%;
+            margin: auto;
+            line-height: 3.5;
+            font-size: 15px;
+            color: white;
+            
+          }
+        }
+
+        .login-face-go-both2{
+          width: 80%;
+          height: 60px;
+          background: white;
+          margin: auto;
+          display: flex;
+          justify-content: flex-start;
+          border: #979797 solid 1px;
+          cursor: pointer;
+
+          .login-face-go-both2-image{
+            padding: 9px;
+          }
+
+          .face-say2{
+            line-height: 58px;
+            margin-left: 10px;
+            font-size: 15px;
+          }
+        }
+      }
+
+      .login-face-go2{
+        width: 80%;
+        height: 150px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+
+        .write-email-password{
+          width: 80%;
+          height: 49px;
+          background: white;
+          margin: 10px auto;
+          display: flex;
+          justify-content: flex-start;
+          border-radius: 4px;
+          border: 1px solid #979797;
+          font-size: 20px;
+          padding: 5px 15px;
+          box-sizing: border-box;
+        }
+      }
+
+      .check-check-robot{
+        width: 65%;
+        margin: auto;
+
+        .image-robot{
+          width: 90%;
+        }
+      }
+
+      .login-send-box{
+        width: 65%;
+        margin: 20px auto;
+        height: 48px;
+        margin-top: 30px;
+
+        .login-send-box-red{
+          width: 100%;
+          height: 100%;
+          margin: auto;
+          background: red;
+          text-align: center;
+          color: white;
+          line-height: 3;
+          cursor: pointer;
+        }
+      }
+
+      .forget-password{
+        width: 65%;
+        margin: auto;
+        font-size: 14px;
+        color: #0099e8;
+
+        &:hover{
+          opacity: 0.6;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .policy{
+      margin-top: 90px;
+      display: flex;
+      justify-content: space-around;
+
+      .register-policy{
+        font-size: 12px;
+        text-decoration: none;
+        color: #444444;
+
+        &:hover{
+          cursor: pointer;
+          color: #666666;
+        }
+      }
+    }
+
+    .back-to-mercari{
+      width: 17%;
+      margin: 0 auto;
+      margin-top: 30px;
+
+      img{
+        color: #999999;
+
+        &:hover{
+          color: #BBBBBB;
+        }
+      }
+    }
+
+    .back-to-mercari-messe{
+      font-size: 13px;
+      text-align: center;
+    }
+  }
+}

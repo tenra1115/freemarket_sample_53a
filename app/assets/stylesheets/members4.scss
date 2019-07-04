@@ -1,45 +1,46 @@
 .flame {
+	height: 2000px;
  	width: 100%;
-	background-color:rgb(245,245,245);
+	background-color:#F5F5F5;
 	padding-top: 30px;
-	height:1200px;
+
 
 	.logout-wrapper{
-			height: 1250px;
-			width: 1020px;
-			margin: 0 auto;
-			.box_main {
-				height: 180px;
-				width: 700px;
-				background-color: white;
-				margin: auto;
+		width: 1020px;
+		margin: 0 auto;
+		.box_main {
+			height: 180px;
+			width: 700px;
+			background-color: white;
+			margin: auto;
+			display: flex;
+			justify-content:center;
+			display: flex;
+			align-items:center;
+			float: right;
+
+			&__sub {
+				height: 49px;
+				width: 280px;
+				background-color: #EA352D;
+				color: white;
+				font-size: 14px;
 				display: flex;
 				justify-content:center;
 				display: flex;
 				align-items:center;
-				float: right;
+			}
 
-				&__sub {
-					height: 49px;
-					width: 280px;
-					background-color: #EA352D;
-					color: white;
-					font-size: 14px;
-					display: flex;
-					justify-content:center;
-					display: flex;
-					align-items:center;
-				}
-
-			}	
-		
+		}	
+	
 		.lists{
 			float: left;
+			width:280px;
 				.box_list {
 				height: 48px;
 				width: 260px;
 				background-color: white;
-				border-bottom: 1px solid  rgb(245,245,245); 
+				border-bottom: 1px solid #F5F5F5; 
 				padding-left:20px;
 				
 				&__sub {
@@ -65,7 +66,7 @@
 						font-weight: bold;
 					}
 				}
-
-		}	
+			}	
+		}
 	}
-}
+

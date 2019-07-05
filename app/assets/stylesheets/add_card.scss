@@ -1,0 +1,55 @@
+.add_card-right{
+  background: white;
+  width: 60%;
+  height: 300px;
+
+  .card-left{
+    height: 50px;
+    text-align: center;
+    line-height: 2;
+    border-bottom: 1px solid #ccc;
+    font-size: 24px;
+  }
+
+  .card-left-middle{
+    padding-top: 50px;
+
+    .card-button-box{
+      width: 100%;
+      margin: auto;
+
+      .card-show-all{
+        width: 50%;
+        margin: auto;
+      }
+
+      .button-to-add-card{
+        margin: auto;
+        width: 50%;
+        position: relative;
+
+        .card-red-box{
+          width: 100%;
+          margin: auto;
+          height: 48px;
+          font-size: 14px;
+          margin-top: 20px;
+          background: red;
+          color: white;
+
+          &:hover{
+            cursor: pointer;
+            opacity: 0.6;
+          }
+        }
+
+        .card-credit-card{
+          position: absolute;
+          top: 35px;
+          left: 35px;
+          color: white;
+        }
+      }
+    }
+  }
+}

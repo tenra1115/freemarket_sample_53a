@@ -16,6 +16,8 @@ Rails.application.routes.draw do
   get "users/call" => "users#call"
   get "users/address" => "users#address"
   get "users/login" => "users#login"
+  get "users/add_card" => "users#add_card"
+  get "users/create_card" => "users#create_card"
   get "products/buy" => "products#buy"
   get "products/registration" => "products#registration"
   get "products/logout" => "products#logout"

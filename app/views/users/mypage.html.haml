@@ -1,9 +1,48 @@
 = render "layouts/header"
 .my-page-yo
   .mypage-both
-    .mypage-left
+    = render "layouts/sidebar"
     .mypage-right
       .mypage-right-box-top
-        = image_tag "スクリーンショット 2019-07-04 16.17.54.png", class: "mypage-right-box-top-image"
-        .mypage-right-box-top-image
+        = image_tag "user-bg.jpg", class: "mypage-right-box-top-image"
       .mypage-right-box-bottom
+        .mypage-right-top-box
+          %p.mypage-right-top-box-doing お知らせ
+          %p.mypage-right-top-box-doing やることリスト
+        .mypage-right-middle-box
+          .news-box
+            .image-mypage
+              = image_tag "スクリーンショット 2019-07-05 10.46.12.png", class: "image-mypage-image"
+            .include-some-in-box
+              %p.say-for-random 事務局からの個別メッセージ 『 ログイン通知』
+              = fa_icon "clock-o", class: "clock-o-mypage"
+              %p.say-arrive-thing 22分前
+            = fa_icon "chevron-right", class: "chevron-right-mypage"
+          .news-box
+            .image-mypage
+              = image_tag "スクリーンショット 2019-07-05 10.46.12.png", class: "image-mypage-image"
+            .include-some-in-box
+              %p.say-for-random 事務局からの個別メッセージ 『 ログイン通知』
+              = fa_icon "clock-o", class: "clock-o-mypage"
+              %p.say-arrive-thing 22分前
+            = fa_icon "chevron-right", class: "chevron-right-mypage"
+          .news-box
+            .image-mypage
+              = image_tag "スクリーンショット 2019-07-05 10.46.12.png", class: "image-mypage-image"
+            .include-some-in-box
+              %p.say-for-random 事務局からの個別メッセージ 『 ログイン通知』
+              = fa_icon "clock-o", class: "clock-o-mypage"
+              %p.say-arrive-thing 22分前
+            = fa_icon "chevron-right", class: "chevron-right-mypage"
+          .new-box-show-all
+            %p.show-all-box-say 一覧を見る
+        .mypage-right-bottom-box
+          %p.mypage-bottom-top 購入した商品
+          .mypage-bottom-bottom-top
+            %p.which-both 取引中の商品 
+            %p.which-both  取引済の商品 
+          .mypage-say-attention-image
+            = image_tag "logo-mercari2.svg", class: "show-space"
+          %p.say-not-products-here 取引中の商品がありません
+= render "layouts/footer"
+    

@@ -6,7 +6,7 @@ class ProductsController < ApplicationController
   def buy
   end
 
-  def registration
+  def products_registration
   end
 
   def logout

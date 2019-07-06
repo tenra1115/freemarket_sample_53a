@@ -1,19 +1,119 @@
 %body
-  .flame
+  .flame_box
     .content_box__wrapper
+      .content_box__mercari-icon
+        %a{href:"/",class:"buy-icon-a"}
+          =image_tag "logo.svg",size:"185x49",class:'buy-logo-img'
+      
       %section.content_box
-        %h2.content_box__logo
+        %h2.header_logo
           商品の情報を入力
-        .content_upload__main
-          .content_upload__main2
-            %h3.content_upload__logo
-              出品画像
-              %span.icon
+        
+        .content_upload
+          %h3.content_upload__logo 
+            出品画像
+            %span.header_icon__logo
+              必須	
+          %p.content_upload__logo--sub
+            最大10枚までアップロードできます
+          %h3.content_upload__logo--sub--item
+            ドラッグアンドドロップ
+            %br
+            またはクリックしてファイルをアップロード
+          
+        .product_name
+          %h4.product_name__item
+            商品名
+            %span.icon__logo
+              必須	
+          %input.product_name__contents{:placeholder => "商品名（必須 40文字まで)", :value => ""}/
+          %h4.product_name__item--sub
+            商品の説明
+            %span.icon__logo
+              必須
+          %textarea.product_name__contents--sub{:placeholder => "商品の説明名（必須 1,000文字以内) (色、素材、重さ、定価、注意点など）例)2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。", :value => ""}	
+          
+        .product_Details
+          %h4.product_Details__item
+            商品の詳細
+          .product_Details__main
+            %h4.product_Details__item--sub
+              カテゴリー
+              %span.icon__logo
+                必須
+        
+            %select.product_Details__contents
+          
+            %h4.product_Details__item--sub
+              商品の状態
+             
+              %span.icon__logo
                 必須	
-            %p.content_upload__logo2
-              最大10枚までアップロードできます
-            %h3.content_upload__item__logo
-              ドラッグアンドドロップ
-              %br
-              またはクリックしてファイルをアップロード
+            %select.product_Details__contents
+          
+        .delivery_box
+          %h4.delivery_box__item
+            配送について
+            = fa_icon "question-circle", id: "delivery_question"
+          .delivery_box__main
+            %h4.delivery_box__item--sub
+              配送料の負担
+              
+              %span.icon__logo
+                必須	
+            %select.delivery_box__contents
+            %h4.delivery_box__item--sub
+              発送元の地域
+              
+              %span.icon__logo
+                必須	
+            %select.delivery_box__contents
+            %h4.delivery_box__item--sub
+              発送までの日数
+              
+              %span.icon__logo
+                必須	
+            %select.delivery_box__contents
+        
+        .selling_price
+          %h4.selling_price__item
+            販売価格(300〜9,999,999)
+            = fa_icon "question-circle", id: "selling_question"
+          .selling_price__price
+            %h4.selling_price__price--sub
+              価格
+              %span.icon__logo 必須
+              %h4.selling_price__item--enn 
+                ¥
+                %select.selling_price__contents--sub
             
+            .selling_price__item--fee 
+              %h4.selling_price__item--fee--sub
+                販売手数料 (10%)
+            .selling_price__profit
+              %h4.selling_price__profit--sub
+                販売利益
+                
+
+        .sell_btn_box
+          .sell_btn_box__text
+            %p 
+              %span 禁止されている出品
+              、
+              %span 行為
+              を必ずご確認ください。
+              %br
+              またブランド品でシリアルナンバー等がある場合はご記載ください。
+              %span 偽ブランドの販売
+              は犯罪で
+              %br
+              あり処罰される可能性があります。また、出品をもちまして
+              %span 加盟店規約
+              に同意したことになります。
+
+          .exhibition_box
+            .exhibition_box__btn
+              出品する
+        
+            .exhibition_box__btn--return
+              もどる

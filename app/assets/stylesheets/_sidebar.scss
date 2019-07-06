@@ -1,5 +1,4 @@
 .lists{
-    height: 1500px;
     width: 600px;
     background-color:rgb(245,245,245);
     .box_list {
@@ -15,7 +14,7 @@
       padding: 10px 0 0 10px;
       
     }
-    i{
+    i {
       z-index: 3px;
       color: #CCCCCC; 
       float: right;
@@ -27,7 +26,7 @@
     .nav {
       margin: 30px 0 10px 0;
 
-      h3{
+      &__sub {
         font-size: 16px;
         font-weight: bold;
       }

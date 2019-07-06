@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   resources :cards, only: [:index]
   resources :addresses, only: [:index]
   get "users/base" => "users#base"
-  get "users/card" => "users#card"
+  get "users/_card" => "users#_card"
   get "users/privacy" => "users#privacy"
   get "users/mypage" => "users#mypage"
   get "users/finish" => "users#finish"

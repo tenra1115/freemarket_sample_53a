@@ -4,11 +4,10 @@
       .content_box__mercari-icon
         %a{href:"/",class:"buy-icon-a"}
           =image_tag "logo.svg",size:"185x49",class:'buy-logo-img'
-      
+
       %section.content_box
         %h2.header_logo
           商品の情報を入力
-        
         .content_upload
           %h3.content_upload__logo 
             出品画像
@@ -20,7 +19,6 @@
             ドラッグアンドドロップ
             %br
             またはクリックしてファイルをアップロード
-          
         .product_name
           %h4.product_name__item
             商品名
@@ -31,8 +29,7 @@
             商品の説明
             %span.icon__logo
               必須
-          %textarea.product_name__contents--sub{:placeholder => "商品の説明名（必須 1,000文字以内) (色、素材、重さ、定価、注意点など）例)2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。", :value => ""}	
-          
+          %textarea.product_name__contents--sub{:placeholder => "商品の説明名（必須 1,000文字以内) (色、素材、重さ、定価、注意点など）例)2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。", :value => ""}	          
         .product_Details
           %h4.product_Details__item
             商品の詳細
@@ -43,14 +40,12 @@
                 必須        
             %select.product_Details__contents
             = fa_icon "angle-down", id: "Details_angle-down"
-
             %h4.product_Details__item--sub
               商品の状態            
               %span.icon__logo
                 必須
             %select.product_Details__contents
             = fa_icon "angle-down", id: "Details_angle-down2"
-
         .delivery_box
           %h4.delivery_box__item
             配送について
@@ -58,29 +53,23 @@
           .delivery_box__main
             %h4.delivery_box__item--sub
               配送料の負担
-              
               %span.icon__logo
                 必須	
             %select.delivery_box__contents
             = fa_icon "angle-down", id: "delivery_box_angle-down"
-
             %h4.delivery_box__item--sub
               発送元の地域
-              
               %span.icon__logo
                 必須
-        
             %select.delivery_box__contents
             = fa_icon "angle-down", id: "delivery_box_angle-down2"
-
             %h4.delivery_box__item--sub
               発送までの日数
-              
               %span.icon__logo
                 必須	
             %select.delivery_box__contents
             = fa_icon "angle-down", id: "delivery_box_angle-down3"
-        
+
         .selling_price
           %h4.selling_price__item
             販売価格(300〜9,999,999)
@@ -100,7 +89,6 @@
             .selling_price__profit
               %h4.selling_price__profit--sub
                 販売利益
-                
 
         .sell_btn_box
           .sell_btn_box__text
@@ -121,11 +109,8 @@
           .exhibition_box
             .exhibition_box__btn
               出品する
-        
             .exhibition_box__btn--return
               もどる
-
-
         .content_bottom
           %ul.content_bottom__list
             = link_to "https://www.mercari.com/jp/privacy/", class: "list_privacy" do
@@ -138,9 +123,3 @@
             = link_to("https://www.mercari.com/jp/") do
               = image_tag "logo-mercari3.svg", class:"back-image-mercari"
             %p.back-image-mercari__message © 2019 Mercari
-
-
-       
-
-         
-      

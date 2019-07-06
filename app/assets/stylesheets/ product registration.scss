@@ -1,24 +1,21 @@
-.flame_box {
+.flame_box  {
   height: 3000px;
   width: 100%;
   background-color: #F5F5F5;
-  
+
   .content_box__wrapper {
     width: 100%;
     padding-top: 100px;
-
     .content_box {
-      height: 2007px;   
+      height: 2007px;
       width: 700px;
       background-color: white;
       margin: auto;
-      
       &__mercari-icon {
         display: flex;
         justify-content:center;
-        padding-bottom: 40px;      
+        padding-bottom: 40px;
       }
-     
       .header_logo {
         height: 96px;
         width: 700px;
@@ -29,21 +26,18 @@
         display: flex;
         align-items:center;
         display: flex;
-        justify-content:center;      
+        justify-content:center;
       }
-      
       .content_upload {
         height: 302px;
         width: 700px;
         border-bottom: 1px solid #EEEEEE;
-        
           &__logo {
             margin:40px 0 8px 0; 
             font-size: 16px;
             font-weight: bold;
             padding: 0 0 0 40px;
-          }   
-
+          }
             .header_icon__logo {
               height: 50px;
               width: 50px;
@@ -52,9 +46,8 @@
               color: white;
               size: 10px;
               padding: 3px;
-              margin: 0 0 0 8px;      
+              margin: 0 0 0 8px;
             }
-
           &__logo--sub {
             margin-bottom: 16px; 
             font-size: 16px;
@@ -83,14 +76,12 @@
         height: 352px;
         width: 700px;
         border-bottom: 1px solid #EEEEEE;
-        
           &__item {
             color: #333;
             font-size: 14px;
             font-weight: bold;
             padding: 30px 0 0 40px;
           }
-
             .icon__logo {
               height: 30px;
               width: 40px;
@@ -101,7 +92,6 @@
               padding: 3px;
               margin: 0 0 0 8px;
             }
-      
           &__item--sub {
             color: #333;
             font-size: 14px;
@@ -120,10 +110,9 @@
             width: 620px;
             margin: 10px 0 0 30px;
             border-radius: 0.2em;
-            padding: 10px 0 0 10px;                  
+            padding: 10px 0 0 10px;
           }
       }
-      
       .product_Details {
         height: 260px;
         width: 700px;
@@ -148,14 +137,12 @@
               position: relative;
               
             }   
-
               &__item--sub {
                 color: #333;
                 font-size: 14px;
                 font-weight: bold;
                 padding: 30px 0 10px 0;
               }
-
               .icon__logo {
                 height: 30px;
                 width: 40px;
@@ -165,33 +152,27 @@
                 size: 10px;
                 padding: 2px;
                 margin: 0 0 0 8px;
-              }
-              
+              }              
               &__contents {
                 height: 48px;
                 width: 400px;
                 border-radius: 0.2em;
                 margin-bottom: 10px;
-                -webkit-appearance: none;                                           
-              }
-              
+                -webkit-appearance: none;
+              }              
               #Details_angle-down {
                 position: absolute;
                 right: 10px; 
                 top: 30%;
                 font-size: 24px;
-              
               }
               #Details_angle-down2 {
                 position: absolute;
                 right: 10px; 
                 top: 77%;
                 font-size: 24px;
-              
               }
-               
       }
-
       .delivery_box {
         height: 369px;
         width: 700px;
@@ -199,7 +180,6 @@
         display: flex;
         justify-content:flex-end;
         
-
         &__item {
           color: #888888;
           font-size: 14px;
@@ -209,7 +189,6 @@
           i {
             color: #00A9F3;
           }
-
         }
           &__main {
             height: 261px;
@@ -224,7 +203,6 @@
               font-weight: bold;
               padding: 25px 0 10px 0;
             }
-
               .icon__logo {
                 height: 30px;
                 width: 40px;
@@ -240,7 +218,7 @@
               width: 400px;
               border-radius: 0.2em;
               margin-bottom: 10px; 
-              -webkit-appearance: none;             
+              -webkit-appearance: none;
             }
             #delivery_box_angle-down {
               position: absolute;
@@ -254,27 +232,21 @@
               top: 70%;
               font-size: 24px;
             }
-            
             #delivery_box_angle-down3 {
               position: absolute;
               right: 10px; 
               top: 114%;
               font-size: 24px;
             }
-            
-
-           
               .delivery_question{
                 color: #00A9F3;
               }
-
       }
       .selling_price {
         height: 298px;
         width: 700px;
         border-bottom: 1px solid #EEEEEE;
       
-
         &__item {
           height: 51px;
           width: 700px;
@@ -282,7 +254,6 @@
           font-size: 14px;
           font-weight: bold;
           padding: 30px 100px 0 30px;
-         
           
           i {
             color: #00A9F3;
@@ -299,14 +270,13 @@
             font-size: 14px;
             font-weight: bold;
             padding: 10px 0 0 300px;
-            margin-top: -50px;              
+            margin-top: -50px;
           }
-
             &__item--enn{
               height: 48px;
               width: 200px;
               background-color:white;
-              margin: -10px 0 20px 495px;         
+              margin: -10px 0 20px 495px;
             }  
               &__contents--sub {
                 height: 48px;
@@ -320,8 +290,6 @@
                 top: 57%;
                 font-size: 24px;
               }
-           
-
 
           .selling_price__item--fee {
             height: 62px;
@@ -343,16 +311,13 @@
             background-color:white;
             margin: 0 0 0 300px;
             line-height: 62px;
-            
-            
-
+                     
             .selling_price__profit--sub {
               color: #333;
               font-size: 16px;
               font-weight: bold;
             }
           }
-              
             .icon__logo {
               height: 30px;
               width: 40px;
@@ -363,15 +328,13 @@
               padding: 2px;
               margin: 0 0 0 8px;
             }
-      }    
-              
+      }
       .sell_btn_box {
         height: 327px;
         width: 700px;
         border-bottom: 1px solid #EEEEEE;
         background-color: white;
-        
-        
+  
         &__text{
           height: 83px;
           width: 620px;
@@ -380,8 +343,7 @@
           font-size: 14px;
           margin: auto;
           margin-top: 40px; 
-          
-          
+
           span {
            color: #00A9F3;
           }
@@ -391,8 +353,7 @@
           width: 620px;
           background-color: white;
           margin: auto;
-          margin-top:50px; 
-         
+          margin-top:50px;
           &__btn {
             height: 50px;
             width: 620px;
@@ -400,8 +361,7 @@
             text-align: center;
             color:white;
             line-height: 50px;
-          }
-          
+          }          
           &__btn--return{
             height: 50px;
             width: 278px;
@@ -411,10 +371,8 @@
             color: white;
             margin: auto;
             margin: 50px 0 0 175px;
-
           }
         }
-        
       }
         .content_bottom {
           height: 220px;
@@ -422,42 +380,36 @@
           background-color:  #F5F5F5;
           padding-top: 50px;
           margin: auto;
-          
+
           &__list {
             display: flex;
-            justify-content: space-between ;
+            justify-content: space-between;
             
             .list_privacy {
               font-size: 13px;
               text-decoration: none;
-            }
-            
+            }           
             .list__terms {
               font-size: 13px;
               text-decoration: none;
-            }
-            
+            }            
             .list_notation {
               font-size: 13px;
               text-decoration: none; 
             }
           }
-        
           .back-image-mercari {
             width: 45%;
             margin: auto;
             margin-top: 20px;
             text-align: center;
-           
-            
+
             &__message {
               font-size: 13px;
               text-align: center;
-            }        
-            
+            }
           }
-          
-        } 
+      } 
     
   }  
 }

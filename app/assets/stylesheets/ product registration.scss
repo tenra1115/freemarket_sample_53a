@@ -141,10 +141,12 @@
         }
         
             &__main {
-              height: 179px;
+              height: 250px;
               width: 400px;
               background-color: white;
               margin:0 30px 0 0;
+              position: relative;
+              
             }   
 
               &__item--sub {
@@ -170,9 +172,24 @@
                 width: 400px;
                 border-radius: 0.2em;
                 margin-bottom: 10px;
+                -webkit-appearance: none;                                           
               }
               
-          
+              #Details_angle-down {
+                position: absolute;
+                right: 10px; 
+                top: 30%;
+                font-size: 24px;
+              
+              }
+              #Details_angle-down2 {
+                position: absolute;
+                right: 10px; 
+                top: 77%;
+                font-size: 24px;
+              
+              }
+               
       }
 
       .delivery_box {
@@ -195,10 +212,11 @@
 
         }
           &__main {
-            height: 179px;
+            height: 261px;
             width: 400px;
             background-color: white;
             margin:0 30px 0 0;
+            position: relative;
           }   
             &__item--sub {
               color: #333;
@@ -221,8 +239,31 @@
               height: 48px;
               width: 400px;
               border-radius: 0.2em;
-              margin-bottom: 10px;              
+              margin-bottom: 10px; 
+              -webkit-appearance: none;             
             }
+            #delivery_box_angle-down {
+              position: absolute;
+              right: 10px; 
+              top: 27%;
+              font-size: 24px;
+            }
+            #delivery_box_angle-down2 {
+              position: absolute;
+              right: 10px; 
+              top: 70%;
+              font-size: 24px;
+            }
+            
+            #delivery_box_angle-down3 {
+              position: absolute;
+              right: 10px; 
+              top: 114%;
+              font-size: 24px;
+            }
+            
+
+           
               .delivery_question{
                 color: #00A9F3;
               }
@@ -241,6 +282,7 @@
           font-size: 14px;
           font-weight: bold;
           padding: 30px 100px 0 30px;
+         
           
           i {
             color: #00A9F3;
@@ -249,6 +291,7 @@
         &__price {
           height: 61px;
           background-color:white;
+          position: relative;
                        
         }
           &__price--sub {
@@ -269,7 +312,15 @@
                 height: 48px;
                 width: 160px;
                 border-radius: 0.2em;
+                -webkit-appearance: none;
               }
+              #selling_price_angle-down {
+                position: absolute;
+                right: 40px; 
+                top: 57%;
+                font-size: 24px;
+              }
+           
 
 
           .selling_price__item--fee {

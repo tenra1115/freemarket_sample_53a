@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_03_121252) do
+ActiveRecord::Schema.define(version: 2019_07_07_092516) do
 
   create_table "address_places", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "prefecture_id"
@@ -40,6 +40,21 @@ ActiveRecord::Schema.define(version: 2019_07_03_121252) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "category_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "name"
+  end
+
+  create_table "category_trees", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "category_tree_id"
+    t.integer "ancester_category_id"
+    t.integer "descendent_category_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "text"
     t.integer "user_id", null: false
@@ -62,13 +77,13 @@ ActiveRecord::Schema.define(version: 2019_07_03_121252) do
     t.integer "charge", null: false
     t.date "buyday"
     t.integer "status", null: false
-    t.integer "category"
-    t.integer "user_id", null: false
     t.string "text", null: false
     t.integer "place", null: false
     t.integer "limit", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "buyer_id"
+    t.integer "saler_id"
     t.index ["name"], name: "index_products_on_name"
   end
 

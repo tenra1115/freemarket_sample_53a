@@ -1,0 +1,2 @@
+class CategoryTree < ApplicationRecord
+end

@@ -12,7 +12,8 @@
         %input.call-name{placeholder: "携帯電話の番号を入力"}
         %p.call-messe 本人確認の為、携帯電話のSMS(ショートメッセージサービス)を利用して認証を行います。
         .sms
-          %h1.sms-code SMSを送信する
+          = link_to "/users/address", class: "sms-code" do
+            SMSを送信する
           %p.attention-call ※電話番号は本人確認や不正防止のために利用します。他のユーザーに公開されることはありません。
           = link_to("https://www.mercari.com/jp/help_center/article/423/") do
             = fa_icon "chevron-right", id: "attention-call-right"

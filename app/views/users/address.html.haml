@@ -71,7 +71,8 @@
             %input.name-address-input2{placeholder: "例) 09012345678"}
         .address-send-box
           %button.address-send-button
-            %p.address-send-button-say 次へ進む
+            = link_to "/users/_card", class: "address-send-button-say" do
+              次へ進む
     %ul.policy-address
       = link_to "", class: "address-privacy" do
         プライバシーポリシー

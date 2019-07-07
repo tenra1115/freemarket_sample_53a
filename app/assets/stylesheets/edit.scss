@@ -1,9 +1,10 @@
-.flame {
+.flame_profile_edit {
 	width: 100%;
 	background-color:#F5F5F5;
-	padding-top: 30px;
+	padding-top: 40px;
 	
 	.profile_box__wrapper {
+		height: 1300px;
 		width: 1020px;
 		margin: 0 auto;
 		
@@ -51,6 +52,7 @@
 					background-color:white;
 					margin: 40px 0 0 20px;
 					border-style: none;
+					padding: 0 0 0 10px;
 				}
 			}
 			
@@ -63,6 +65,7 @@
 				.profile_box__textara2 {
 					height: 215px;
 					width: 668px;
+					padding: 0 0 0 10px;
 				}
 			}
 			

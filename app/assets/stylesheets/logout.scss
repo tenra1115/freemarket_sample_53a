@@ -1,13 +1,14 @@
-.flame {
-  height: 2000px;
-   width: 100%;
+.flame_logout {
+  height: 1400px;
+  width: 100%;
   background-color:#F5F5F5;
-  padding-top: 30px;
 
-
-  .logout-wrapper{
+  .logout-wrapper {
+    height:  1250px;
     width: 1020px;
     margin: 0 auto;
+    padding-top: 45px;
+
     .box_main {
       height: 180px;
       width: 700px;
@@ -39,4 +40,3 @@
     }	  
   }
 }
-

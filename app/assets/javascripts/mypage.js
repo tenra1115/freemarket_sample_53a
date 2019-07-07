@@ -1,22 +1,23 @@
 $(function() {
   $('#practice').on('click', function(){
     $('.news-box2').hide();
-    $('.news-box').show();
+    $('.news-box').show('.news-box');
     return false;
   })
 
   $('#play').on('click', function(){
     $('.news-box').hide();
-    $('.news-box2').show();
+    $('.news-box2').show('.news-box2');
   })
 
+
   $('.delete').on('click', function(){
-    const hu = $(this).parent().hide();
-    $('.bitcoin').show();
+    $(this).parent().hide();
+    $('.bitcoin').show('.bitcoin');
   
 
     $('.bitcoin').on('click', function(){
-      $(hu).show('.news-box2');
+      $('.news-box2').show('.news-box2');
       $('.bitcoin').hide();
     })
   })

@@ -70,7 +70,7 @@
     %h3.nav__sub
       設定 
   .box_list
-    = link_to "/users/:id/edit", class: "box_list__sub" do
+    = link_to edit_user_path(current_user), class: "box_list__sub" do
       プロフィール
     = fa_icon "chevron-right", class: "chevron-right-sidebar"
   .box_list

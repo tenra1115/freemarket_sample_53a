@@ -8,16 +8,19 @@ Rails.application.routes.draw do
   resources :cards, only: [:index]
   resources :addresses, only: [:index]
   get "users/base" => "users#base"
-  get "users/card" => "users#card"
+  get "users/_card" => "users#_card"
   get "users/privacy" => "users#privacy"
+  get "users/mypage" => "users#mypage"
   get "users/finish" => "users#finish"
   get "users/select" => "users#select"
   get "users/call" => "users#call"
   get "users/address" => "users#address"
+  get "users/login" => "users#login"
+  get "users/add_card" => "users#add_card"
+  get "users/create_card" => "users#create_card"
   get "products/buy" => "products#buy"
   get "products/registration" => "products#registration"
   get "products/logout" => "products#logout"
   get "products/profile_edit" => "products#profile_edit"
   get "products/show" => "products#show"
-  
 end

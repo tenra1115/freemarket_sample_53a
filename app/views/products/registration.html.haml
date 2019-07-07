@@ -2,8 +2,8 @@
   .flame_box
     .content_box__wrapper
       .content_box__mercari-icon
-        %a{href:"/",class:"buy-icon-a"}
-          =image_tag "logo.svg",size:"185x49",class:'buy-logo-img'
+        =link_to("https://www.mercari.com/jp/") do
+          =image_tag "logo.svg",size:"185x49",class:'content_box__mercari-icon'
 
       %section.content_box
         %h2.header_logo

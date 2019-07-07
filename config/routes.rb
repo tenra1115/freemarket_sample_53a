@@ -18,6 +18,6 @@ Rails.application.routes.draw do
   get "products/registration" => "products#registration"
   get "products/logout" => "products#logout"
   get "products/profile_edit" => "products#profile_edit"
+ 
 
-  
 end

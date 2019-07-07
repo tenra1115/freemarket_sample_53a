@@ -70,7 +70,7 @@
     %h3.nav__sub
       設定 
   .box_list
-    = link_to edit_user_path(current_user), class: "box_list__sub" do
+    = link_to "/users/:id/edit", class: "box_list__sub" do
       プロフィール
     = fa_icon "chevron-right", class: "chevron-right-sidebar"
   .box_list
@@ -78,16 +78,16 @@
     発送元・お届け先住所変更
     = fa_icon "chevron-right", class: "chevron-right-sidebar"
   .box_list
-    .box_list__sub
-    支払い方法
+    = link_to "/users/add_card", class: "box_list__sub" do
+      支払い方法
     = fa_icon "chevron-right", class: "chevron-right-sidebar"
   .box_list
     .box_list__sub
     メール/パスワード
     = fa_icon "chevron-right", class: "chevron-right-sidebar"
   .box_list
-    .box_list__sub
-    本人情報
+    = link_to "/users/base", class: "box_list__sub" do
+      本人情報
     = fa_icon "chevron-right", class: "chevron-right-sidebar"
   .box_list
     .box_list__sub
@@ -95,6 +95,6 @@
     = fa_icon "chevron-right", class: "chevron-right-sidebar"
   .box_list
     .box_list__sub
-    = link_to "/products/logout", class: "box_list__sub" do
+    = link_to "/users/logout", class: "box_list__sub" do
       ログアウト
     = fa_icon "chevron-right", class: "chevron-right-sidebar"

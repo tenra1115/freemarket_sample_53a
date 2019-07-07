@@ -4,7 +4,8 @@
   .start-second
     .start-select-say
       %h1.start-say 新規会員登録
-    %ul.start-select-box
+    -# %ul.start-select-box
+    = link_to "/users/privacy", class: "start-select-box" do
       %button.start-select-mail メールアドレスで登録する
       = fa_icon "envelope-o", class: "envelope-o"
       %button.start-select-face FaceBookで登録する

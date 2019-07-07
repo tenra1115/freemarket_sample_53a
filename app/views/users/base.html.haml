@@ -1,7 +1,8 @@
+
+= render "/layouts/header" 
 .confirm-block
   .confirm-both
-    .confirm-left
-      サイドバー
+    = render "/layouts/sidebar"
     .confirm-right
       .confirm-say 
         %h1.say-confirm 本人情報の登録
@@ -51,3 +52,5 @@
           = link_to "https://www.mercari.com/jp/help_center/article/423/", class: "go-to-check-myself" do
             %p.fa.fa-chevron-right{"aria-hidden" => "true"}
               本人情報の登録について
+= render "layouts/banner"
+= render "layouts/footer"

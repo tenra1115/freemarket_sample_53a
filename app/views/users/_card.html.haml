@@ -42,7 +42,8 @@
           %p.pay-card-attention カード裏面の番号とは?
           = fa_icon "question-circle", class:"question-circle"
           %button.pay-card-button
-            %p.pay-card-button-say 次へ進む
+            = link_to "/users/finish", class: "pay-card-button-say" do
+              次へ進む
       %ul.policy-pay
         = link_to "#", class: "pay-privacy" do
           プライバシーポリシー

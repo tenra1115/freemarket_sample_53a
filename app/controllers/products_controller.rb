@@ -9,6 +9,8 @@ class ProductsController < ApplicationController
   def create
   end
 
-  def logout
+  def show
   end
+
+  
 end

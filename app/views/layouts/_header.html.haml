@@ -29,7 +29,7 @@
             やることリスト
         %li.menu-mypage
           =image_tag 'member_photo_noimage_thumb.png',size:'32x32',class:'mypage-icon'
-          %p.mypage-title
+          = link_to "/users/mypage", class: "mypage-title" do
             マイページ
 
 

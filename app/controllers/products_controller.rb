@@ -6,14 +6,9 @@ class ProductsController < ApplicationController
   def buy
   end
 
-  def products_registration
+  def create
   end
 
   def logout
   end
-
-  def profile_edit
-  end
-
-  
 end

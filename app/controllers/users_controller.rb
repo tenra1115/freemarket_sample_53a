@@ -25,5 +25,8 @@ class UsersController < ApplicationController
 
   def add_card
   end
+
+  def edit
+  end
   
 end

@@ -7,8 +7,8 @@
         = image_tag "user-bg.jpg", class: "mypage-right-box-top-image"
       .mypage-right-box-bottom
         .mypage-right-top-box
-          %p.mypage-right-top-box-doing お知らせ
-          %p.mypage-right-top-box-doing やることリスト
+          %p.mypage-right-top-box-doing#practice お知らせ
+          %p.mypage-right-top-box-doing#play やることリスト
         .mypage-right-middle-box
           .news-box
             .image-mypage
@@ -34,8 +34,27 @@
               = fa_icon "clock-o", class: "clock-o-mypage"
               %p.say-arrive-thing 22分前
             = fa_icon "chevron-right", class: "chevron-right-mypage"
+          .news-box2
+            .image-mypage
+              = image_tag "スクリーンショット 2019-07-05 10.46.12.png", class: "image-mypage-image"
+            .include-some-in-box
+              %p.say-for-random Js使えてるよ！
+              = fa_icon "clock-o", class: "clock-o-mypage"
+              %p.say-arrive-thing その調子！
+            = fa_icon "chevron-right", class: "chevron-right-mypage"
+            %p.delete 削除
+          .news-box2
+            .image-mypage
+              = image_tag "スクリーンショット 2019-07-05 10.46.12.png", class: "image-mypage-image"
+            .include-some-in-box
+              %p.say-for-random Js動いてる！
+              = fa_icon "clock-o", class: "clock-o-mypage"
+              %p.say-arrive-thing あと一歩！
+            = fa_icon "chevron-right", class: "chevron-right-mypage"
+            %p.delete 削除
           .new-box-show-all
             %p.show-all-box-say 一覧を見る
+            = fa_icon "bitcoin", class: "bitcoin"
         .mypage-right-bottom-box
           %p.mypage-bottom-top 購入した商品
           .mypage-bottom-bottom-top

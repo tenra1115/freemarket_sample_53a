@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
   root "products#index"
-  resources :users, only: [:index, :new]
-  resources :products, only: [:index,:show]
+  resources :users, only: [:index, :new,:edit]
+  resources :products, only: [:index,:show,:create]
   resources :comments, only: [:index]
   resources :images, only: [:index]
   resources :cards, only: [:index]
@@ -19,7 +19,5 @@ Rails.application.routes.draw do
   get "users/add_card" => "users#add_card"
   get "users/create_card" => "users#create_card"
   get "products/buy" => "products#buy"
-  get "products/registration" => "products#registration"
   get "products/logout" => "products#logout"
-  get "products/profile_edit" => "products#profile_edit" 
 end

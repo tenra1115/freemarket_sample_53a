@@ -1,99 +1,100 @@
 .lists    
   .box_list
-    .box_list__sub
-    マイページ
-    = fa_icon "chevron-right", id: "box_list_chevron"
+    = link_to "/users/mypage", class: "box_list__sub" do
+      マイページ
+    = fa_icon "chevron-right", class: "chevron-right-sidebar"
   .box_list
     .box_list__sub
     お知らせ
-    = fa_icon "chevron-right", id: "box_list_chevron"
+    = fa_icon "chevron-right", class: "chevron-right-sidebar"
   .box_list
     .box_list__sub
     やることリスト
-    = fa_icon "chevron-right", id: "box_list_chevron"
+    = fa_icon "chevron-right", class: "chevron-right-sidebar"
   .box_list
     .box_list__sub
     いいね！一覧
-    = fa_icon "chevron-right", id: "box_list_chevron"
+    = fa_icon "chevron-right", class: "chevron-right-sidebar"
   .box_list
-    .box_list__sub
-    出品する
-    = fa_icon "chevron-right", id: "box_list_chevron"
+    =link_to "/products/registration", class: "box_list__sub" do
+      出品する
+    = fa_icon "chevron-right", class: "chevron-right-sidebar"
   .box_list
     .box_list__sub
     出品した商品-出品中
-    = fa_icon "chevron-right", id: "box_list_chevron"
+    = fa_icon "chevron-right", class: "chevron-right-sidebar"
   .box_list
     .box_list__sub
     出品した商品-取引中
-    = fa_icon "chevron-right", id: "box_list_chevron"
+    = fa_icon "chevron-right", class: "chevron-right-sidebar"
   .box_list
     .box_list__sub
     出品した商品-売却済み
-    = fa_icon "chevron-right", id: "box_list_chevron"
+    = fa_icon "chevron-right", class: "chevron-right-sidebar"
   .box_list
     .box_list__sub
     購入した商品-取引中
-    = fa_icon "chevron-right", id: "box_list_chevron"
+    = fa_icon "chevron-right", class: "chevron-right-sidebar"
   .box_list
     .box_list__sub
     購入した商品-過去の取引
-    = fa_icon "chevron-right", id: "box_list_chevron"
+    = fa_icon "chevron-right", class: "chevron-right-sidebar"
   .box_list
     .box_list__sub
     ニュース一覧
-    = fa_icon "chevron-right", id: "box_list_chevron"
+    = fa_icon "chevron-right", class: "chevron-right-sidebar"
   .box_list
     .box_list__sub
     評価一覧
-    = fa_icon "chevron-right", id: "box_list_chevron"
+    = fa_icon "chevron-right", class: "chevron-right-sidebar"
   .box_list
     .box_list__sub
     ガイド
-    = fa_icon "chevron-right", id: "box_list_chevron"
+    = fa_icon "chevron-right", class: "chevron-right-sidebar"
   .box_list
     .box_list__sub
     お問い合わせ
-    = fa_icon "chevron-right", id: "box_list_chevron"
+    = fa_icon "chevron-right", class: "chevron-right-sidebar"
   .nav
     %h3.nav__sub
       メルペイ  
   .box_list
     .box_list__sub
     残高・振込申請
-    = fa_icon "chevron-right", id: "box_list_chevron"
+    = fa_icon "chevron-right", class: "chevron-right-sidebar"
   .box_list
     .box_list__sub
     ポイント
-    = fa_icon "chevron-right", id: "box_list_chevron"
+    = fa_icon "chevron-right", class: "chevron-right-sidebar"
   .nav
     %h3.nav__sub
       設定 
   .box_list
-    .box_list__sub
-    プロフィール
-    = fa_icon "chevron-right", id: "box_list_chevron"
+    = link_to "/products/profile_edit", class: "box_list__sub" do
+      プロフィール
+    = fa_icon "chevron-right", class: "chevron-right-sidebar"
   .box_list
     .box_list__sub
     発送元・お届け先住所変更
-    = fa_icon "chevron-right", id: "box_list_chevron"
+    = fa_icon "chevron-right", class: "chevron-right-sidebar"
   .box_list
     .box_list__sub
     支払い方法
-    = fa_icon "chevron-right", id: "box_list_chevron"
+    = fa_icon "chevron-right", class: "chevron-right-sidebar"
   .box_list
     .box_list__sub
     メール/パスワード
-    = fa_icon "chevron-right", id: "box_list_chevron"
+    = fa_icon "chevron-right", class: "chevron-right-sidebar"
   .box_list
     .box_list__sub
     本人情報
-    = fa_icon "chevron-right", id: "box_list_chevron"
+    = fa_icon "chevron-right", class: "chevron-right-sidebar"
   .box_list
     .box_list__sub
     電話番号の確認
-    = fa_icon "chevron-right", id: "box_list_chevron"
+    = fa_icon "chevron-right", class: "chevron-right-sidebar"
   .box_list
     .box_list__sub
-    ログアウト
-    = fa_icon "chevron-right", id: "box_list_chevron"
+    = link_to "/products/logout", class: "box_list__sub" do
+      ログアウト
+    = fa_icon "chevron-right", class: "chevron-right-sidebar"

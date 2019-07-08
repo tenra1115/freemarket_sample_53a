@@ -129,6 +129,30 @@
         width: 100%;
         padding-top: 10px;
 
+        .year-big-date-box{
+          height: 50px;
+          width: 60%;
+          margin: auto;
+          display: flex;
+
+          #user_birth_date_1i{
+            width: 76px;
+            margin-right: 20px;
+            padding: 10px;
+          }
+
+          #user_birth_date_2i{
+            width: 76px;
+            margin-right: 20px;
+            padding: 10px;
+          }
+
+          #user_birth_date_3i{
+            width: 76px;
+            padding: 10px;
+          }
+        }
+
         .year-need{
           width: 76px;
           height: 48px;

@@ -49,7 +49,8 @@
           .note-nickname
             %p.need 必須
           .year-big-date
-            = f.date_select :birth_date,use_month_numbers: true,start_year:1930
+            .year-big-date-box
+              = f.date_select :birth_date,use_month_numbers: true,start_year:1930
             %p.attention-say ※ 本人情報は正しく入力してください。会員登録後、修正するにはお時間を頂く場合があります。
             = image_tag "スクリーンショット 2019-07-02 14.10.32.png", class: "attention-say-image"
             %p.text-center 
@@ -73,8 +74,6 @@
               = link_to("https://www.mercari.com/jp/") do
                 = image_tag("logo-mercari3.svg")
             %p.back-to-mercari-messe © 2019 Mercari
-            
-= render "devise/shared/links"
             
           
  

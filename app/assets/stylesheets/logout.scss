@@ -31,6 +31,10 @@
         justify-content:center;
         display: flex;
         align-items:center;
+        .logout-last{
+          color:white;
+          text-decoration: none;
+        }
 
         &:hover{
           background: #F5F5F5;

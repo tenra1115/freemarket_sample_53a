@@ -95,8 +95,7 @@
     = fa_icon "chevron-right", class: "chevron-right-sidebar"
   .box_list
     .box_list__sub
-    - if user_signed_in?
-      = link_to 'ログアウト', destroy_user_session_path, method: :delete
-    -# = link_to "/users/logout", class: "box_list__sub" do
-    -#   ログアウト
     = fa_icon "chevron-right", class: "chevron-right-sidebar"
+    - if user_signed_in?
+      = link_to users_logout_path,class:"side-logout" do
+        ログアウト

@@ -1,4 +1,7 @@
-= render 'layouts/header'
+-if user_signed_in?
+  = render 'layouts/header'
+- else
+  = render 'layouts/unsignIn.header'
 .top-page-wrapper
   .camp-img
     = image_tag 'banner-camp.jpg',class:"top-slide"

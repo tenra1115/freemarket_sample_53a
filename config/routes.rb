@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   get "users/mypage" => "users#mypage"
   get "users/finish" => "users#finish"
   get "users/select" => "users#select"
-  get "users/call" => "users#call"
+  post "users/call" => "users#call"
   get "users/address" => "users#address"
   get "users/login" => "users#login"
   get "users/add_card" => "users#add_card"

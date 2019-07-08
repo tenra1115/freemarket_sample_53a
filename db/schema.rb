@@ -74,8 +74,12 @@ ActiveRecord::Schema.define(version: 2019_07_08_031755) do
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "nickname", null: false
-    t.string "name", null: false
-    t.integer "birthday", null: false
+    t.string "first_name", null: false
+    t.string "last_name", null: false
+    t.string "kana_first_name", null: false
+    t.string "kana_last_name", null: false
+    t.date "birth_date", null: false
+    t.integer "phone_number", null: false
     t.string "icon"
     t.string "intro_text"
     t.integer "rating"
@@ -85,7 +89,10 @@ ActiveRecord::Schema.define(version: 2019_07_08_031755) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["name"], name: "index_users_on_name"
+    t.index ["first_name"], name: "index_users_on_first_name"
+    t.index ["kana_first_name"], name: "index_users_on_kana_first_name"
+    t.index ["kana_last_name"], name: "index_users_on_kana_last_name"
+    t.index ["last_name"], name: "index_users_on_last_name"
     t.index ["nickname"], name: "index_users_on_nickname"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

@@ -41,7 +41,7 @@
     .header-navi{
       width:100%;
       height:40px;
-      margin-top:4px;
+      margin-top:8px;
       .navi-left{
         float:left;
         list-style: none;
@@ -147,6 +147,35 @@
             text-decoration: none;
             color: black;
           }
+        }
+      }
+      .session-right{
+        float: right;
+        font-size:14px;
+        .signup-btn{
+          float: left;
+          background-color: red;
+          color:white;
+          height: 32px;
+          padding:0 10px;
+          line-height: 32px;
+          border-radius: 4px;
+          .new-user-link{
+            text-decoration:none;
+            .new-user{
+            color:white;
+            }
+          }
+        }
+        .login-btn{
+          color:#0099E8;
+          border: solid 1px #0099E8;
+          float: right;
+          margin-left:8px;
+          height: 32px;
+          padding:0 10px;
+          line-height: 32px;
+          border-radius: 4px;
         }
       }
     }

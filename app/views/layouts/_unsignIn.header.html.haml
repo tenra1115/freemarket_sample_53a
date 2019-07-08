@@ -1,0 +1,23 @@
+.header-wrapper
+  .header-content
+    .header-top
+      = image_tag 'logo.svg',size:'134x36',class: 'header-log'
+      .header-serch
+        %input{type: 'serch',name:"keyword",placeholder:"何かお探しですか？",class:"header-serch_main"}
+        %i.fa.fa-search.icon-serch
+    .header-navi
+      %ul.navi-left
+        %li.navi-list
+          = link_to"/",class:"navi-list-a" do
+            %i.fa.fa-list-ul
+            カテゴリーから探す
+        %li.brand-list
+          %i.fa.fa-tag
+          ブランドから探す
+      %ul.session-right
+        .signup-btn
+          =link_to new_user_registration_path,class:"new-user-link" do
+            %p.new-user
+              新規会員登録
+        .login-btn
+          ログイン

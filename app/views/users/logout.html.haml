@@ -3,7 +3,8 @@
   .logout-wrapper
     .box_main
       .box_main__sub
-        ログアウト 
+        - if user_signed_in?
+          = link_to 'ログアウト', destroy_user_session_path,class:"logout-last", method: :delete 
     = render "layouts/sidebar"
 = render "layouts/banner"
 = render "layouts/footer"

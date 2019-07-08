@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_07_092516) do
+ActiveRecord::Schema.define(version: 2019_07_08_031755) do
 
   create_table "address_places", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "prefecture_id"
@@ -36,21 +36,6 @@ ActiveRecord::Schema.define(version: 2019_07_07_092516) do
     t.integer "exp_month", null: false
     t.integer "exp_year", null: false
     t.integer "user_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "category_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "name"
-  end
-
-  create_table "category_trees", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "category_tree_id"
-    t.integer "ancester_category_id"
-    t.integer "descendent_category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -82,23 +67,27 @@ ActiveRecord::Schema.define(version: 2019_07_07_092516) do
     t.integer "limit", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "buyer_id"
-    t.integer "saler_id"
     t.index ["name"], name: "index_products_on_name"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
     t.string "nickname", null: false
-    t.string "email", null: false
     t.string "name", null: false
     t.integer "birthday", null: false
     t.string "icon"
     t.string "intro_text"
     t.integer "rating"
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["name"], name: "index_users_on_name"
     t.index ["nickname"], name: "index_users_on_nickname"
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
 end

@@ -81,3 +81,4 @@ gem 'bcrypt_pbkdf'
 gem 'active_hash'
 gem "font-awesome-rails"
 
+gem "devise"

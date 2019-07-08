@@ -7,7 +7,6 @@
     width: 70%;
     margin: 0 auto;
     
-
     .register-left{
       float: left;
       height: 128px;
@@ -48,44 +47,51 @@
       padding: 32px 0;
       border-bottom: 1px solid #cccccc;
       
-
       .member-info-h1{
         font-size: 22px;
         text-align: center;
         
       }
-
     }
+
     .note-register{
       width: 70%;
       margin: 0 auto;
       text-align: center;
 
       .note-register-nickname{
-        width: 27%;
+        font-size: 17px;
+        width: 30%;
+        margin: auto;
         float: left;
-        padding-left: 75px;
-        font-size: 14px;
-      }
-      
-      .need{
-        padding: 1px 5px;
-        font-size: 13px;
-        color: white;
-        float: left;
-        background-color: red;
-        border-radius: 4px;
+        padding-left: 45px;
+
       }
 
-      .need-name{
-        width: 60%;
-        margin: 0 auto;
-        padding: 10px 16px 8px;
-        border-radius: 4px;
-        border: 1px solid #ccc;
-        margin-bottom: 40px;
-        margin-top: 5px;
-
+      .note-nickname{
+        width: 80%;
+        margin: auto;
+        
+        .need{
+          padding: 1px 5px;
+          font-size: 13px;
+          color: white;
+          float: left;
+          background-color: red;
+          border-radius: 4px;
+        }
+        
+        input{
+          width: 90%;
+          height: 50px;
+          box-sizing: border-box;
+          padding: 10px 20px;
+          border-radius: 4px;
+          border: 1px solid #ccc;
+          font-size: 17px;
+          margin-bottom: 30px;
+          
+        }
       }
 
       .check-announce{
@@ -105,6 +111,30 @@
         float: left;
         width: 100%;
         padding-top: 10px;
+
+        .year-big-date-box{
+          height: 50px;
+          width: 60%;
+          margin: auto;
+          display: flex;
+
+          #user_birth_date_1i{
+            width: 76px;
+            margin-right: 20px;
+            padding: 10px;
+          }
+
+          #user_birth_date_2i{
+            width: 76px;
+            margin-right: 20px;
+            padding: 10px;
+          }
+
+          #user_birth_date_3i{
+            width: 76px;
+            padding: 10px;
+          }
+        }
 
         .year-need{
           width: 76px;
@@ -170,6 +200,18 @@
           height: 48px;
           cursor: pointer;
 
+          input{
+            background: red;
+            width: 100%;
+            height: 50px;
+            cursor: pointer;
+            color: white;
+
+            &:hover{
+              opacity: 0.7;
+            }
+          }
+
           .go-go-box{
             line-height: 48px;
             color: white;
@@ -204,7 +246,7 @@
           }
         }
         .policy{
-          margin-top: 90px;
+          margin-top: 100px;
           display: flex;
           justify-content: space-around;
 

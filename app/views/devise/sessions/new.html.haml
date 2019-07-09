@@ -4,7 +4,7 @@
   .login-note
     .login-new-make-box
       %p.login-new-make-box-say アカウントをお持ちでない方はこちら
-      .box-new-box
+      = link_to new_user_registration_path, class: "box-new-box" do
         %button.login-new-make-box-say-new
           %p.make-box-say-new 新規会員登録
     .login-new-make-box2

@@ -83,3 +83,4 @@ gem "font-awesome-rails"
 
 gem "devise"
 gem 'omniauth-google-oauth2'
+gem 'omniauth-facebook'

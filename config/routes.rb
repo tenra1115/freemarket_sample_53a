@@ -16,11 +16,11 @@ Rails.application.routes.draw do
   get "users/select" => "users#select"
   post "users/call" => "users#call"
   get "users/address" => "users#address"
-  get "users/login" => "users#login"
+  post "users/login" => "users#login"
   get "users/add_card" => "users#add_card"
   get "users/create_card" => "users#create_card"
   get "users/logout" => "users#logout"
   
   get "products/buy" => "products#buy"
-  
+
 end

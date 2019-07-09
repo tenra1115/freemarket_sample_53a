@@ -15,25 +15,24 @@
         %button.login-face-go-both2
           = image_tag "スクリーンショット 2019-06-30 17.07.34.png", class: "login-face-go-both2-image"
           %p.face-say2 Goggleでログイン
-  
       .login-face-go2
-    = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-      = render "devise/shared/error_messages", resource: resource
-      = f.email_field :email, autocomplete: "email", placeholder: "アドレス"
-      = f.password_field :password, autocomplete: "password", placeholder: "パスワード"
-      .check-check-robot
-        = image_tag "スクリーンショット 2019-07-02 14.10.32.png", class: "image-robot"
-        .login-send-box
-          = f.submit "ログイン"
-        %p.forget-password パスワードをお忘れの方
-    %ul.policy 
-      =link_to "https://www.mercari.com/jp/privacy/", class: "register-policy" do
-        プライバシーポリシー
-      =link_to "https://www.mercari.com/jp/tos/", class: "register-policy" do
-        メルカリ利用規約
-      =link_to "https://www.mercari.com/jp/tokutei/", class: "register-policy" do
-        特定商取引に関する表記
-    .back-to-mercari
-      = link_to("https://www.mercari.com/jp/") do
-        = image_tag("logo-mercari3.svg")
-    %p.back-to-mercari-messe © 2019 Mercari
+        = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+          = render "devise/shared/error_messages", resource: resource
+          = f.email_field :email, autocomplete: "email", class: "write-email-password", placeholder: "メールアドレス"
+          = f.password_field :password, autocomplete: "password", class: "write-email-password", placeholder: "パスワード"
+          .check-check-robot
+            = image_tag "スクリーンショット 2019-07-02 14.10.32.png", class: "image-robot"
+            .login-send-box
+              = f.submit "ログイン",class:"write-email-password"
+            %p.forget-password パスワードをお忘れの方
+        %ul.policy 
+          =link_to "https://www.mercari.com/jp/privacy/", class: "register-policy" do
+            プライバシーポリシー
+          =link_to "https://www.mercari.com/jp/tos/", class: "register-policy" do
+            メルカリ利用規約
+          =link_to "https://www.mercari.com/jp/tokutei/", class: "register-policy" do
+            特定商取引に関する表記
+        .back-to-mercari
+          = link_to("https://www.mercari.com/jp/") do
+            = image_tag("logo-mercari3.svg")
+        %p.back-to-mercari-messe © 2019 Mercari

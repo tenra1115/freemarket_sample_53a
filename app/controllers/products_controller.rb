@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+  before_action :hoge, except: :index
 
   def index
   end

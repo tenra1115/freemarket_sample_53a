@@ -7,14 +7,17 @@
       = link_to new_user_registration_path, class: "box-new-box" do
         %button.login-new-make-box-say-new
           %p.make-box-say-new 新規会員登録
+    .border-box
     .login-new-make-box2
       .login-face-go
         %button.login-face-go-both
           = fa_icon "facebook-square", class: "login-facebook"
-          %p.face-say Facebookでログイン
+          = link_to "/users/auth/google_oauth2", class: "link-to-google" do
+            %p.face-say Facebookでログイン
         %button.login-face-go-both2
           = image_tag "スクリーンショット 2019-06-30 17.07.34.png", class: "login-face-go-both2-image"
-          %p.face-say2 Goggleでログイン
+          = link_to "/users/auth/google_oauth2", class: "link-to-facebook" do
+            %p.face-say2 Googleでログイン
       .login-face-go2
         = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
           = render "devise/shared/error_messages", resource: resource
@@ -36,4 +39,3 @@
           = link_to("https://www.mercari.com/jp/") do
             = image_tag("logo-mercari3.svg")
         %p.back-to-mercari-messe © 2019 Mercari
-= render "devise/shared/links"

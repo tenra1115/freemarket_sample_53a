@@ -4,8 +4,8 @@
       .content_box__mercari-icon
         =link_to("https://www.mercari.com/jp/") do
           =image_tag "logo.svg",size:"185x49",class:'content_box__mercari-icon'
-
       %section.content_box
+      =form_for(@product, url: products_path) do |f|
         %h2.header_logo
           商品の情報を入力
         .content_upload
@@ -24,27 +24,27 @@
             商品名
             %span.icon__logo
               必須	
-          %input.product_name__contents{:placeholder => "商品名（必須 40文字まで)", :value => ""}/
+          = f.text_field :name ,class: "product_name__contents",placeholder: "商品名（必須 40文字まで)"
           %h4.product_name__item--sub
             商品の説明
             %span.icon__logo
               必須
-          %textarea.product_name__contents--sub{:placeholder => "商品の説明名（必須 1,000文字以内) (色、素材、重さ、定価、注意点など）例)2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。", :value => ""}	          
+          = f.text_area :text ,class: "product_name__contents--sub",placeholder: "商品の説明名（必須 1,000文字以内) (色、素材、重さ、定価、注意点など）例)2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。"        
         .product_Details
           %h4.product_Details__item
             商品の詳細
           .product_Details__main
-            %h4.product_Details__item--sub
-              カテゴリー
-              %span.icon__logo
-                必須        
-            %select.product_Details__contents
+            -# %h4.product_Details__item--sub
+            -#   カテゴリー
+            -#   %span.icon__logo
+            -#     必須        
+            -# %select.product_Details__contents
             = fa_icon "angle-down", id: "Details_angle-down"
             %h4.product_Details__item--sub
               商品の状態            
               %span.icon__logo
                 必須
-            %select.product_Details__contents
+            = f.select :condition,  [['新品、未使用','1'],['未使用に近い','2'],["目立った傷やよごれなし","3"],["やや傷や汚れあり","4"],["傷や汚れあり","5"],["全体的に状態が悪い","6"]]  
             = fa_icon "angle-down", id: "Details_angle-down2"
         .delivery_box
           %h4.delivery_box__item
@@ -55,19 +55,19 @@
               配送料の負担
               %span.icon__logo
                 必須	
-            %select.delivery_box__contents
+            = f.select :charge,[['送料込み（出品者負担）','1'],['着払い（購入者負担）','2']]
             = fa_icon "angle-down", id: "delivery_box_angle-down"
             %h4.delivery_box__item--sub
               発送元の地域
               %span.icon__logo
                 必須
-            %select.delivery_box__contents
+            = f.collection_select :place ,@address, :id, :name 
             = fa_icon "angle-down", id: "delivery_box_angle-down2"
             %h4.delivery_box__item--sub
               発送までの日数
               %span.icon__logo
                 必須	
-            %select.delivery_box__contents
+            = f.select :limit,  [['１〜２日で発送','1'],['２〜３日で発送','2'],['４〜７日で発送','3']]
             = fa_icon "angle-down", id: "delivery_box_angle-down3"
 
         .selling_price
@@ -80,7 +80,7 @@
               %span.icon__logo 必須
               %h4.selling_price__item--enn 
                 ¥
-                %select.selling_price__contents--sub
+                =f.number_field :price,class:"selling_price__contents--sub"
                 = fa_icon "angle-down", id: "selling_price_angle-down"
             
             .selling_price__item--fee 
@@ -107,8 +107,9 @@
               に同意したことになります。
 
           .exhibition_box
-            .exhibition_box__btn
-              出品する
+            =f.submit"出品する",class:"exhibition_box__btn"
+              
+              
             .exhibition_box__btn--return
               もどる
         .content_bottom

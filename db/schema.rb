@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_09_040328) do
+ActiveRecord::Schema.define(version: 2019_07_10_062755) do
 
   create_table "address_places", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "prefecture_id"
@@ -40,6 +40,20 @@ ActiveRecord::Schema.define(version: 2019_07_09_040328) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "category_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "category_trees", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "category_tree_id"
+    t.integer "ancester_category_id"
+    t.integer "descendent_category_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "text"
     t.integer "user_id", null: false
@@ -65,6 +79,8 @@ ActiveRecord::Schema.define(version: 2019_07_09_040328) do
     t.string "text", null: false
     t.integer "place", null: false
     t.integer "limit", null: false
+    t.integer "buyer_id"
+    t.integer "saler_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["name"], name: "index_products_on_name"
@@ -74,10 +90,10 @@ ActiveRecord::Schema.define(version: 2019_07_09_040328) do
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "nickname", null: false
-    t.string "first_name", default: ""
-    t.string "last_name", default: ""
-    t.string "kana_first_name", default: ""
-    t.string "kana_last_name", default: ""
+    t.string "first_name"
+    t.string "last_name"
+    t.string "kana_first_name"
+    t.string "kana_last_name"
     t.date "birth_date"
     t.integer "phone_number"
     t.string "icon"
@@ -91,11 +107,6 @@ ActiveRecord::Schema.define(version: 2019_07_09_040328) do
     t.string "provider"
     t.string "uid"
     t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["first_name"], name: "index_users_on_first_name"
-    t.index ["kana_first_name"], name: "index_users_on_kana_first_name"
-    t.index ["kana_last_name"], name: "index_users_on_kana_last_name"
-    t.index ["last_name"], name: "index_users_on_last_name"
-    t.index ["nickname"], name: "index_users_on_nickname"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 

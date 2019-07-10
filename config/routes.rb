@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
   root "products#index"
   resources :users, only: [:index, :new,:edit]
-  resources :products, only: [:index,:show,:create]
+  resources :products, only: [:index, :show,:new, :create]
   resources :comments, only: [:index]
   resources :images, only: [:index]
   resources :cards, only: [:index]
@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   get "users/add_card" => "users#add_card"
   get "users/create_card" => "users#create_card"
   get "users/logout" => "users#logout"
-  
+
   get "products/buy" => "products#buy"
 
 end

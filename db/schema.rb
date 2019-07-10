@@ -74,12 +74,12 @@ ActiveRecord::Schema.define(version: 2019_07_09_040328) do
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "nickname", null: false
-    t.string "first_name", null: false
-    t.string "last_name", null: false
-    t.string "kana_first_name", null: false
-    t.string "kana_last_name", null: false
-    t.date "birth_date", null: false
-    t.integer "phone_number", null: false
+    t.string "first_name", default: ""
+    t.string "last_name", default: ""
+    t.string "kana_first_name", default: ""
+    t.string "kana_last_name", default: ""
+    t.date "birth_date"
+    t.integer "phone_number"
     t.string "icon"
     t.string "intro_text"
     t.integer "rating"
@@ -91,6 +91,11 @@ ActiveRecord::Schema.define(version: 2019_07_09_040328) do
     t.string "provider"
     t.string "uid"
     t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["first_name"], name: "index_users_on_first_name"
+    t.index ["kana_first_name"], name: "index_users_on_kana_first_name"
+    t.index ["kana_last_name"], name: "index_users_on_kana_last_name"
+    t.index ["last_name"], name: "index_users_on_last_name"
+    t.index ["nickname"], name: "index_users_on_nickname"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 

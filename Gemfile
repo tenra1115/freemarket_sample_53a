@@ -44,8 +44,6 @@ group :development, :test do
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
   gem 'capistrano3-unicorn'
-  gem 'omniauth-google-oauth2'
-  gem 'omniauth-facebook'
 
 end
 
@@ -84,3 +82,6 @@ gem 'active_hash'
 gem "font-awesome-rails"
 
 gem "devise"
+
+gem 'omniauth-google-oauth2'
+gem 'omniauth-facebook'

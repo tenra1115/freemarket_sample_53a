@@ -8,7 +8,9 @@
       .profile_box__main 
         %from.profile_box__icon
           = image_tag "421878364.jpg"
-        %input.profile_box__input
+        .ggg
+          %input.profile_box__input
+            = current_user.nickname
 
       .profile_box__textara
         %textarea.profile_box__textara2

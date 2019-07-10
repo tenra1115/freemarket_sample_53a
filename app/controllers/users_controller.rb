@@ -30,6 +30,7 @@ class UsersController < ApplicationController
   end
 
   def mypage
+    @users = User.all
   end
 
   def logout

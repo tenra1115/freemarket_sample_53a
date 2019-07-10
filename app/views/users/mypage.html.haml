@@ -4,7 +4,17 @@
     = render "layouts/sidebar"
     .mypage-right
       .mypage-right-box-top
-        = image_tag "user-bg.jpg", class: "mypage-right-box-top-image"
+        .mypage-right-box-top-image
+          = image_tag "member_photo_noimage_thumb.png", class: "my-icon-image"
+          %p.fsa 
+            = current_user.nickname
+          .my-lock
+            %p.rate-me
+              評価  0
+            %p.amount
+              出品数  0
+        -# = image_tag "user-bg.jpg", class: "mypage-right-box-top-image"
+        -# = current_user.nickname
       .mypage-right-box-bottom
         .mypage-right-top-box
           %p.mypage-right-top-box-doing#practice お知らせ

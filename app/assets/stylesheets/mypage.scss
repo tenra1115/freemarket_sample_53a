@@ -27,11 +27,29 @@
       .mypage-right-box-top{
         width: 100%;
         height: 200px;
+        background: image-url("user-bg.jpg");
 
         .mypage-right-box-top-image{
-          width: 100%;
+          width: 40%;
+          margin: auto;
           height: 100%;
+          text-align: center;
 
+          .my-icon-image{
+            width: 30%;
+            border-radius: 40px;
+            margin-top: 30px;
+          }
+
+          .fsa{
+            font-size: 13px;
+          }
+
+          .my-lock{
+            display: flex;
+            justify-content: space-evenly;
+            font-size: 12px;
+          }
         }
       }
 

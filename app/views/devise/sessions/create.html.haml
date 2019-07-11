@@ -1,0 +1,41 @@
+.login-body
+  .login-body-image
+    = image_tag "logo.svg", class: "login-body-image-image"
+  .login-note
+    .login-new-make-box
+      %p.login-new-make-box-say アカウントをお持ちでない方はこちら
+      = link_to new_user_registration_path, class: "box-new-box" do
+        %button.login-new-make-box-say-new
+          %p.make-box-say-new 新規会員登録
+    .border-box
+    .login-new-make-box2
+      .login-face-go
+        %button.login-face-go-both
+          = fa_icon "facebook-square", class: "login-facebook"
+          = link_to "/users/auth/google_oauth2", class: "link-to-google" do
+            %p.face-say Facebookでログイン
+        %button.login-face-go-both2
+          = image_tag "スクリーンショット 2019-06-30 17.07.34.png", class: "login-face-go-both2-image"
+          = link_to "/users/auth/google_oauth2", class: "link-to-facebook" do
+            %p.face-say2 Googleでログイン
+      .login-face-go2
+        = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+          = render "devise/shared/error_messages", resource: resource
+          = f.email_field :email, autocomplete: "email", class: "write-email-password", placeholder: "メールアドレス"
+          = f.password_field :password, autocomplete: "password", class: "write-email-password", placeholder: "パスワード"
+          .check-check-robot
+            = image_tag "スクリーンショット 2019-07-02 14.10.32.png", class: "image-robot"
+            .login-send-box
+              = f.submit "ログイン",class:"write-email-password"
+            %p.forget-password パスワードをお忘れの方
+        %ul.policy 
+          =link_to "https://www.mercari.com/jp/privacy/", class: "register-policy" do
+            プライバシーポリシー
+          =link_to "https://www.mercari.com/jp/tos/", class: "register-policy" do
+            メルカリ利用規約
+          =link_to "https://www.mercari.com/jp/tokutei/", class: "register-policy" do
+            特定商取引に関する表記
+        .back-to-mercari
+          = link_to("https://www.mercari.com/jp/") do
+            = image_tag("logo-mercari3.svg")
+        %p.back-to-mercari-messe © 2019 Mercari

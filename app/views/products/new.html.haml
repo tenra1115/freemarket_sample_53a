@@ -38,13 +38,13 @@
             -#   カテゴリー
             -#   %span.icon__logo
             -#     必須        
-            -# %select.product_Details__contents
+            -# = f.select :category_id, [['--','0'],['メンズ','1'],['レディース','2'],["ベビー、キッズ","3"],["インテリア、住まい、小物","4"],["本、音楽、ゲーム","5"],["おもちゃ、ホビー、グッズ","6"],["コスメ、香水、美容","7"],["家電、スマホ、カメラ","8"],["スポーツ、レジャー","9"],["ハンドメイド","10"],["チケット","11"],["自転車、オートバイ","12"],["その他","13"]]
             = fa_icon "angle-down", id: "Details_angle-down"
             %h4.product_Details__item--sub
               商品の状態            
               %span.icon__logo
                 必須
-            = f.select :condition,  [['新品、未使用','1'],['未使用に近い','2'],["目立った傷やよごれなし","3"],["やや傷や汚れあり","4"],["傷や汚れあり","5"],["全体的に状態が悪い","6"]]  
+            = f.select :condition,  [['--','0'],['新品、未使用','1'],['未使用に近い','2'],["目立った傷やよごれなし","3"],["やや傷や汚れあり","4"],["傷や汚れあり","5"],["全体的に状態が悪い","6"]]  
             = fa_icon "angle-down", id: "Details_angle-down2"
         .delivery_box
           %h4.delivery_box__item
@@ -55,7 +55,7 @@
               配送料の負担
               %span.icon__logo
                 必須	
-            = f.select :charge,[['送料込み（出品者負担）','1'],['着払い（購入者負担）','2']]
+            = f.select :charge,[['--','0'],['送料込み（出品者負担）','1'],['着払い（購入者負担）','2']]
             = fa_icon "angle-down", id: "delivery_box_angle-down"
             %h4.delivery_box__item--sub
               発送元の地域
@@ -67,7 +67,7 @@
               発送までの日数
               %span.icon__logo
                 必須	
-            = f.select :limit,  [['１〜２日で発送','1'],['２〜３日で発送','2'],['４〜７日で発送','3']]
+            = f.select :limit,  [['--','0'],['１〜２日で発送','1'],['２〜３日で発送','2'],['４〜７日で発送','3']]
             = fa_icon "angle-down", id: "delivery_box_angle-down3"
 
         .selling_price

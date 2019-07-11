@@ -1,21 +1,21 @@
 class User < ApplicationRecord
   devise :omniauthable, omniauth_providers: %i[google_oauth2 facebook]
   
-  validates :email, format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i }
+  # validates :email, format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i }
 
-  validates :encrypted_password, length: { minimum: 6 } 
+  # validates :encrypted_password, length: { minimum: 6 } 
 
-  validates :nickname, length: { minimum: 1, maximum: 10 }
+  # validates :nickname, length: { minimum: 1, maximum: 10 }
 
-  validates :first_name, presence: true
+  # validates :first_name, presence: true
 
-  validates :last_name, presence: true
+  # validates :last_name, presence: true
 
-  validates :kana_first_name, presence: true
+  # validates :kana_first_name, presence: true
 
-  validates :kana_last_name, presence: true
+  # validates :kana_last_name, presence: true
 
-  validates :birth_date, presence: true
+  # validates :birth_date, presence: true
 
 
   def self.from_omniauth(auth)

@@ -18,7 +18,7 @@
     width: 45%;
     margin: auto;
     background: white;
-    height: 400px;
+    height: 450px;
     margin-top: 40px;
 
     .start-select-say{
@@ -29,6 +29,7 @@
     }
 
     .start-select-box{
+      text-decoration: none;
       padding-top: 40px;
       width: 50%;
       display: flex;
@@ -44,16 +45,31 @@
       
       .start-select-mail{
         position: $rl;
-        background: #eee;
+        background: #FF4500;
         color: #000;
         text-align: $ct;
         padding: $ht;
         font-size: $fs;
+        color: white;
 
         &:hover{
           opacity: 0.6;
           cursor: $pt;
         }
+      }
+
+      #face{
+        background: #385185;
+        color: white;
+      }
+
+      #google{
+        background: white;
+        color: black;
+      }
+
+      #yyy{
+        color: white;
       }
 
       .envelope-o{
@@ -62,6 +78,11 @@
         padding-left: 20px;
         color: #ccc;
         font-size: 30px;
+      }
+
+      #hhh{
+        width: 3%;
+        padding-top: 8px;
       }
       
 

@@ -303,6 +303,13 @@
             .selling_price__item--fee--sub{
               color: #333;
               font-size: 14px;
+              float: left;
+            }
+            .js_display_margin{
+              float: right;
+              height:61px;
+              width:50%;
+              color:#333;
             }
           } 
           .selling_price__profit {
@@ -316,6 +323,13 @@
               color: #333;
               font-size: 16px;
               font-weight: bold;
+              float: left;
+            }
+            .js_display{
+              float: right;
+              height:61px;
+              width:50%;
+              color:#333;
             }
           }
             .icon__logo {

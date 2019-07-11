@@ -80,15 +80,18 @@
               %span.icon__logo 必須
               %h4.selling_price__item--enn 
                 ¥
-                =f.number_field :price,class:"selling_price__contents--sub"
+                =f.number_field :price,class:"selling_price__contents--sub",id:"price"
                 = fa_icon "angle-down", id: "selling_price_angle-down"
             
             .selling_price__item--fee 
               %h4.selling_price__item--fee--sub
                 販売手数料 (10%)
+              .js_display_margin
             .selling_price__profit
               %h4.selling_price__profit--sub
                 販売利益
+              .js_display
+                
 
         .sell_btn_box
           .sell_btn_box__text

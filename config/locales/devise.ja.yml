@@ -50,6 +50,14 @@ ja:
       unlocked: 'アカウントを凍結解除しました。'
   errors:
     messages:
+      nickname: 'ニックネームを入力してください'
+      address: 'メールアドレスを入力してください'
+      password: 'パスワードを6文字以上で入力してください'
+      password_confirmation: 'パスワード（確認）を入力してください'
+      last_name: '姓を入力してください'
+      first_name: '名を入力してください'
+      kana_last_name: '姓カナを入力してください'
+      kana_first_name: '名カナを入力してください'
       already_confirmed: 'は既に登録済みです。ログインしてください。'
       confirmation_period_expired: "の期限が切れました。%{period} までに確認する必要があります。 新しくリクエストしてください。"
       expired: 'の有効期限が切れました。新しくリクエストしてください。'

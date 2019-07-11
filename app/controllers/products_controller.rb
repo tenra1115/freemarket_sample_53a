@@ -15,7 +15,7 @@ class ProductsController < ApplicationController
     @product = Product.new(products_params)
     @product.save
   end
-
+  
   def show
   end
 

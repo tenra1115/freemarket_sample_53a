@@ -4,10 +4,10 @@
   background-color: #F5F5F5;
 
   .content_box__wrapper {
-    width: 100%;
+    width: 70%;
+    margin: auto;
     padding-top: 100px;
     .content_box {
-      height: 2007px;
       width: 700px;
       background-color: white;
       margin: auto;
@@ -16,6 +16,7 @@
         justify-content:center;
         padding-bottom: 40px;
       }
+
       .header_logo {
         height: 96px;
         width: 700px;
@@ -72,6 +73,12 @@
           }
       }  
     }  
+
+    .new_product{
+      background: white;
+      width: 70%;
+      margin: auto;
+    }
       .product_name	{
         height: 352px;
         width: 700px;
@@ -92,6 +99,10 @@
               padding: 3px;
               margin: 0 0 0 8px;
             }
+
+            
+
+
           &__item--sub {
             color: #333;
             font-size: 14px;
@@ -133,8 +144,12 @@
               height: 250px;
               width: 400px;
               background-color: white;
-              margin:0 30px 0 0;
               position: relative;
+
+              #product_name{
+                height: 40px;
+                width: 80%;
+              }
               
             }   
               &__item--sub {
@@ -143,6 +158,12 @@
                 font-weight: bold;
                 padding: 30px 0 10px 0;
               }
+
+              #product_condition{
+                height: 40px;
+                width: 80%;
+              }
+
               .icon__logo {
                 height: 30px;
                 width: 40px;
@@ -175,16 +196,15 @@
       }
       .delivery_box {
         height: 369px;
-        width: 700px;
         border-bottom: 1px solid #EEEEEE;
         display: flex;
-        justify-content:flex-end;
+        justify-content: space-around;
         
         &__item {
           color: #888888;
           font-size: 14px;
           font-weight: bold;
-          padding: 30px 150px 0 0;
+          padding: 30px 0px 0 10px;
           
           i {
             color: #00A9F3;
@@ -192,9 +212,8 @@
         }
           &__main {
             height: 261px;
-            width: 400px;
             background-color: white;
-            margin:0 30px 0 0;
+            width: 48%;
             position: relative;
           }   
             &__item--sub {
@@ -202,6 +221,26 @@
               font-size: 14px;
               font-weight: bold;
               padding: 25px 0 10px 0;
+            }
+
+            #product_charge{
+              width: 95%;
+              height: 40px;
+              -webkit-appearance: none;
+              padding: 5px 20px;
+
+            }
+
+            #product_place{
+              width: 95%;
+              height: 40px;
+
+            }
+
+            #product_limit{
+              width: 95%;
+              height: 40px;
+
             }
               .icon__logo {
                 height: 30px;
@@ -222,9 +261,10 @@
             }
             #delivery_box_angle-down {
               position: absolute;
-              right: 10px; 
-              top: 27%;
-              font-size: 24px;
+              top: 60px;
+              right: 40px;
+              font-size: 30px;
+              
             }
             #delivery_box_angle-down2 {
               position: absolute;
@@ -390,7 +430,6 @@
       }
         .content_bottom {
           height: 220px;
-          width: 455px;
           background-color:  #F5F5F5;
           padding-top: 50px;
           margin: auto;

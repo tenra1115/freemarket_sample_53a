@@ -4,14 +4,15 @@
   .start-second
     .start-select-say
       %h1.start-say 新規会員登録
-    -# %ul.start-select-box
     = link_to new_user_registration_path, class: "start-select-box" do
       %button.start-select-mail メールアドレスで登録する
       = fa_icon "envelope-o", class: "envelope-o"
-      %button.start-select-face FaceBookで登録する
-      = fa_icon "facebook-official", class: "facebook-official"
-      %button.start-select-gogo Googleで登録する
-      = image_tag "スクリーンショット 2019-06-30 17.07.34.png", class: "start-select-gogo-image"
+    = link_to "/users/auth/facebook", class: "start-select-box" do
+      %button.start-select-mail#face FaceBookで登録する
+      = fa_icon "facebook-official", class: "envelope-o", id: "yyy"
+    = link_to "/users/auth/google_oauth2", class: "start-select-box" do
+      %button.start-select-mail#google Googleで登録する
+      = image_tag "スクリーンショット 2019-06-30 17.07.34.png", class: "envelope-o", id: "hhh"
     %ul.policy 
       = link_to "https://www.mercari.com/jp/privacy/", class: "policy-start" do
         プライバシーポリシー

@@ -51,7 +51,7 @@ ja:
   errors:
     messages:
       nickname: 'ニックネームを入力してください'
-      address: 'メールアドレスを入力してください'
+      email: 'メールアドレスを入力してください'
       password: 'パスワードを6文字以上で入力してください'
       password_confirmation: 'パスワード（確認）を入力してください'
       last_name: '姓を入力してください'

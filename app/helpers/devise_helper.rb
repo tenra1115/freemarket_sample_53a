@@ -10,10 +10,10 @@ module DeviseHelper
     end
   end
 
-  def error_address
-    if resource.errors[:address].count > 0
+  def error_email
+    if resource.errors[:email].count > 0
       I18n.t(
-        "errors.messages.address",
+        "errors.messages.email",
         count: resource.errors.count,
         resource: resource.class.model_name.human.downcase
       )
@@ -30,7 +30,7 @@ module DeviseHelper
     end
   end
 
-  def error_password_confirmation
+  def error_password2
     if resource.errors[:password_confirmation].count > 0
       I18n.t(
         "errors.messages.password_confirmation",

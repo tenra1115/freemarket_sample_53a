@@ -20,23 +20,23 @@
           .note-nickname
             %p.need 必須
             = f.email_field :email, autofocus: true, autocomplete: "email",placeholder: "PC・携帯どちらでも可"
-          .error_msg_address
-            %h2
-              = error_address()
+          .error_msg_email
+            = error_email()
+      
           %label.note-register-nickname パスワード
           .note-nickname
             %p.need 必須
             = f.password_field :password, autocomplete: "new-password",placeholder: "例) 6文字以上"
           .error_msg_password
-            %h2
-              = error_password()
+            = error_password()
+            
           %label.note-register-nickname パスワード(確認)
           .note-nickname
             %p.need 必須
             = f.password_field :password_confirmation, autocomplete: "new-password",placeholder: "例) 6文字以上"
           .error_msg_password_confirmation
-            %h2
-              = error_password_confirmation()
+            = error_password2()
+            
           .check-sentense
             %h2.check-announce 本人確認
             %p.announce-sentense 安心・安全にご利用いただくために、お客さまの本人情報の登録にご協力ください。他のお客さまに公開されることはありません。
@@ -45,29 +45,29 @@
             %p.need 必須
             = f.text_field :last_name, placeholder: "例) 山田"
           .error_msg_last_name
-            %h2
-              = error_last_name()
+            = error_last_name()
+            
           %label.note-register-nickname 名 (全角)
           .note-nickname
             %p.need 必須
             = f.text_field :first_name,placeholder: "例) 綾"
           .error_msg_first_name
-            %h2
-              = error_first_name()
+            = error_first_name()
+            
           %label.note-register-nickname 姓カナ (全角)
           .note-nickname
             %p.need 必須
             = f.text_field :kana_last_name, placeholder: "例) ヤマダ"
           .error_msg_kana_last_name
-            %h2
-              = error_kana_last_name()
+            = error_kana_last_name()
+            
           %label.note-register-nickname 名カナ (全角)
           .note-nickname
             %p.need 必須
             = f.text_field :kana_first_name,placeholder: "例) アヤ"
           .error_msg_kana_first_name
-            %h2
-              = error_kana_first_name()
+            = error_kana_first_name()
+            
           %label.note-register-nickname 生年月日
           .note-nickname
             %p.need 必須

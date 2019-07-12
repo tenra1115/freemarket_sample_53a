@@ -13,7 +13,7 @@
         = link_to "/",class:"new-item" do
           レディース新着アイテム
       .category-items
-        .category-item
+        = link_to "/products/#{:id}", class: "category-item" do
           =image_tag "m27603844485_1.jpg",size:"213x213"
           .item-text-box
             %h3.item-name

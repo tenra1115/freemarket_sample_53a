@@ -14,4 +14,5 @@ $(function(){
     var haja = `<option value${i}>${i}</option>`;
     $('#date').append(haja);
   }
+
 })

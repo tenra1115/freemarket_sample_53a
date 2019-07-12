@@ -44,6 +44,7 @@ group :development, :test do
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
   gem 'capistrano3-unicorn'
+  gem "pry-rails"
 
 end
 
@@ -85,3 +86,6 @@ gem "devise"
 
 gem 'omniauth-google-oauth2'
 gem 'omniauth-facebook'
+
+gem 'payjp'
+gem "jquery-rails"

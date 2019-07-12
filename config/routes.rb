@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   get "users/add_card" => "users#add_card"
   get "users/create_card" => "users#create_card"
   get "users/logout" => "users#logout"
-
+  get "users/sns" => "users#sns"
   get "products/buy" => "products#buy"
 
 end

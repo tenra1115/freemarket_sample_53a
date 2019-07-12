@@ -20,7 +20,7 @@
 
     .new_product{
       background: white;
-      width: 70%;
+      width: 73%;
       margin: auto;
 
       .header_logo{
@@ -32,7 +32,8 @@
 
       .content_upload {
         height: 302px;
-        width: 700px;
+        width: 70%;
+        margin: auto;
         border-bottom: 1px solid #EEEEEE;
           &__logo {
             margin:40px 0 8px 0; 
@@ -76,7 +77,8 @@
     }
       .product_name	{
         height: 352px;
-        width: 700px;
+        margin: auto;
+        width: 70%;
         border-bottom: 1px solid #EEEEEE;
           &__item {
             color: #333;
@@ -287,7 +289,6 @@
       }
       .selling_price {
         height: 298px;
-        width: 700px;
         border-bottom: 1px solid #EEEEEE;
       
         &__item {
@@ -313,7 +314,6 @@
             font-size: 14px;
             font-weight: bold;
             padding: 10px 0 0 300px;
-            margin-top: -50px;
           }
             &__item--enn{
               height: 48px;
@@ -390,7 +390,6 @@
       }
       .sell_btn_box {
         height: 327px;
-        width: 700px;
         border-bottom: 1px solid #EEEEEE;
         background-color: white;
   

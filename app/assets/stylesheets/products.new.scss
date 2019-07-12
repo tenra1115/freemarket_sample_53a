@@ -32,7 +32,6 @@
 
       .content_upload {
         height: 302px;
-        width: 70%;
         margin: auto;
         border-bottom: 1px solid #EEEEEE;
           &__logo {
@@ -60,7 +59,7 @@
           
           &__logo--sub--item {
             height: 170px;
-            width: 620px;
+            width: 90%;
             background-color:#F5F5F5;
             color: #333;
             font-size: 14px;
@@ -86,6 +85,8 @@
             font-weight: bold;
             padding: 30px 0 0 40px;
           }
+
+
             .icon__logo {
               height: 30px;
               width: 40px;
@@ -107,16 +108,15 @@
             padding: 30px 0 0 40px;
           }
           .product_name__contents {
-            height: 48px;
-            width: 620px;
-            margin: 5px 0 0 30px;
-            border-radius: 0.2em;
-            padding: 0 0 0 10px;
+              height: 50px;
+              width: 100%;
+              border-radius: 0.2em;
+              padding: 5px 20px;
+              box-sizing: border-box;
           }
           &__contents--sub {
             height: 140px;
-            width: 620px;
-            margin: 10px 0 0 30px;
+            width: 100%;
             border-radius: 0.2em;
             padding: 5px 20px;
             box-sizing: border-box;
@@ -158,6 +158,13 @@
                 font-size: 14px;
                 font-weight: bold;
                 padding: 30px 0 10px 0;
+              }
+              #product_categories_attributes_0_category_id{
+
+                height: 40px;
+                width: 80%;
+                -webkit-appearance: none;
+                padding: 5px 20px;
               }
 
               #product_condition{
@@ -227,7 +234,7 @@
             }
 
             #product_charge{
-              width: 95%;
+              width: 92%;
               height: 40px;
               -webkit-appearance: none;
               padding: 5px 20px;
@@ -235,14 +242,14 @@
             }
 
             #product_place{
-              width: 95%;
+              width: 92%;
               height: 40px;
               -webkit-appearance: none;
               padding: 5px 20px;
             }
 
             #product_limit{
-              width: 95%;
+              width: 92%;
               height: 40px;
               -webkit-appearance: none;
               padding: 5px 20px;

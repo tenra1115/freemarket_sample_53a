@@ -9,6 +9,7 @@ class ProductsController < ApplicationController
   def new
     @product = Product.new
     @address = Prefecture.all
+    @product.categories.build
   end
 
   def create
@@ -22,6 +23,6 @@ class ProductsController < ApplicationController
   private
 
   def products_params
-    params.require(:product).permit(:name, :text,:condition,:limit,:charge,:price,:place)
+    params.require(:product).permit(:name, :text,:condition,:limit,:charge,:price,:place,categories_attributes:[:category_id])
   end
 end

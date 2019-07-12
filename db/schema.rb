@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_10_062755) do
+ActiveRecord::Schema.define(version: 2019_07_12_063849) do
 
   create_table "address_places", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "prefecture_id"
@@ -25,16 +25,6 @@ ActiveRecord::Schema.define(version: 2019_07_10_062755) do
     t.string "town", null: false
     t.integer "block", null: false
     t.string "building_name", null: false
-    t.integer "user_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "cards", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "number", null: false
-    t.integer "cvc", null: false
-    t.integer "exp_month", null: false
-    t.integer "exp_year", null: false
     t.integer "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -76,12 +66,12 @@ ActiveRecord::Schema.define(version: 2019_07_10_062755) do
     t.integer "condition", null: false
     t.integer "charge", null: false
     t.date "buyday"
-    t.integer "status", null: false
+    t.integer "status"
     t.string "text", null: false
     t.integer "place", null: false
     t.integer "limit", null: false
     t.integer "buyer_id"
-    t.integer "saler_id", null: false
+    t.integer "saler_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["name"], name: "index_products_on_name"

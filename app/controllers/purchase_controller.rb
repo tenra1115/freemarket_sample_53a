@@ -3,8 +3,16 @@ class PurchaseController < ApplicationController
   require 'payjp'
 
   def index
+    @product = Product.find(params[:id])
+    @product.buyer_id = current_user.id
+    @product.save
+    
+    
+    
+    # = Product.create(buyer_id: current_user.id)
     card = Card.where(user_id: current_user.id).first
     # テーブルからpayjpの顧客IDを検索
+    binding.pry
 
     if card.blank?
       #登録された情報がない場合にカード登録画面に移動
@@ -15,6 +23,7 @@ class PurchaseController < ApplicationController
       customer = Payjp::Customer.retrieve(card.customer_id)
       #保管したカードIDでpayjpから情報取得、カード情報表示のためインスタンス変数に代入
       @default_card_information = customer.cards.retrieve(card.card_id)
+      # binding.pry
     end
   end
 
@@ -30,6 +39,14 @@ class PurchaseController < ApplicationController
   end
 
   def done
+  end
+
+
+  private
+
+  def products_params
+    params.require(:product).permit(:name).merge(buyer_id: current_user.id)
+    binding.pry
   end
 
   # binding.pry

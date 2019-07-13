@@ -93,7 +93,7 @@ ActiveRecord::Schema.define(version: 2019_07_12_130526) do
     t.integer "place", null: false
     t.integer "limit", null: false
     t.integer "buyer_id"
-    t.integer "saler_id", null: false
+    t.integer "saler_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["name"], name: "index_products_on_name"

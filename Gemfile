@@ -85,3 +85,5 @@ gem "devise"
 
 gem 'omniauth-google-oauth2'
 gem 'omniauth-facebook'
+gem 'pry-rails'
+gem 'mini_magick'

@@ -13,8 +13,8 @@ class ProductsController < ApplicationController
   end
 
   def create
-    @product = Product.new(products_params)
-    @product.save
+    @product = Product.create(products_params)
+    redirect_to @product
   end
   
   def show
@@ -23,6 +23,7 @@ class ProductsController < ApplicationController
   private
 
   def products_params
-    params.require(:product).permit(:name, :text,:condition,:limit,:charge,:price,:place,categories_attributes:[:category_id])
+    params.require(:product).permit(:name, :text,:condition,:limit,:charge,:price,:place,images:[],categories_attributes:[:category_id])
+
   end
 end

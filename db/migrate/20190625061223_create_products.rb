@@ -11,7 +11,7 @@ class CreateProducts < ActiveRecord::Migration[5.2]
       t.integer :place, null: false
       t.integer :limit, null: false 
       t.integer :buyer_id,foreign_key: true
-      t.integer :saler_id,null: false,foreign_key: true
+      t.integer :saler_id
       t.timestamps
     end
   end

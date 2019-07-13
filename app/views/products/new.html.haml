@@ -16,10 +16,10 @@
           %p.content_upload__logo--sub
             最大10枚までアップロードできます
           %h3.content_upload__logo--sub--item
+            = f.file_field :images,multiple: true,class:'hidden'
             ドラッグアンドドロップ
             %br
             またはクリックしてファイルをアップロード
-          = f.file_field :images,multiple: true
         .product_name
           %h4.product_name__item
             商品名

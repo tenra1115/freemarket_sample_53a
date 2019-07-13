@@ -45,8 +45,8 @@
                   -# %input.pay-card-input{placeholder: "カード背面4桁もしくは3桁の番号"}
                 %p.pay-card-attention カード裏面の番号とは?
                 = fa_icon "question-circle", class:"question-circle"
-                %button.pay-card-button
-                  = submit_tag "追加する", id: "card_token"
+                = submit_tag "追加する",class: "pay-card-button", id: "card_token"
+                -# %button.pay-card-button
                   -# %p.pay-card-button-say 次へ進む
 = render "layouts/banner"
 = render "layouts/footer"

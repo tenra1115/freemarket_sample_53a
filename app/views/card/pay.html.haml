@@ -1,0 +1,52 @@
+= render "layouts/header"
+.my-page-yo
+  .mypage-both
+    = render "layouts/sidebar"
+    .add_card-right 
+      -# = render "users/card"
+      .pay-body 
+        .pay
+          .pay-note
+            .pay-note-set
+              %p.pay-note-say2 支払い方法
+            -# .pay-note-box
+            = form_tag(pay_card_index_path, method: :post, class: "pay-note-box", id: 'charge-form',  name: "inputForm") do
+              .pay-card-number
+                .pay-card-name
+                  %p.pay-card-name-say カード番号
+                  .pay-need-this-say
+                    %p.pay-need-this-say2 必須
+                .pay-card-name
+                  = text_field_tag "number", "", class: "pay-card-input", placeholder: "半角数字のみ" ,maxlength: "16", type: "text", id: "card_number"
+                  -# %input.pay-card-input{placeholder: "半角英数字のみ"}
+                .pay-card-name
+                  = image_tag "f6e624a62e69385c759a3b9b2959eaff.png", class: "pay-card-type-image-image"
+              .pay-card-number 
+                .pay-just-box
+                  %p.pay-card-name-say 有効期限
+                  .pay-card-this-say
+                    %p.pay-card-this-say2 必須
+                .pay-just-for-select
+                  .pay-just-for-select-left
+                    %select#id_month.select-card-month{name: "month"}
+                    = fa_icon "chevron-down", class: "pay-chevron-down"
+                    %p.say-about-month 月
+                  .pay-just-for-select-right
+                    %select#id_year.select-card-month{name: "year"}
+                    = fa_icon "chevron-down", class: "pay-chevron-down"
+                    %p.say-about-year 年
+              .pay-card-number
+                .pay-card-name
+                  %p.pay-card-name-say セキュリティーコード
+                  .pay-need-this-say
+                    %p.pay-need-this-say2 必須
+                .pay-card-name
+                  = text_field_tag "cvc", "", class: "pay-card-input", placeholder: "カード背面3~4桁の番号", maxlength: "4", id: "cvc"
+                  -# %input.pay-card-input{placeholder: "カード背面4桁もしくは3桁の番号"}
+                %p.pay-card-attention カード裏面の番号とは?
+                = fa_icon "question-circle", class:"question-circle"
+                %button.pay-card-button
+                  = submit_tag "追加する", id: "card_token"
+                  -# %p.pay-card-button-say 次へ進む
+= render "layouts/banner"
+= render "layouts/footer"

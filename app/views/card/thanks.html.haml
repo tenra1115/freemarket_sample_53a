@@ -12,7 +12,7 @@
             .pay-note-box
               .pay-card-number
                 %button.pay-card-button
-                  -# = submit_tag "追加する", id: "card_token"
-                  %p.pay-card-button-say 登録が完了しました
+                  = link_to "/", class: "awful" do
+                    %p.pay-card-button-say 登録が完了しました
 = render "layouts/banner"
 = render "layouts/footer"

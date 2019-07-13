@@ -87,3 +87,4 @@ gem 'omniauth-google-oauth2'
 gem 'omniauth-facebook'
 gem 'pry-rails'
 gem 'mini_magick'
+gem "aws-sdk-s3", require: false

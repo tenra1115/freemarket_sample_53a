@@ -87,5 +87,11 @@ gem "devise"
 gem 'omniauth-google-oauth2'
 gem 'omniauth-facebook'
 
+
 gem 'payjp'
 gem "jquery-rails"
+
+gem 'pry-rails'
+gem 'mini_magick'
+gem "aws-sdk-s3", require: false
+

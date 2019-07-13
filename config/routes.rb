@@ -11,8 +11,9 @@ Rails.application.routes.draw do
   resources :comments, only: [:index]
   resources :images, only: [:index]
   # resources :cards, only: [:index, :new, :show, :pay]
-  resources :card, only: [:new, :show, :pay] do
+  resources :card, only: [:new, :show, :pay, :thanks] do
     collection do
+      get 'thanks', to: 'card#thanks'
       post 'show', to: 'card#show'
       post 'pay', to: 'card#pay'
       post 'delete', to: 'card#delete'

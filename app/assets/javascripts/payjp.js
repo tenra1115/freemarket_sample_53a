@@ -12,10 +12,10 @@ $(function() {
     var exp_month = Number($("#id_month").val());
     var exp_year = Number($("#id_year").val());
     
-    console.log(number)
-    console.log(cvc)
-    console.log(exp_month)
-    console.log(exp_year)
+    // console.log(number)
+    // console.log(cvc)
+    // console.log(exp_month)
+    // console.log(exp_year)
     var card = {
       number: number,
       cvc: cvc,
@@ -25,7 +25,7 @@ $(function() {
     
     Payjp.createToken(card, function(status, response) {
       if (status == 200) {
-        console.log(response);
+        // console.log(response);
 
         $("#card_number").removeAttr("name");
         // console.log($("#card_number").removeAttr("name"))

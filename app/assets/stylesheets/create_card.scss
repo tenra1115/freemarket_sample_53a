@@ -53,7 +53,7 @@
       }
 
       .pay-note-box{
-        width: 80%;
+        width: 60%;
         margin: 10px auto;
 
         .pay-card-number{
@@ -250,6 +250,45 @@
               color: white;
               font-weight: bold;
             }
+          }
+        }
+      }
+    }
+
+    .pay-note-thanks-card{
+      width: 100%;
+      margin: auto;
+      height: 300px;
+      background: white;
+
+      .pay-note-set{
+        width: 100%;
+        margin: auto;
+        border-bottom: 2px solid #ccc;
+
+        .pay-note-say2{
+          text-align: center;
+          padding: 20px;
+          font-size: 20px;
+          font-weight: bold;
+          
+        }
+      }
+      .pay-note-box{
+        width: 60%;
+        margin: 10px auto;
+
+        .pay-card-button{
+          padding: 20px 30px;
+          width: 95%;
+          margin: 30px auto;
+          background: red;
+
+          .pay-card-button-say{
+            font-size: 15px;
+            color: white;
+            font-weight: bold;
+          
           }
         }
       }

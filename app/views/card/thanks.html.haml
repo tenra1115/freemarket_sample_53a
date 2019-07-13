@@ -1,0 +1,18 @@
+= render "layouts/header"
+.my-page-yo
+  .mypage-both
+    = render "layouts/sidebar"
+    .add_card-right 
+      -# = render "users/card"
+      .pay-body 
+        .pay
+          .pay-note-thanks-card
+            .pay-note-set
+              %p.pay-note-say2 支払い方法
+            .pay-note-box
+              .pay-card-number
+                %button.pay-card-button
+                  -# = submit_tag "追加する", id: "card_token"
+                  %p.pay-card-button-say 登録が完了しました
+= render "layouts/banner"
+= render "layouts/footer"

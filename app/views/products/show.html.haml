@@ -8,7 +8,10 @@
       =@product.name
     .products-details
       .products-images-photo
-        = image_tag 'm43183075997_1.jpg',size:"300x300", class: "top-products-img"
+        - @product.images.each do |image|
+          .category-item
+            =image_tag image ,size:"324x324"
+        -# = image_tag 'm43183075997_1.jpg',size:"300x300", class: "top-products-img"
         .products
           = image_tag 'm43183075997_1.jpg',size:"60x60", class: "products-images"
           = image_tag 'm43183075997_2.jpg',size:"60x60", class:"products-images"

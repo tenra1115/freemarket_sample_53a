@@ -75,7 +75,8 @@
       .send-fee
         送料込み
     .clear
-    .product-show-buy-btn
+
+    = link_to product_purchase_index_path(@product), class: "product-show-buy-btn" do
       購入画面に進む
     .products-description
       Apple Watch<br>iPhoneやiPad等で有名な、アップル社より発売されている スマートウォッチ<br>お手持ちのiPhoneと紐付けをし、iPhoneにかかってきた着信への応答、通知確認等、便利な機能満載！

@@ -49,7 +49,6 @@ class CardController < ApplicationController
       Payjp.api_key = "sk_test_10114eafe2605308cd83bd02"
       customer = Payjp::Customer.retrieve(card.customer_id)
       @default_card_information = customer.cards.retrieve(card.card_id)
-      # binding.pry
     end
   end
 

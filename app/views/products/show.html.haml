@@ -21,7 +21,7 @@
             .product-detail-show.seller
               出品者
             .product-detail-show-txt
-              三日月@全品即購入可
+              = @user.nickname
               %i.fa.fa-smile-o.fa-lg
                 %p.favo-count
                   218
@@ -66,7 +66,7 @@
             .product-narrow-show-detail
               発送日の目安
             .product-narrow-show-detail-txt
-              =@product.limit
+              = @product.limit
     .products-price-box
       .products-price
         = @product.price

@@ -57,12 +57,13 @@
               width:60%;
               font-size: 14px;
               color:#0099E8;
-              padding:5px;
+              padding: 0 5px;
               box-sizing: border-box;
+              display: flex;
+              flex-direction: column;
               .fa-smile-o{
                 color:red;
                 display: block;
-                margin-top:5px;
                 float: left;
                 margin-left:5px;
                 .favo-count{

@@ -16,14 +16,26 @@ class ProductsController < ApplicationController
   end
   
   def create
-    
     @product = Product.create(products_params)
     redirect_to @product
   end
 
   def show
+    @user = User.find(current_user.id)
     @product = Product.find(params[:id])
   end
+
+  def edit
+    @product = Product.find(params[:id])
+  end
+
+  def destroy 
+    @product = Product.find(params[:id])
+    @product.destroy
+    redirect_to users_mypage_path
+  end 
+
+  
 
   private
 

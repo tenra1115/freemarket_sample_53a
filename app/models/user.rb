@@ -7,7 +7,7 @@ class User < ApplicationRecord
 
   validates :email, format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i, on: :create }
 
-  validates :nickname, length: { minimum: 1, maximum: 5 }
+  validates :nickname, length: { minimum: 1, maximum: 25 }
 
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|

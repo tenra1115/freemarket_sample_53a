@@ -8,8 +8,9 @@ Rails.application.routes.draw do
   get 'card/show'
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
   root "products#index"
-  resources :users, only: [:index, :new,:edit]
+  resources :users, only: [:index, :new,:edit] 
   resources :products, only: [:index, :show,:new, :create]
+  
   resources :comments, only: [:index]
   resources :images, only: [:index]
   # resources :cards, only: [:index, :new, :show, :pay]

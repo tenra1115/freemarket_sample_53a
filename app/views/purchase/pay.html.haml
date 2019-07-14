@@ -1,73 +1,74 @@
-.buy-wrapper
-  .buy-mercari
-    .buy-mercari-icon
-      %a{href:"/",class:"buy-icon-a"}
-        =image_tag "logo.svg",size:"185x49",class:'buy-logo-img'
-  .buy-main
-    .buy-main-content
-      .buy-item-check
-        購入内容の確認
-      .buy-item-detail
-        .buy-item-label
-          =image_tag 'm27603844485_1.jpg',size:'64x64',class:'buy-item-img'
-          %p.buy-item-name
-            ナチュラルビューティーベーシック<br>テーラードジャケット ネイビー
-        .buy-item-price
-          ¥2,800
-          %p.item-send-fee
-            送料込み
-        .point-btn
-          ポイントはありません
-        .pay-price-check
-          %p.checking-price-label
-            支払い金額
-          %p.checking-price
-            ¥2,800
-        .anounce
-          配送先と支払い方法の入力を完了してください。
-        .buy-btn
-        - if @default_card_information.blank?
-          %br /
-        - else
-          -#以下カード情報を表示
-          = "**** **** **** " + @default_card_information.last4
-          - exp_month = @default_card_information.exp_month.to_s
-          - exp_year = @default_card_information.exp_year.to_s.slice(2,3)
-          = exp_month + " / " + exp_year
-        %br
-        = form_tag(action: :pay, method: :post) do
-          %button 購入する
-          -# 購入する
-      .buy-border-line
-      .myself-detail
-        .send-place
-          配達先
-        .send-post-number
-          〒123-4567
-        .send-adress
-          北海道 虻田郡 ニセコ町131-3
-        .post-name
-          勝野 天欄
-        .change-myself
-          変更する >
-      .buy-self-border
-      .how-to-pay
-        .how-to-pay-txt
-          支払い方法
-        .pay-kind
-          クレジットカード 
-        .change-myself
-          変更する >
-    %ul.policy-pay
-      = link_to "#", class: "pay-privacy" do
-        プライバシーポリシー
-      = link_to "#", class: "pay-privacy" do
-        メルカリ利用規約
-      = link_to "#", class: "pay-privacy" do
-        特定商取引に関する表記
-    .back-to-mercari-pay
-      = link_to "#", class:"link-to-pay" do
-        = image_tag "logo-mercari3.svg",size:"70x70",class: "link-to-pay-image"
-    %p.back-to-mercari-messe-pay © 2019 Mercari
+-# .buy-wrapper
+-#   .buy-mercari
+-#     .buy-mercari-icon
+-#       %a{href:"/",class:"buy-icon-a"}
+-#         =image_tag "logo.svg",size:"185x49",class:'buy-logo-img'
+-#   .buy-main
+-#     .buy-main-content
+-#       .buy-item-check
+-#         購入内容の確認
+-#       .buy-item-detail
+-#         .buy-item-label
+-#           =image_tag 'm27603844485_1.jpg',size:'64x64',class:'buy-item-img'
+-#           %p.buy-item-name
+-#             ナチュラルビューティーベーシック<br>テーラードジャケット ネイビー
+-#         .buy-item-price
+-#           ¥2,800
+-#           %p.item-send-fee
+-#             送料込み
+-#         .point-btn
+-#           ポイントはありません
+-#         .pay-price-check
+-#           %p.checking-price-label
+-#             支払い金額
+-#           %p.checking-price
+-#             ¥2,800
+-#         .anounce
+-#           配送先と支払い方法の入力を完了してください。
+-#         .buy-btn
+-#         - if @default_card_information.blank?
+-#           %br /
+-#         - else
+-#           -#以下カード情報を表示
+-#           = "**** **** **** " + @default_card_information.last4
+-#           - exp_month = @default_card_information.exp_month.to_s
+-#           - exp_year = @default_card_information.exp_year.to_s.slice(2,3)
+-#           = exp_month + " / " + exp_year
+-#         %br
+-#         = form.submit pay_product_purchase_index_path(product), do
+-#           %button 購入する
+-#         -# = form_tag(action: :pay, method: :post) do
+-#           -# 購入する
+-#       .buy-border-line
+-#       .myself-detail
+-#         .send-place
+-#           配達先
+-#         .send-post-number
+-#           〒123-4567
+-#         .send-adress
+-#           北海道 虻田郡 ニセコ町131-3
+-#         .post-name
+-#           勝野 天欄
+-#         .change-myself
+-#           変更する >
+-#       .buy-self-border
+-#       .how-to-pay
+-#         .how-to-pay-txt
+-#           支払い方法
+-#         .pay-kind
+-#           クレジットカード 
+-#         .change-myself
+-#           変更する >
+-#     %ul.policy-pay
+-#       = link_to "#", class: "pay-privacy" do
+-#         プライバシーポリシー
+-#       = link_to "#", class: "pay-privacy" do
+-#         メルカリ利用規約
+-#       = link_to "#", class: "pay-privacy" do
+-#         特定商取引に関する表記
+-#     .back-to-mercari-pay
+-#       = link_to "#", class:"link-to-pay" do
+-#         = image_tag "logo-mercari3.svg",size:"70x70",class: "link-to-pay-image"
+-#     %p.back-to-mercari-messe-pay © 2019 Mercari
       
       

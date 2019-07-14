@@ -46,7 +46,7 @@
             .product-narrow-show-detail
               商品の状態
             .product-narrow-show-detail-txt
-              やや傷や汚れあり
+              = @product.condition
           .product-narrow
             .product-narrow-show-detail
               配送料の負担
@@ -69,14 +69,14 @@
               1~2日で発送
     .products-price-box
       .products-price
-        ¥ 1,9700
+        = @product.price
       .products-tax
         (税込)
       .send-fee
         送料込み
     .clear
     -# .product-show-buy-btn
-    = link_to "/purchase/index", class: "product-show-buy-btn" do
+    = link_to product_purchase_index_path(@product), class: "product-show-buy-btn" do
       購入画面に進む
     .products-description
       Apple Watch<br>iPhoneやiPad等で有名な、アップル社より発売されている スマートウォッチ<br>お手持ちのiPhoneと紐付けをし、iPhoneにかかってきた着信への応答、通知確認等、便利な機能満載！

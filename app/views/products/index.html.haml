@@ -16,7 +16,7 @@
         - @products.each do |product|
           - product.images.each do |image|
             .category-item
-              = link_to "products/show" do
+              = link_to product_path(product) do
                 =image_tag image ,size:"213x213"
                 .item-text-box
                   %h3.item-name

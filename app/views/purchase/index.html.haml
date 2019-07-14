@@ -35,8 +35,10 @@
             - exp_year = @default_card_information.exp_year.to_s.slice(2,3)
             = exp_month + " / " + exp_year
           %br
-          = form_tag(action: :pay, method: :post) do
+          -# = submit_tag  pay_product_purchase_index_path(product) do
+          = form_tag pay_product_purchase_index_path do
             %button 購入する
+          -# = form.submit pay_product_purchase_index_path(@product) do
           -# 購入する
       .buy-border-line
       .myself-detail

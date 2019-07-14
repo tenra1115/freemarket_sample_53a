@@ -13,11 +13,12 @@
             =image_tag image ,size:"324x324"
         -# = image_tag 'm43183075997_1.jpg',size:"300x300", class: "top-products-img"
         .products
-          = image_tag 'm43183075997_1.jpg',size:"60x60", class: "products-images"
-          = image_tag 'm43183075997_2.jpg',size:"60x60", class:"products-images"
-          = image_tag 'm43183075997_3.jpg',size:"60x60",class:"products-images"
-          = image_tag 'm43183075997_4.jpg',size:"60x60",class:"products-images"
-          = image_tag 'm43183075997_5.jpg',size:"60x60",class:"products-images"
+          - @product.images.each do |image|
+            = image_tag image, size:"60x60", class: "products-images"
+            = image_tag image, size:"60x60", class: "products-images"
+            = image_tag image, size:"60x60", class: "products-images"
+            = image_tag image, size:"60x60", class: "products-images"
+            = image_tag image, size:"60x60", class: "products-images"
       .products-detail
         .products-width
           .product-width

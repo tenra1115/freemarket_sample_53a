@@ -35,7 +35,7 @@
             .product-detail-show.category
               カテゴリー
             .product-detail-show-txt
-              = @product.categories.category_name
+              -# = @product.categories.category_name
         .products-narrow
           .product-narrow
             .product-narrow-show-detail
@@ -71,13 +71,12 @@
       .products-price
         = @product.price
       .products-tax
-        (税込)
+        円 (税込)
       .send-fee
         送料込み
     .clear
-
-    = link_to product_purchase_index_path(@product), class: "product-show-buy-btn" do
-      購入画面に進む
+      = link_to product_purchase_index_path(@product), class: "product-show-buy-btn" do
+        購入画面に進む
     .products-description
       Apple Watch<br>iPhoneやiPad等で有名な、アップル社より発売されている スマートウォッチ<br>お手持ちのiPhoneと紐付けをし、iPhoneにかかってきた着信への応答、通知確認等、便利な機能満載！
     .products-description

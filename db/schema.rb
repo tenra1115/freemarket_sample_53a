@@ -88,7 +88,6 @@ ActiveRecord::Schema.define(version: 2019_07_14_043507) do
     t.string "condition", null: false
     t.string "charge", null: false
     t.date "buyday"
-
     t.string "text", null: false
     t.string "place", null: false
     t.string "limit", null: false

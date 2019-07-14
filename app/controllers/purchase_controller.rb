@@ -4,6 +4,8 @@ class PurchaseController < ApplicationController
 
   def index
 
+    @products = Product.find(params[:product_id])
+
     card = Card.where(user_id: current_user.id).first
     # テーブルからpayjpの顧客IDを検索
 
@@ -29,12 +31,13 @@ class PurchaseController < ApplicationController
     card = Card.where(user_id: current_user.id).first
     Payjp.api_key = "sk_test_10114eafe2605308cd83bd02"
     charge = Payjp::Charge.create(
-      :amount => 7000,
+      :amount => product.price,
       :customer => card.customer_id,
       :currency => 'jpy',
     )
 
-    redirect_to action: 'done' #完了画面に移動
+
+    redirect_to "/" #完了画面に移動
   end
 
   def done

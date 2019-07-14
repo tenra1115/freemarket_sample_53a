@@ -1,6 +1,6 @@
 .header-wrapper
   .header-content
-    .header-top
+    = link_to "/", class: "header-top" do
       = image_tag 'logo.svg',size:'134x36',class: 'header-log'
       .header-serch
         %input{type: 'serch',name:"keyword",placeholder:"何かお探しですか？",class:"header-serch_main"}

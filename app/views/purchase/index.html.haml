@@ -11,9 +11,10 @@
         .buy-item-label
           =image_tag 'm27603844485_1.jpg',size:'64x64',class:'buy-item-img'
           %p.buy-item-name
-            ナチュラルビューティーベーシック<br>テーラードジャケット ネイビー
+            = @products.name
         .buy-item-price
-          ¥2,800
+          ¥
+          = @products.price
           %p.item-send-fee
             送料込み
         .point-btn
@@ -22,7 +23,8 @@
           %p.checking-price-label
             支払い金額
           %p.checking-price
-            ¥2,800
+            ¥
+            = @products.price
         .anounce
           配送先と支払い方法の入力を完了してください。
         .buy-btn
@@ -36,8 +38,10 @@
             = exp_month + " / " + exp_year
           %br
           -# = submit_tag  pay_product_purchase_index_path(product) do
-          = form_tag pay_product_purchase_index_path do
-            %button 購入する
+        = form_tag pay_product_purchase_index_path, class: "pay-by-card-pay" do
+          %button.this-is-buy 
+            %p.say-buy 購入する
+              
           -# = form.submit pay_product_purchase_index_path(@product) do
           -# 購入する
       .buy-border-line

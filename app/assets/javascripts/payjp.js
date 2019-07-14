@@ -45,4 +45,8 @@ $(function() {
       };
     });
   })
+
+  $(".pay-by-card-pay").on('submit', function() {
+    alert("購入が完了しました");
+  })
 })

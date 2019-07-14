@@ -1,7 +1,9 @@
 class ProductsController < ApplicationController
+  # before_action :set_product, only: [:show, :index]
 
   def index
     @products = Product.limit(4)
+    
   end
 
   def buy
@@ -26,8 +28,7 @@ class ProductsController < ApplicationController
   private
 
   def products_params
+
     params.require(:product).permit(:id, :name, :text,:condition, :limit,:charge,:price,:place,images:[],categories_attributes:[:category_id]).merge(saler_id: current_user.id)
   end
-
-
 end

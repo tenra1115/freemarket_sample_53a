@@ -9,7 +9,8 @@
         購入内容の確認
       .buy-item-detail
         .buy-item-label
-          =image_tag 'm27603844485_1.jpg',size:'64x64',class:'buy-item-img'
+          - @products.images.each do |image|
+            =image_tag image ,size:"64x64",class:'buy-item-img'
           %p.buy-item-name
             = @products.name
         .buy-item-price

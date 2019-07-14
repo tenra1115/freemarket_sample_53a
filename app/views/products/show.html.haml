@@ -5,7 +5,7 @@
 .products-show-wrapper
   .products-show-main
     .products-name
-      Apple Watch SPORT Space Gray
+      =@product.name
     .products-details
       .products-images-photo
         = image_tag 'm43183075997_1.jpg',size:"300x300", class: "top-products-img"
@@ -35,7 +35,7 @@
             .product-detail-show.category
               カテゴリー
             .product-detail-show-txt
-              家電・スマホ・カメラ<br>>スマートフォン/携帯電話<br>>携帯電話本体
+              = @product.categories.category_name
         .products-narrow
           .product-narrow
             .product-narrow-show-detail
@@ -51,7 +51,7 @@
             .product-narrow-show-detail
               配送料の負担
             .product-narrow-show-detail-txt
-              送料込み(出品者負担)
+              = @product.charge
           .product-narrow
             .product-narrow-show-detail
               配送の方法
@@ -61,12 +61,12 @@
             .product-narrow-show-detail
               配送元地域
             .product-narrow-show-detail-txt.link-color
-              山梨県
+              = @product.place
           .product-narrow
             .product-narrow-show-detail
               発送日の目安
             .product-narrow-show-detail-txt
-              1~2日で発送
+              =@product.limit
     .products-price-box
       .products-price
         = @product.price
@@ -75,7 +75,7 @@
       .send-fee
         送料込み
     .clear
-    -# .product-show-buy-btn
+
     = link_to product_purchase_index_path(@product), class: "product-show-buy-btn" do
       購入画面に進む
     .products-description

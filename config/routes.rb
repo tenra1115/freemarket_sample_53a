@@ -8,11 +8,20 @@ Rails.application.routes.draw do
   get 'card/show'
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
   root "products#index"
+  
   resources :users, only: [:index, :new,:edit]
-  resources :products, only: [:index, :show,:new, :create, :edit, :destroy]
+
+  resources :products, only: [:index, :show,:new, :create, :edit, :destroy] do
+    resources :purchase, only: [:index] do
+      collection do
+        post 'pay', to: 'purchase#pay'
+        get 'done', to: 'purchase#done'
+      end
+    end
+  end
+  
   resources :comments, only: [:index]
   resources :images, only: [:index]
-  # resources :cards, only: [:index, :new, :show, :pay]
   resources :card, only: [:new, :show, :pay, :thanks] do
     collection do
       get 'thanks', to: 'card#thanks'
@@ -22,13 +31,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :purchase, only: [:index] do
-    collection do
-      get 'index', to: 'purchase#index'
-      post 'pay', to: 'purchase#pay'
-      get 'done', to: 'purchase#done'
-    end
-  end
+  
 
   resources :addresses, only: [:index]
   get "users/base" => "users#base"

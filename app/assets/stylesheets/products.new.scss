@@ -134,7 +134,7 @@
       }
       .product_Details {
         height: 260px;
-        width: 700px;
+        width: 100%;
         border-bottom: 1px solid #EEEEEE;
         margin: auto;
         display: flex;
@@ -145,18 +145,22 @@
           color: #888888;
           font-size: 14px;
           font-weight: bold;
-          padding: 30px 160px 0 0;
+          line-height: 8;
+          width: 27%;
+          text-align: center;
         }
         
             &__main {
               height: 250px;
-              width: 400px;
+              width: 60%;
+              margin: auto;
               background-color: white;
               position: relative;
+              text-align: center;
 
               #product_name{
                 height: 40px;
-                width: 80%;
+                width: 75%;
                 -webkit-appearance: none;
                 padding: 5px 20px;
               }
@@ -167,18 +171,19 @@
                 font-size: 14px;
                 font-weight: bold;
                 padding: 30px 0 10px 0;
+                width: 50%;
               }
               #product_categories_attributes_0_category_id{
-
                 height: 40px;
-                width: 80%;
+                width: 75%;
                 -webkit-appearance: none;
                 padding: 5px 20px;
+                margin-left: 75px;
               }
 
               #product_condition{
                 height: 40px;
-                width: 80%;
+                width: 75%;
                 -webkit-appearance: none;
                 padding: 5px 20px;
               }
@@ -195,7 +200,7 @@
               }   
               select{
                 height: 40px;
-                width: 80%;
+                width: 75%;
                 -webkit-appearance: none;
                 padding: 5px 20px;
               }           
@@ -209,14 +214,14 @@
               #Details_angle-down {
                 position: absolute;
                 top: 65px;
-                right: 100px;
                 font-size: 30px;
+                right: 75px;
               }
               #Details_angle-down2 {
                 padding-top: 5px;
                 position: absolute;
-                right: 100px;
                 font-size: 30px;
+                right: 75px;
               }
       }
       .delivery_box {
@@ -326,26 +331,31 @@
           }
         }
         &__price {
-          height: 61px;
-          background-color:white;
+          height: 261px;
+          background-color: white;
           position: relative;
+          margin: auto;
+          width: 60%;
                        
         }
           &__price--sub {
             color: #333;
             font-size: 14px;
             font-weight: bold;
-            padding: 10px 0 0 300px;
+            padding: 0 0 0 200px;
+            float: left;
+            line-height: 4;
           }
             &__item--enn{
               height: 48px;
-              width: 200px;
-              background-color:white;
-              margin: -10px 0 20px 495px;
+              width: 40%;
+              background-color: white;
+              margin: -10px 0 20px 395px;
+              position: relative;
             }  
               &__contents--sub {
                 height: 48px;
-                width: 160px;
+                width: 90%;
                 border-radius: 0.2em;
                 -webkit-appearance: none;
                 padding: 5px 15px;
@@ -353,19 +363,19 @@
               }
               #selling_price_angle-down {
                 position: absolute;
-                right: 40px; 
-                top: 57%;
+                right: 5%;
+                top: 15%;
                 font-size: 24px;
               }
 
           .selling_price__item--fee {
             height: 62px;
-            width: 400px;
-            background-color:white;
-            margin: 0 0 0 300px;
+            width: 390px;
+            background-color: white;
+            margin: 0 0 0 200px;
             line-height: 62px;
-            border-bottom:1px solid#CCCCCC;
-            border-top:1px solid#CCCCCC;
+            border-bottom: 1px solid #CCCCCC;
+            border-top: 1px solid #CCCCCC;
           
             .selling_price__item--fee--sub{
               color: #333;
@@ -381,9 +391,9 @@
           } 
           .selling_price__profit {
             height: 61px;
-            width: 400px;
-            background-color:white;
-            margin: 0 0 0 300px;
+            width: 390px;
+            background-color: white;
+            margin: 0 0 0 200px;
             line-height: 62px;
                      
             .selling_price__profit--sub {

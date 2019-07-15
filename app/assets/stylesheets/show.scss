@@ -1,11 +1,18 @@
+#destroy-top{
+  height:1400px;
+}
 .products-show-wrapper{
   width:100%;
   height:3950px;
   background-color:#f5f5f5;
   padding-top:40px;
+
+  #destroy{
+    height: 600px;
+  }
   .products-show-main{
     max-width:45%;
-    height:1320px;
+    height:800px;
     background-color: white;
     margin:0 auto;
     padding: 24px 40px 40px;
@@ -16,58 +23,53 @@
       font-weight: bold;
       color: #333;
     }
-
     .products-images-photo{
       width:50%;
       float: left;
       margin-top:20px;
       height:450px;
+      position: relative;
       .top-products-img{
         float: left;
-
         margin-bottom: 35px;
       }  
+
+      .try-bought{
+        position: absolute;
+        cursor: pointer;
+        width: 57%;
+        height: 200px;
+        overflow: hidden;
+        bottom: 250px;
+
+        .this-bought{
+          position: absolute;
+          bottom: 80px;
+          left: -120px;
+          font-weight: bold;
+          letter-spacing: 8px;
+          width: 240px;
+          height: 240px;
+          color: white;
+          background-color: red;
+          display: flex;
+          justify-content: center;
+          align-items: flex-end;
+          font-size: 2rem;
+          z-index: 2;
+          transform: rotate(-45deg);
+          box-sizing: border-box;
+        }
+      }
+
       .products{
         font-size: 0;
-        margin-top:350px;
         .products-images{
           opacity: 0.5;
         }
-        .products-images-photo{
-          float: left;
-          width: 53%;
-          position: relative;
-
-          .try-bought{
-            position: absolute;
-            cursor: pointer;
-            width: 50%;
-            height: 200px;
-            overflow: hidden;
-            bottom: 190px;
-
-            .this-bought{
-              position: absolute;
-              bottom: 80px;
-              left: -120px;
-              font-weight: bold;
-              letter-spacing: 8px;
-              width: 240px;
-              height: 240px;
-              color: white;
-              background-color: red;
-              display: flex;
-              justify-content: center;
-              align-items: flex-end;
-              font-size: 2rem;
-              z-index: 2;
-              transform: rotate(-45deg);
-              box-sizing: border-box;
-            }
-          }
-        }
       }
     }
+    
 
     .products-details{
       height:420px;
@@ -75,24 +77,6 @@
       margin: 0 auto;
       position: relative;
       
-      height:450px;
-      padding-top:16px;
-      margin: 0 auto;
-      float: right;
-      .products-images-photo{
-        float: left;
-        width: 53%;
-        position: relative;
-      }
-      
-      .products{
-        font-size: 0;
-        .products-images{
-          opacity: 0.5;
-        }
-      }
-      
-
       .products-detail{
         width:300px;
         height:420px;
@@ -156,7 +140,6 @@
                   margin-left:5px;
                  }
               }
-              
             }
             .category,.seller{
               background-color: #f5f5f5;
@@ -232,7 +215,7 @@
         line-height: 100px;
         color:#333
       }
-    
+    }  
   }
   .clear{
     width: 90%;
@@ -310,19 +293,18 @@
       float: right;
       .fa-lock{
         display: block;
-      line-height: 20px;
-      float: left;
-      color:#0099E8;
+        line-height: 20px;
+        float: left;
+        color:#0099E8;
       }
       .safety-txt{
-      font-size: 14px;
-      margin-left:5px;
-      display: block;
-      float: right;
-      color:#0099E8;
+        font-size: 14px;
+        margin-left:5px;
+        display: block;
+        float: right;
+        color:#0099E8;
       }
-  }
-  }
+    } 
   }
   .products-show-comment{
     width:650px;
@@ -344,9 +326,9 @@
         text-align: center;
         box-sizing: border-box;
         float: left;
-      .comment-icon{
-        margin-top:10px;
-      }
+        .comment-icon{
+          margin-top:10px;
+        }
       }
       .comment-name{
         float: left;
@@ -356,7 +338,7 @@
       }
       .commment-text-box {
         width:600px;
-      float: right;
+        float: right;
         background-color: #f5f5f5;
         margin-top: 5px;
         padding: 16px;

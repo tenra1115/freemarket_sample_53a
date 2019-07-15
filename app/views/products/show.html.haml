@@ -8,10 +8,14 @@
       =@product.name
     .products-details
       .products-images-photo
-        - @product.images.first(1).each do |image|
-          =image_tag image ,size:"324x324"
-          .try-bought
-            %p.this-bought SOLD
+        - if @product.buyer_id.blank?
+          - @product.images.first(1).each do |image|
+            =image_tag image ,size:"324x324"
+        - else
+          - @product.images.first(1).each do |image|
+            =image_tag image ,size:"324x324"
+            .try-bought
+              %p.this-bought SOLD
         .products
           - @product.images.each do |image|
             = image_tag image, size:"60x60", class: "products-images"

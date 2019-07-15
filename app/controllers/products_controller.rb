@@ -1,5 +1,4 @@
 class ProductsController < ApplicationController
-  # before_action :set_product, only: [:show, :index]
 
   def index
     @products = Product.limit(4)
@@ -23,6 +22,9 @@ class ProductsController < ApplicationController
   def show
     @user = User.find(current_user.id)
     @product = Product.find(params[:id])
+    if @product.saler_id == @user.id
+      redirect_to controller: "products", action: "edit"
+    end
   end
 
   def edit
@@ -35,7 +37,6 @@ class ProductsController < ApplicationController
     redirect_to users_mypage_path
   end 
 
-  
 
   private
 

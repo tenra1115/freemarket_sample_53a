@@ -82,8 +82,7 @@
         送料込み
   .destroy-flame
     .destroy-main-box
-      .destroy-edit-btn
-        商品の編集
+      = link_to "商品の編集", product_path(@product), class: "destroy-edit-btn" 
       .destroy-message-or
         or
       .destroy-stop-btn

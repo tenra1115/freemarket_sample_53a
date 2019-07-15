@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   
   resources :users, only: [:index, :new,:edit]
 
-  resources :products, only: [:index, :show,:new, :create, :edit, :destroy] do
+  resources :products, only: [:index, :show,:new, :create, :edit, :destroy, :update] do
     resources :purchase, only: [:index] do
       collection do
         post 'pay', to: 'purchase#pay'
@@ -48,6 +48,7 @@ Rails.application.routes.draw do
   get "users/logout" => "users#logout"
   get "users/sns" => "users#sns"
   get "products/buy" => "products#buy"
+  get "products/detail" => "products#detail"
  
 
 end

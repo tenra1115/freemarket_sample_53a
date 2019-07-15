@@ -5,11 +5,12 @@
 .products-show-wrapper
   .products-show-main
     .products-name
-      =@product.name
-    .products-details
+      = @product.name
+    - @product.images.first(1).each do|image|
       .products-images-photo
         - if @product.buyer_id.blank?
           - @product.images.first(1).each do |image|
+            = image_tag image,size:"300x300",class: "top-products-img"
             =image_tag image ,size:"324x324"
         - else
           - @product.images.first(1).each do |image|
@@ -17,12 +18,9 @@
             .try-bought
               %p.this-bought SOLD
         .products
-          - @product.images.each do |image|
-            = image_tag image, size:"60x60", class: "products-images"
-            = image_tag image, size:"60x60", class: "products-images"
-            = image_tag image, size:"60x60", class: "products-images"
-            = image_tag image, size:"60x60", class: "products-images"
-            = image_tag image, size:"60x60", class: "products-images"
+          - @product.images.each do|i|
+            = image_tag i,size:"60x60", class: "products-images"
+    .products-details
       .products-detail
         .products-width
           .product-width
@@ -43,7 +41,6 @@
             .product-detail-show.category
               カテゴリー
             .product-detail-show-txt
-              -# = @product.categories.category_name
         .products-narrow
           .product-narrow
             .product-narrow-show-detail
@@ -74,7 +71,8 @@
             .product-narrow-show-detail
               発送日の目安
             .product-narrow-show-detail-txt
-              = @product.limit
+              =@product.limit
+    .clear
     .products-price-box
       .products-price
         = @product.price

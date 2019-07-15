@@ -4,99 +4,103 @@
   = render "layouts/breadcrumbs"
 - else
   = render 'layouts/unsignIn.header'
-.destroy-show-wrapper
-  .destroy-show-main
-    .destroy-show-sub
-      .products-name
-        =@product.name
-      .products-details
-        .products-images-photo
-          = image_tag 'm43183075997_1.jpg',size:"300x300", class: "top-products-img"
-          .products
-            = image_tag 'm43183075997_1.jpg',size:"60x60", class: "products-images"
-            = image_tag 'm43183075997_2.jpg',size:"60x60", class:"products-images"
-            = image_tag 'm43183075997_3.jpg',size:"60x60",class:"products-images"
-            = image_tag 'm43183075997_4.jpg',size:"60x60",class:"products-images"
-            = image_tag 'm43183075997_5.jpg',size:"60x60",class:"products-images"
-        .products-detail
-          .products-width
-            .product-width
-              .product-detail-show.seller
-                出品者
-              .product-detail-show-txt
-                三日月@全品即購入可
-                %i.fa.fa-smile-o.fa-lg
-                  %p.favo-count
-                    218
-                %i.fa.fa-meh-o.fa-lg
-                  %p.favo-count
-                    0
-                %i.fa.fa-frown-o.fa-lg
-                  %p.favo-count
-                    0
-            .product-width
-              .product-detail-show.category
-                カテゴリー
-              .product-detail-show-txt
-          .products-narrow
-            .product-narrow
-              .product-narrow-show-detail
-                ブランド
-              .product-narrow-show-detail-txt.link-color
-                アップル
-            .product-narrow
-              .product-narrow-show-detail
-                商品の状態
-              .product-narrow-show-detail-txt
-                = @product.condition
-            .product-narrow
-              .product-narrow-show-detail
-                配送料の負担
-              .product-narrow-show-detail-txt
-                = @product.charge
-            .product-narrow
-              .product-narrow-show-detail
-                配送の方法
-              .product-narrow-show-detail-txt
-                らくらくメルカリ便
-            .product-narrow
-              .product-narrow-show-detail
-                配送元地域
-              .product-narrow-show-detail-txt.link-color
-                = @product.place
-            .product-narrow
-              .product-narrow-show-detail
-                発送日の目安
-              .product-narrow-show-detail-txt
-                =@product.limit
-      .products-price-box
-        .products-price
-          = @product.price
-        .products-tax
-          円 (税込)
-        .send-fee
-          送料込み
-      .clear
-    .destroy-flame
-      .destroy-main-box
-        .destroy-edit-btn
-          商品の編集
-        .destroy-message-or
-          or
-        .destroy-stop-btn
-          出品を一旦停止する
-        .destroy-message-or#or2
-          or
-        .destroy-delete-btn
-          = link_to product_path(@product), class: "destroy-btn" do
-            削除する
-      .destroy-flame-sub
-        .destroy-caution-statement
-          .destroy-message-caution-statement
-            相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがありえます。
-            .destroy-comment-box
-              %textarea.show-comment-box-sub
-            .destroy-comment-btn
-              コメントする
+.products-show-wrapper#destroy-top
+  .products-show-main#destroy
+    .products-name
+      = @product.name
+    - @product.images.first(1).each do|image|
+      .products-images-photo
+        - if @product.buyer_id.blank?
+          - @product.images.first(1).each do |image|
+            = image_tag image,size:"300x300",class: "top-products-img"
+            -# =image_tag image ,size:"324x324"
+        - else
+          - @product.images.first(1).each do |image|
+            =image_tag image ,size:"324x324"
+            .try-bought
+              %p.this-bought SOLD
+        .products
+          - @product.images.each do|i|
+            = image_tag i,size:"60x60", class: "products-images"
+    .products-details
+      .products-detail
+        .products-width
+          .product-width
+            .product-detail-show.seller
+              出品者
+            .product-detail-show-txt
+              = @user.nickname
+              %i.fa.fa-smile-o.fa-lg
+                %p.favo-count
+                  218
+              %i.fa.fa-meh-o.fa-lg
+                %p.favo-count
+                  0
+              %i.fa.fa-frown-o.fa-lg
+                %p.favo-count
+                  0
+          .product-width
+            .product-detail-show.category
+              カテゴリー
+            .product-detail-show-txt
+        .products-narrow
+          .product-narrow
+            .product-narrow-show-detail
+              ブランド
+            .product-narrow-show-detail-txt.link-color
+              アップル
+          .product-narrow
+            .product-narrow-show-detail
+              商品の状態
+            .product-narrow-show-detail-txt
+              = @product.condition
+          .product-narrow
+            .product-narrow-show-detail
+              配送料の負担
+            .product-narrow-show-detail-txt
+              = @product.charge
+          .product-narrow
+            .product-narrow-show-detail
+              配送の方法
+            .product-narrow-show-detail-txt
+              らくらくメルカリ便
+          .product-narrow
+            .product-narrow-show-detail
+              配送元地域
+            .product-narrow-show-detail-txt.link-color
+              = @product.place
+          .product-narrow
+            .product-narrow-show-detail
+              発送日の目安
+            .product-narrow-show-detail-txt
+              =@product.limit
+    .clear
+    .products-price-box
+      .products-price
+        = @product.price
+      .products-tax
+        円 (税込)
+      .send-fee
+        送料込み
+  .destroy-flame
+    .destroy-main-box
+      = link_to "商品の編集", product_path(@product), class: "destroy-edit-btn" 
+      .destroy-message-or
+        or
+      .destroy-stop-btn
+        出品を一旦停止する
+      .destroy-message-or#or2
+        or
+      .destroy-delete-btn
+        = link_to product_path(@product), class: "destroy-btn", method: :delete do
+          削除する
+    .destroy-flame-sub
+      .destroy-caution-statement
+        .destroy-message-caution-statement
+          相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがありえます。
+          .destroy-comment-box
+            %textarea.show-comment-box-sub
+          .destroy-comment-btn
+            コメントする
 =render "layouts/banner"
 =render "layouts/footer"

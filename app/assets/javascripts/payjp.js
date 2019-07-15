@@ -49,4 +49,8 @@ $(function() {
   $(".pay-by-card-pay").on('submit', function() {
     alert("購入が完了しました");
   })
+
+  $(".destroy-btn").on('click', function() {
+    alert("商品を削除しました");
+  })
 })

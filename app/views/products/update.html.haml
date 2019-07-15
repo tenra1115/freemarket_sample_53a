@@ -1,0 +1,132 @@
+%body
+  .flame_box
+    .content_box__wrapper
+      .content_box__mercari-icon
+        =link_to("https://www.mercari.com/jp/") do
+          =image_tag "logo.svg",size:"185x49",class:'content_box__mercari-icon'
+      %section.content_box
+      =form_for(@product, url: products_path) do |f|
+        %h2.header_logo
+          商品の情報を入力
+        .content_upload
+          %h3.content_upload__logo 
+            出品画像
+            %span.header_icon__logo
+              必須	
+          %p.content_upload__logo--sub
+            最大10枚までアップロードできます
+          %h3.content_upload__logo--sub--item
+            = f.file_field :images,multiple: true,class:'hidden'
+            ドラッグアンドドロップ
+            %br
+            またはクリックしてファイルをアップロード
+        .product_name
+          %h4.product_name__item
+            商品名
+            %span.icon__logo
+              必須	
+          = f.text_field :name ,class: "product_name__contents",placeholder: "商品名（必須 40文字まで)"
+          %h4.product_name__item--sub
+            商品の説明
+            %span.icon__logo
+              必須
+          = f.text_area :text ,class: "product_name__contents--sub",placeholder: "商品の説明名（必須 1,000文字以内) (色、素材、重さ、定価、注意点など）例)2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。"
+        .product_Details
+          %h4.product_Details__item
+            商品の詳細
+          .product_Details__main
+            %h4.product_Details__item--sub
+              カテゴリー
+              %span.icon__logo
+
+                必須 
+            = f.fields_for :categories do |c|       
+              = c.select :category_name, [['--','0'],['メンズ','メンズ'],['レディース','レディース'],["ベビー、キッズ","ベビー、キッズ"],["インテリア、住まい、小物","インテリア、住まい、小物"],["本、音楽、ゲーム","本、音楽、ゲーム"],["おもちゃ、ホビー、グッズ","おもちゃ、ホビー、グッズ"],["コスメ、香水、美容","コスメ、香水、美容"],["家電、スマホ、カメラ","家電、スマホ、カメラ"],["スポーツ、レジャー","スポーツ、レジャー"],["ハンドメイド","ハンドメイド"],["チケット","チケット"],["自転車、オートバイ","自転車、オートバイ"],["その他","その他"]]
+            = fa_icon "angle-down", id: "Details_angle-down"
+            %h4.product_Details__item--sub
+              商品の状態            
+              %span.icon__logo
+                必須
+            = f.select :condition,  [['--','0'],['新品、未使用','新品、未使用'],['未使用に近い','未使用に近い'],["目立った傷やよごれなし","目立った傷やよごれなし"],["やや傷や汚れあり","やや傷や汚れあり"],["傷や汚れあり","傷や汚れあり"],["全体的に状態が悪い","全体的に状態が悪い"]]  
+            = fa_icon "angle-down", id: "Details_angle-down2"
+        .delivery_box
+          %h4.delivery_box__item
+            配送について
+            = fa_icon "question-circle", id: "delivery_question"
+          .delivery_box__main
+            %h4.delivery_box__item--sub
+              配送料の負担
+              %span.icon__logo
+                必須	
+            = f.select :charge,[['--','0'],['送料込み（出品者負担）','送料込み（出品者負担）'],['着払い（購入者負担）','着払い（購入者負担）']]
+            = fa_icon "angle-down", id: "delivery_box_angle-down"
+            %h4.delivery_box__item--sub
+              発送元の地域
+              %span.icon__logo
+                必須
+            = f.collection_select :place ,@address, :name, :name 
+            = fa_icon "angle-down", id: "delivery_box_angle-down2"
+            %h4.delivery_box__item--sub
+              発送までの日数
+              %span.icon__logo
+                必須	
+            = f.select :limit,  [['--','0'],['１〜２日で発送','１〜２日で発送'],['２〜３日で発送','２〜３日で発送'],['４〜７日で発送','４〜７日で発送']]
+            = fa_icon "angle-down", id: "delivery_box_angle-down3"
+
+        .selling_price
+          %h4.selling_price__item
+            販売価格(300〜9,999,999)
+            = fa_icon "question-circle", id: "selling_question"
+          .selling_price__price
+            %h4.selling_price__price--sub
+              価格
+              %span.icon__logo 必須
+              %h4.selling_price__item--enn 
+                ¥
+                =f.number_field :price,class:"selling_price__contents--sub",id:"price"
+                = fa_icon "angle-down", id: "selling_price_angle-down"
+            
+            .selling_price__item--fee 
+              %h4.selling_price__item--fee--sub
+                販売手数料 (10%)
+              .js_display_margin
+            .selling_price__profit
+              %h4.selling_price__profit--sub
+                販売利益
+              .js_display
+                
+
+        .sell_btn_box
+          .sell_btn_box__text
+            %p 
+              %span 禁止されている出品
+              、
+              %span 行為
+              を必ずご確認ください。
+              %br
+              またブランド品でシリアルナンバー等がある場合はご記載ください。
+              %span 偽ブランドの販売
+              は犯罪で
+              %br
+              あり処罰される可能性があります。また、出品をもちまして
+              %span 加盟店規約
+              に同意したことになります。
+
+          .exhibition_box
+            =f.submit"出品する",class:"exhibition_box__btn"
+              
+              
+            .exhibition_box__btn--return
+              もどる
+        .content_bottom
+          %ul.content_bottom__list
+            = link_to "https://www.mercari.com/jp/privacy/", class: "list_privacy" do
+              プライバシーポリシー
+            = link_to "https://www.mercari.com/jp/tos/", class: "list__terms" do
+              メルカリ利用規約
+            = link_to "https://www.mercari.com/jp/tokutei/", class: "list_notation" do
+              特定商取引に関する表記
+          .back-image-mercari
+            = link_to("https://www.mercari.com/jp/") do
+              = image_tag "logo-mercari3.svg", class:"back-image-mercari"
+            %p.back-image-mercari__message © 2019 Mercari

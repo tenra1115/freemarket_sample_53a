@@ -8,10 +8,14 @@
       =@product.name
     .products-details
       .products-images-photo
-        - @product.images.each do |image|
-          .category-item
+        - if @product.buyer_id.blank?
+          - @product.images.first(1).each do |image|
             =image_tag image ,size:"324x324"
-        -# = image_tag 'm43183075997_1.jpg',size:"300x300", class: "top-products-img"
+        - else
+          - @product.images.first(1).each do |image|
+            =image_tag image ,size:"324x324"
+            .try-bought
+              %p.this-bought SOLD
         .products
           - @product.images.each do |image|
             = image_tag image, size:"60x60", class: "products-images"
@@ -82,11 +86,7 @@
       = link_to product_purchase_index_path(@product), class: "product-show-buy-btn" do
         購入画面に進む
     .products-description
-      Apple Watch<br>iPhoneやiPad等で有名な、アップル社より発売されている スマートウォッチ<br>お手持ちのiPhoneと紐付けをし、iPhoneにかかってきた着信への応答、通知確認等、便利な機能満載！
-    .products-description
-      人気の アップルウォッチ sport<br>軽量化されたモデルですので重みを感じず快適な着け心地です<br>スポーツシーンにもオススメ！
-    .products-description
-      アップルウォッチ本体<br>社外製ブルーミラネーゼループ<br>充電ケーブル のセットですので、<br>届いたその日からお持ちのiPhoneとペアリングして使用可能です( ´ ▽ ` )1518<br>箱はありません<br>背面に小傷がありますが、動作に影響はありませんので問題なく使用できます！<br>画面に強化ガラスフィルムを貼ってお譲りします<br>画面タッチも異常なしで、指感触もなめらかです(^^)<br>動作確認済み<br>アクティベーションロック解除済み<br>初期化済み
+      = @product.text
     .products-company-policy
       .products-good-btn
         .products-good-btn-txt

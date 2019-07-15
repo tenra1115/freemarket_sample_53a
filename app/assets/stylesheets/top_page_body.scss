@@ -49,6 +49,39 @@
           float: left;
           margin-left:20px;
           text-align: left;
+          position: relative;
+
+          .already-buy{
+            position: absolute;
+            cursor: pointer;
+            width: 80%;
+            height: 150px;
+            overflow: hidden;
+            bottom: 200px;
+            
+            .already-bought{
+              position: absolute;
+              bottom: 80px;
+              left: -70px;
+              font-weight: bold;
+              letter-spacing: 5px;
+              width: 141px;
+              height: 141px;
+              color: white;
+              background-color: red;
+              display: flex;
+              justify-content: center;
+              align-items: flex-end;
+              z-index: 2;
+              transform: rotate(-45deg);
+              box-sizing: border-box;
+            }
+          }
+
+
+
+
+
           .item-text-box{
             height:137px;
             box-sizing: border-box;

@@ -5,16 +5,14 @@
 .products-show-wrapper
   .products-show-main
     .products-name
-      =@product.name
-    .products-details
+      = @product.name
+    - @product.images.first(1).each do|image|
       .products-images-photo
-        = image_tag 'm43183075997_1.jpg',size:"300x300", class: "top-products-img"
+        = image_tag image,size:"300x300",class: "top-products-img"
         .products
-          = image_tag 'm43183075997_1.jpg',size:"60x60", class: "products-images"
-          = image_tag 'm43183075997_2.jpg',size:"60x60", class:"products-images"
-          = image_tag 'm43183075997_3.jpg',size:"60x60",class:"products-images"
-          = image_tag 'm43183075997_4.jpg',size:"60x60",class:"products-images"
-          = image_tag 'm43183075997_5.jpg',size:"60x60",class:"products-images"
+          - @product.images.each do|i|
+            = image_tag i,size:"60x60", class: "products-images"
+    .products-details
       .products-detail
         .products-width
           .product-width
@@ -35,7 +33,7 @@
             .product-detail-show.category
               カテゴリー
             .product-detail-show-txt
-              = @product.categories.category_name
+              -# = @product.category_name
         .products-narrow
           .product-narrow
             .product-narrow-show-detail
@@ -56,7 +54,7 @@
             .product-narrow-show-detail
               配送の方法
             .product-narrow-show-detail-txt
-              くらくメルカリ便
+              らくらくメルカリ便
           .product-narrow
             .product-narrow-show-detail
               配送元地域
@@ -67,6 +65,7 @@
               発送日の目安
             .product-narrow-show-detail-txt
               =@product.limit
+    .clear
     .products-price-box
       .products-price
         = @product.price

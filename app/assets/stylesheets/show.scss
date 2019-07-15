@@ -16,26 +16,28 @@
       font-weight: bold;
       color: #333;
     }
-    .products-details{
-      height:420px;
-      padding-top:16px;
-      margin: 0 auto;
-      .products-images-photo{
-        width:50%;
+    .products-images-photo{
+      width:50%;
+      float: left;
+      margin-top:20px;
+      height:450px;
+      .top-products-img{
         float: left;
-        height:100px;
-        .top-products-img{
-          float: left;
-          margin-bottom: 35px;
-        }  
-        .products{
-          font-size: 0;
-          margin-top: 340px;
-          .products-images{
-            opacity: 0.5;
-          }
+        margin-bottom: 35px;
+      }  
+      .products{
+        font-size: 0;
+        margin-top:350px;
+        .products-images{
+          opacity: 0.5;
         }
       }
+    }
+    .products-details{
+      height:450px;
+      padding-top:16px;
+      margin: 0 auto;
+      float: right;
       .products-detail{
         width:300px;
         height:420px;
@@ -148,10 +150,9 @@
       }
     }
     .products-price-box{
-      padding-top:24px;
-      height:50px;
-      width:70%;
+      width:60%;
       margin: 0 auto;
+      height: 100px;
       padding-left:40px;
       .products-price{
         font-size: 50px;
@@ -159,6 +160,7 @@
         color:#333;
         float: left;
         display: inline;
+       
       }
       .products-tax{
         font-size:12px;
@@ -166,6 +168,7 @@
         line-height: 100px;
         margin-left:10px;
         color:#333;
+     
       }
       .send-fee{
         font-size:16px;

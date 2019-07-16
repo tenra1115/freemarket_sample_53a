@@ -45,8 +45,9 @@ Rails.application.routes.draw do
   get "users/create_card" => "users#create_card"
   get "users/logout" => "users#logout"
   get "users/sns" => "users#sns"
+
+  get "products/:id/detail" => "products#detail"
   get "products/buy" => "products#buy"
-  get "products/detail" => "products#detail"
  
 
 end

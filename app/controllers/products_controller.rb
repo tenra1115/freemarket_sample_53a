@@ -23,8 +23,13 @@ class ProductsController < ApplicationController
     @user = User.find(current_user.id)
     @product = Product.find(params[:id])
     if @product.saler_id == @user.id
-      redirect_to controller: "products", action: "edit"
+      redirect_to controller: "products", action: "detail"
     end
+  end
+
+  def detail
+    @user = User.find(current_user.id)
+    @product = Product.find(params[:id])
   end
 
   def edit

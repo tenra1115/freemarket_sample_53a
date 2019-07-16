@@ -14,30 +14,29 @@
           レディース新着アイテム
         .category-items
           - @products.each do |product|
-            - product.images.each do |image|
-              .category-item
-                - if product.buyer_id.blank?
-                  = link_to product_path(product) do
-                    =image_tag image ,size:"213x213"
-                    .item-text-box
-                      %h3.item-name
-                        = product.name
-                      .item-price-top
-                        .price-mark
-                          ¥
-                        = product.price
-                - else 
-                  = link_to product_path(product) do
-                    =image_tag image ,size:"213x213"
-                    .already-buy
-                      %p.already-bought SOLD
-                    .item-text-box
-                      %h3.item-name
-                        = product.name
-                      .item-price-top
-                        .price-mark
-                          ¥
-                        = product.price
+            .category-item
+              - if product.buyer_id.blank?
+                = link_to product_path(product) do
+                  =image_tag product.images[0] ,size:"213x213"
+                  .item-text-box
+                    %h3.item-name
+                      = product.name
+                    .item-price-top
+                      .price-mark
+                        ¥
+                      = product.price
+              - else 
+                = link_to product_path(product) do
+                  =image_tag image ,size:"213x213"
+                  .already-buy
+                    %p.already-bought SOLD
+                  .item-text-box
+                    %h3.item-name
+                      = product.name
+                    .item-price-top
+                      .price-mark
+                        ¥
+                      = product.price
         .top-item-show-more
           = link_to"/",class:"item-show-more" do
             すべての商品を見る
@@ -47,30 +46,29 @@
             メンズ新着アイテム
         .category-items
           - @products.each do |product|
-            - product.images.each do |image|
-              .category-item
-                - if product.buyer_id.blank?
-                  = link_to product_path(product) do
-                    =image_tag image ,size:"213x213"
-                    .item-text-box
-                      %h3.item-name
-                        = product.name
-                      .item-price-top
-                        .price-mark
-                          ¥
-                        = product.price
-                - else 
-                  = link_to product_path(product) do
-                    =image_tag image ,size:"213x213"
-                    .already-buy
-                      %p.already-bought SOLD
-                    .item-text-box
-                      %h3.item-name
-                        = product.name
-                      .item-price-top
-                        .price-mark
-                          ¥
-                        = product.price
+            .category-item
+              - if product.buyer_id.blank?
+                = link_to product_path(product) do
+                  = image_tag product.images[0] ,size:"213x213"
+                  .item-text-box
+                    %h3.item-name
+                      = product.name
+                    .item-price-top
+                      .price-mark
+                        ¥
+                      = product.price
+              - else 
+                = link_to product_path(product) do
+                  =image_tag image ,size:"213x213"
+                  .already-buy
+                    %p.already-bought SOLD
+                  .item-text-box
+                    %h3.item-name
+                      = product.name
+                    .item-price-top
+                      .price-mark
+                        ¥
+                      = product.price
         .top-item-show-more
           = link_to"/",class:"item-show-more" do
             すべての商品を見る
@@ -80,30 +78,29 @@
             ベビー・キッズ 新着アイテム
         .category-items
           - @products.each do |product|
-            - product.images.each do |image|
-              .category-item
-                - if product.buyer_id.blank?
-                  = link_to product_path(product) do
-                    =image_tag image ,size:"213x213"
-                    .item-text-box
-                      %h3.item-name
-                        = product.name
-                      .item-price-top
-                        .price-mark
-                          ¥
-                        = product.price
-                - else 
-                  = link_to product_path(product) do
-                    =image_tag image ,size:"213x213"
-                    .already-buy
-                      %p.already-bought SOLD
-                    .item-text-box
-                      %h3.item-name
-                        = product.name
-                      .item-price-top
-                        .price-mark
-                          ¥
-                        = product.price
+            .category-item
+              - if product.buyer_id.blank?
+                = link_to product_path(product) do
+                  = image_tag product.images[0] ,size:"213x213"
+                  .item-text-box
+                    %h3.item-name
+                      = product.name
+                    .item-price-top
+                      .price-mark
+                        ¥
+                      = product.price
+              - else 
+                = link_to product_path(product) do
+                  =image_tag image ,size:"213x213"
+                  .already-buy
+                    %p.already-bought SOLD
+                  .item-text-box
+                    %h3.item-name
+                      = product.name
+                    .item-price-top
+                      .price-mark
+                        ¥
+                      = product.price
         .top-item-show-more
           = link_to"/",class:"item-show-more" do
             すべての商品を見る
@@ -113,16 +110,29 @@
             コスメ・香水・美容 新着アイテム
         .category-items
           - @products.each do |product|
-            - product.images.each do |image|
-              .category-item
-                =image_tag image ,size:"213x213"
-                .item-text-box
-                  %h3.item-name
-                    = product.name
-                  .item-price-top
-                    .price-mark
-                      ¥
-                    = product.price
+            .category-item
+              - if product.buyer_id.blank?
+                = link_to product_path(product) do
+                  = image_tag product.images[0] ,size:"213x213"
+                  .item-text-box
+                    %h3.item-name
+                      = product.name
+                    .item-price-top
+                      .price-mark
+                        ¥
+                      = product.price
+              - else 
+                = link_to product_path(product) do
+                  =image_tag image ,size:"213x213"
+                  .already-buy
+                    %p.already-bought SOLD
+                  .item-text-box
+                    %h3.item-name
+                      = product.name
+                    .item-price-top
+                      .price-mark
+                        ¥
+                      = product.price
         .top-item-show-more
           = link_to"/",class:"item-show-more" do
             すべての商品を見る
@@ -136,16 +146,29 @@
             シャネル 新着アイテム
         .category-items
           - @products.each do |product|
-            - product.images.each do |image|
-              .category-item
-                =image_tag image ,size:"213x213"
-                .item-text-box
-                  %h3.item-name
-                    = product.name
-                  .item-price-top
-                    .price-mark
-                      ¥
-                    = product.price
+            .category-item
+              - if product.buyer_id.blank?
+                = link_to product_path(product) do
+                  = image_tag product.images[0] ,size:"213x213"
+                  .item-text-box
+                    %h3.item-name
+                      = product.name
+                    .item-price-top
+                      .price-mark
+                        ¥
+                      = product.price
+              - else 
+                = link_to product_path(product) do
+                  =image_tag image ,size:"213x213"
+                  .already-buy
+                    %p.already-bought SOLD
+                  .item-text-box
+                    %h3.item-name
+                      = product.name
+                    .item-price-top
+                      .price-mark
+                        ¥
+                      = product.price
         .top-item-show-more
           = link_to"/",class:"item-show-more" do
             すべての商品を見る
@@ -155,48 +178,87 @@
             ルイ・ヴィトン 新着アイテム
         .category-items
           - @products.each do |product|
-            - product.images.each do |image|
-              .category-item
-                =image_tag image ,size:"213x213"
-                .item-text-box
-                  %h3.item-name
-                    = product.name
-                  .item-price-top
-                    .price-mark
-                      ¥
-                    = product.price
+            .category-item
+              - if product.buyer_id.blank?
+                = link_to product_path(product) do
+                  = image_tag product.images[0] ,size:"213x213"
+                  .item-text-box
+                    %h3.item-name
+                      = product.name
+                    .item-price-top
+                      .price-mark
+                        ¥
+                      = product.price
+              - else 
+                = link_to product_path(product) do
+                  =image_tag image ,size:"213x213"
+                  .already-buy
+                    %p.already-bought SOLD
+                  .item-text-box
+                    %h3.item-name
+                      = product.name
+                    .item-price-top
+                      .price-mark
+                        ¥
+                      = product.price
         .clear
         .text-center-mens
           = link_to "/",class:"text-center-mens-a" do
             シュプリーム 新着アイテム
         .category-items
           - @products.each do |product|
-            - product.images.each do |image|
-              .category-item
-                =image_tag image ,size:"213x213"
-                .item-text-box
-                  %h3.item-name
-                    = product.name
-                  .item-price-top
-                    .price-mark
-                      ¥
-                    = product.price
+            .category-item
+              - if product.buyer_id.blank?
+                = link_to product_path(product) do
+                  = image_tag product.images[0] ,size:"213x213"
+                  .item-text-box
+                    %h3.item-name
+                      = product.name
+                    .item-price-top
+                      .price-mark
+                        ¥
+                      = product.price
+              - else 
+                = link_to product_path(product) do
+                  =image_tag image ,size:"213x213"
+                  .already-buy
+                    %p.already-bought SOLD
+                  .item-text-box
+                    %h3.item-name
+                      = product.name
+                    .item-price-top
+                      .price-mark
+                        ¥
+                      = product.price
         .clear
         .text-center-mens
           = link_to "/",class:"text-center-mens-a" do
             ナイキ 新着アイテム
         .category-items
           - @products.each do |product|
-            - product.images.each do |image|
-              .category-item
-                =image_tag image ,size:"213x213"
-                .item-text-box
-                  %h3.item-name
-                    = product.name
-                  .item-price-top
-                    .price-mark
-                      ¥
-                    = product.price
+            .category-item
+              - if product.buyer_id.blank?
+                = link_to product_path(product) do
+                  = image_tag product.images[0] ,size:"213x213"
+                  .item-text-box
+                    %h3.item-name
+                      = product.name
+                    .item-price-top
+                      .price-mark
+                        ¥
+                      = product.price
+              - else 
+                = link_to product_path(product) do
+                  =image_tag image ,size:"213x213"
+                  .already-buy
+                    %p.already-bought SOLD
+                  .item-text-box
+                    %h3.item-name
+                      = product.name
+                    .item-price-top
+                      .price-mark
+                        ¥
+                      = product.price
 
 = render "layouts/banner"
 =render "layouts/footer"

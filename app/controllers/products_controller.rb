@@ -25,7 +25,7 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
-    @user = User.find(params[:id])
+    # @user = Product.where(saler_id : user.id)
     if @product.saler_id == current_user.id
       redirect_to controller: "products", action: "detail"
     end
@@ -43,6 +43,7 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
     @product.categories.build
     @address = Prefecture.all
+    @product.images.purge
   end
   
   def update

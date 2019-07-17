@@ -1,5 +1,6 @@
 class Product < ApplicationRecord
   has_many_attached :images
+  # belongs_to :user
 
   validates :name, length: { minimum: 1, maximum: 25}
 

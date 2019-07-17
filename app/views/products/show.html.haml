@@ -84,11 +84,11 @@
       .send-fee
         送料込み
     .clear
-      - if @product.buyer_id
-        .product-show-buy-btn 売り切れました
-      - else
+      - if @product.buyer_id.blank?
         = link_to product_purchase_index_path(@product), class: "product-show-buy-btn" do
           購入画面に進む
+      - else
+        .product-show-buy-btn 売り切れました
     .products-description
       = @product.text
     .products-company-policy

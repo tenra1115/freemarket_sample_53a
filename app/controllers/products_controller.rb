@@ -22,7 +22,7 @@ class ProductsController < ApplicationController
   def show
     @user = User.find(current_user.id)
     @product = Product.find(params[:id])
-    if @product.saler_id == @user.id
+    if @product.saler_id == current_user.id
       redirect_to controller: "products", action: "detail"
     end
   end
@@ -35,16 +35,22 @@ class ProductsController < ApplicationController
   def edit
     @user = User.find(current_user.id)
     @product = Product.find(params[:id])
+    @product.categories.build
+    @address = Prefecture.all
+    # binding.pry
   end
   
   def update
-    @product = Product.find(params[:id])
+    product = Product.find(params[:id])
+    product.update(products_params)
+    redirect_to product_path
+    
   end
 
   def destroy 
     @product = Product.find(params[:id])
     @product.destroy
-    redirect_to users_mypage_path
+    redirect_to root_path
   end 
 
 

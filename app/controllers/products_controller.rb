@@ -28,6 +28,7 @@ class ProductsController < ApplicationController
     if @product.saler_id == current_user.id
       redirect_to controller: "products", action: "detail"
     end
+    @category = Category.find(params[:id])
   end
 
   def detail
@@ -42,6 +43,7 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
     @product.categories.build
     @address = Prefecture.all
+    @category = Category.find(params[:id])
   end
   
   def update

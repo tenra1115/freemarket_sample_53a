@@ -5,7 +5,7 @@
         =link_to("https://www.mercari.com/jp/") do
           =image_tag "logo.svg",size:"185x49",class:'content_box__mercari-icon'
       %section.content_box
-      =form_for(@product, url: products_path) do |f|
+      =form_for(@product, url: products_path, method: :post) do |f|
         %h2.header_logo
           商品の情報を入力
         .content_upload

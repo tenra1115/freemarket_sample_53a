@@ -1,4 +1,8 @@
 class ProductsController < ApplicationController
+
+  before_action :authenticate_user!, only: [:show]
+
+  # before_action :set_user, only:[:index, :show]
   
   def index
     @products = Product.limit(4)
@@ -20,8 +24,8 @@ class ProductsController < ApplicationController
   end
 
   def show
-    @user = User.find(current_user.id)
     @product = Product.find(params[:id])
+    @user = User.find(params[:id])
     if @product.saler_id == current_user.id
       redirect_to controller: "products", action: "detail"
     end
@@ -30,6 +34,8 @@ class ProductsController < ApplicationController
   def detail
     @user = User.find(current_user.id)
     @product = Product.find_by(params[current_user.id])
+    @product = Product.find(params[:id])
+    @category = Category.find(params[:id])
   end
 
   def edit
@@ -37,7 +43,6 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
     @product.categories.build
     @address = Prefecture.all
-    # binding.pry
   end
   
   def update
@@ -57,7 +62,12 @@ class ProductsController < ApplicationController
   private
 
   def products_params
-
     params.require(:product).permit(:name, :text,:condition, :limit,:charge,:price,:place,images:[],categories_attributes:[:category_id,:category_name]).merge(saler_id: current_user.id)
+  end
+
+  def set_user
+    if user_signed_in? && @product.saler_id == current_user.id
+      redirect_to controller: "users", action: "address"
+    end
   end
 end

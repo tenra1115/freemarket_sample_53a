@@ -18,8 +18,14 @@ class ProductsController < ApplicationController
   end
   
   def create
-    @product = Product.create(products_params)
-    redirect_to @product
+    @product = Product.new(products_params)
+    if @product.save
+      redirect_to product_path(@product)
+    else
+      @address = Prefecture.all
+      @product.categories.build
+      render "new"
+    end
   end
 
   def show

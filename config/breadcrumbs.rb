@@ -7,22 +7,27 @@ crumb :mercari_mypage do
   parent :mercari_home
 end
 
+crumb :mercari_show do
+  link "購入する", product_path
+  parent :mercari_mypage
+end
+
 crumb :mercari_new_product do
   link "出品する", new_product_path
   parent :mercari_mypage
 end
 
-crumb :mercari_edit  do
+crumb :mercari_detail do
   link "出品した商品-出品中", users_sns_path
   parent :mercari_mypage
 end
 
-crumb :mercari_card  do
+crumb :mercari_card do
   link "支払い方法", users_add_card_path
   parent :mercari_mypage
 end
 
-crumb :mercari_new_card  do
+crumb :mercari_new_card do
   link "クレジットカード情報入力", new_card_path
   parent :mercari_card
 end

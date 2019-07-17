@@ -6,7 +6,6 @@ class ProductsController < ApplicationController
   
   def index
     @products = Product.limit(4)
-    
   end
 
   def buy
@@ -29,6 +28,7 @@ class ProductsController < ApplicationController
     if @product.saler_id == current_user.id
       redirect_to controller: "products", action: "detail"
     end
+    @category = Category.find(params[:id])
   end
 
   def detail
@@ -44,12 +44,14 @@ class ProductsController < ApplicationController
     @product.categories.build
     @address = Prefecture.all
     @product.images.purge
+    @category = Category.find(params[:id])
+
   end
   
   def update
     product = Product.find(params[:id])
     product.update(products_params)
-    redirect_to product_path
+    redirect_to root_path
     
   end
 

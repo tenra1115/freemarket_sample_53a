@@ -18,7 +18,7 @@ crumb :mercari_new_product do
 end
 
 crumb :mercari_detail do
-  link "出品した商品-出品中", users_sns_path
+  link "商品出品画面", users_sns_path
   parent :mercari_mypage
 end
 

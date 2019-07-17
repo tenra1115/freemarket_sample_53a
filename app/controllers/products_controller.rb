@@ -43,6 +43,7 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
     @product.categories.build
     @address = Prefecture.all
+    @category = Category.find(params[:id])
   end
   
   def update

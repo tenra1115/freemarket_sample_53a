@@ -13,13 +13,8 @@ crumb :mercari_new_product do
 end
 
 crumb :mercari_edit  do
-  link "出品した商品-出品中", edit_product_path
+  link "出品した商品-出品中", users_sns_path
   parent :mercari_mypage
-end
-
-crumb :mercari_show  do
-  link "出品商品画面", product_path
-  parent :mercari_edit 
 end
 
 crumb :mercari_card  do

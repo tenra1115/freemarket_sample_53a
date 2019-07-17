@@ -2,7 +2,6 @@ class ProductsController < ApplicationController
   
   def index
     @products = Product.limit(4)
-    
   end
 
   def buy
@@ -43,7 +42,7 @@ class ProductsController < ApplicationController
   def update
     product = Product.find(params[:id])
     product.update(products_params)
-    redirect_to product_path
+    redirect_to root_path
     
   end
 

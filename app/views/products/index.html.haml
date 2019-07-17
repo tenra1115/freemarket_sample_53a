@@ -1,5 +1,7 @@
 -if user_signed_in?
   = render 'layouts/header'
+  - breadcrumb :mercari_home 
+  = render "layouts/breadcrumbs"
 - else
   = render 'layouts/unsignIn.header'
 .top-page-wrapper

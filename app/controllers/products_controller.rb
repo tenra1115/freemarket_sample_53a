@@ -33,8 +33,8 @@ class ProductsController < ApplicationController
   end
 
   def detail
-    @product = Product.find_by(params[current_user.id])
-    @product = Product.find(params[:id])
+      @product = Product.find(params[:id])
+      check_user
   end
 
   def edit

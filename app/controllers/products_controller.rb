@@ -27,7 +27,7 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
-    if @product.saler_id == current_user.id
+    if user_signed_in? && @product.saler_id == current_user.id
       redirect_to controller: "products", action: "detail"
     end
   end

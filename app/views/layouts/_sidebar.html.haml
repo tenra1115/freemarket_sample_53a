@@ -1,6 +1,6 @@
 .lists    
   .box_list
-    = link_to "/users/mypage", class: "box_list__sub" do
+    = link_to users_mypage_path, class: "box_list__sub" do
       マイページ
     = fa_icon "chevron-right", class: "chevron-right-sidebar"
   .box_list
@@ -13,11 +13,11 @@
     いいね！一覧
     = fa_icon "chevron-right", class: "chevron-right-sidebar"
   .box_list
-    =link_to "/products/registration", class: "box_list__sub" do
+    =link_to new_product_path, class: "box_list__sub" do
       出品する
     = fa_icon "chevron-right", class: "chevron-right-sidebar"
   .box_list
-    =link_to "/products/:id/detail", class: "box_list__sub" do
+    = link_to root_path, class: "box_list__sub" do
       商品出品画面
     = fa_icon "chevron-right", class: "chevron-right-sidebar"
   .box_list
@@ -57,21 +57,21 @@
     %h3.nav__sub
       設定 
   .box_list
-    = link_to "/users/#{current_user.id}/edit", class: "box_list__sub" do
+    = link_to users_mypage_path, class: "box_list__sub" do
       プロフィール
     = fa_icon "chevron-right", class: "chevron-right-sidebar"
   .box_list
     発送元・お届け先住所変更
     = fa_icon "chevron-right", class: "chevron-right-sidebar"
   .box_list
-    = link_to "/users/add_card", class: "box_list__sub" do
+    = link_to users_add_card_path, class: "box_list__sub" do
       支払い方法
     = fa_icon "chevron-right", class: "chevron-right-sidebar"
   .box_list
     メール/パスワード
     = fa_icon "chevron-right", class: "chevron-right-sidebar"
   .box_list
-    = link_to "/users/base", class: "box_list__sub" do
+    = link_to users_base_path, class: "box_list__sub" do
       本人情報
     = fa_icon "chevron-right", class: "chevron-right-sidebar"
   .box_list

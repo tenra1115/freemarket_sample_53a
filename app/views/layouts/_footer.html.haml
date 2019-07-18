@@ -104,15 +104,8 @@
         = image_tag 'logo-white.svg',size:"124x33",class: "img-footer-logo"
       %p.mercari-company
         © 2019 Mercari
--if user_signed_in?
   .sell-btn-wrapper
     = link_to new_product_path ,class:'sell-btn' do
-      %p.sell-btn-label
-        出品
-      %i.fa.fa-camera.fa-4x
-- else
-  .sell-btn-wrappers
-    = link_to users_sns_path ,class:'sell-btn' do
       %p.sell-btn-label
         出品
       %i.fa.fa-camera.fa-4x

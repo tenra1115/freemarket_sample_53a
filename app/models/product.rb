@@ -9,8 +9,9 @@ class Product < ApplicationRecord
   validates :text, presence: true
 
   validates :price, numericality: {only_integer: true, greater_than_or_equal_to: 300, less_than_or_equal_to: 100000, presence: true}
-  has_many :categories
-  accepts_nested_attributes_for :categories
+  has_one :category
+  accepts_nested_attributes_for :category
+  
 
 
 end

@@ -15,8 +15,8 @@ class ProductsController < ApplicationController
   
   def new
     @product = Product.new
+    @product.build_category
     @address = Prefecture.all
-    @product.categories.build
   end
   
   def create
@@ -25,7 +25,6 @@ class ProductsController < ApplicationController
       redirect_to product_path(@product)
     else
       @address = Prefecture.all
-      @product.categories.build
       render "new"
     end
   end
@@ -36,14 +35,14 @@ class ProductsController < ApplicationController
     if @product.saler_id == current_user.id
       redirect_to controller: "products", action: "detail"
     end
-    @category = Category.find(params[:id])
+    # @category = Category.find(params[:id])
   end
 
   def detail
     # @user = User.find(current_user.id)
     @product = Product.find_by(params[current_user.id])
     @product = Product.find(params[:id])
-    @category = Category.find(params[:id])
+    # @category = Category.find(params[:id])
   end
 
   def edit
@@ -52,7 +51,7 @@ class ProductsController < ApplicationController
     check_user
     @product.categories.build
     @address = Prefecture.all
-    @category = Category.find(params[:id])
+    # @category = Category.find(params[:id])
     
   end
   
@@ -76,7 +75,7 @@ class ProductsController < ApplicationController
   private
 
   def products_params
-    params.require(:product).permit(:name, :text,:condition, :limit,:charge,:price,:place,images:[],categories_attributes:[:category_id,:category_name]).merge(saler_id: current_user.id)
+    params.require(:product).permit(:name, :text,:condition, :limit,:charge,:price,:place,images:[],category_attributes:[:category_name]).merge(saler_id: current_user.id)
   end
 
   def check_user

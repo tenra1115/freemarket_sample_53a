@@ -1,5 +1,6 @@
 class User < ApplicationRecord
-  # has_many :products
+  has_many :products
+  has_many :products, foreign_key: :saler_id
 
   
 

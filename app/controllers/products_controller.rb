@@ -2,6 +2,8 @@ class ProductsController < ApplicationController
 
   before_action :authenticate_user!, only: [:show]
 
+  # before_action :check_user, only:[:edit, :update, :destroy]
+
   # before_action :set_user, only:[:index, :show]
   
   def index
@@ -32,25 +34,28 @@ class ProductsController < ApplicationController
   end
 
   def detail
-    @user = User.find(current_user.id)
+    # @user = User.find(current_user.id)
     @product = Product.find_by(params[current_user.id])
     @product = Product.find(params[:id])
     @category = Category.find(params[:id])
   end
 
   def edit
-    @user = User.find(current_user.id)
+    # @user = User.find(current_user.id)
     @product = Product.find(params[:id])
+    check_user
     @product.categories.build
     @address = Prefecture.all
-    @product.images.purge
     @category = Category.find(params[:id])
-
+    
   end
   
   def update
-    product = Product.find(params[:id])
-    product.update(products_params)
+    
+    @product = Product.find(params[:id])
+    check_user
+    @product.images.purge
+    @product.update(products_params)
     redirect_to root_path
     
   end
@@ -68,9 +73,9 @@ class ProductsController < ApplicationController
     params.require(:product).permit(:name, :text,:condition, :limit,:charge,:price,:place,images:[],categories_attributes:[:category_id,:category_name]).merge(saler_id: current_user.id)
   end
 
-  def set_user
-    if user_signed_in? && @product.saler_id == current_user.id
-      redirect_to controller: "users", action: "address"
+  def check_user
+    unless user_signed_in? && @product.saler_id == current_user.id
+      redirect_to root_path
     end
   end
 end

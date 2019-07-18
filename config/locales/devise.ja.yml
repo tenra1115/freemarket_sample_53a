@@ -58,6 +58,9 @@ ja:
       first_name: '名を入力してください'
       kana_last_name: '姓カナを入力してください'
       kana_first_name: '名カナを入力してください'
+      name: 'ネームを入力してください'
+      text: 'textを入力してください'
+      price: '300以上9999999以下で入力してください'
       already_confirmed: 'は既に登録済みです。ログインしてください。'
       confirmation_period_expired: "の期限が切れました。%{period} までに確認する必要があります。 新しくリクエストしてください。"
       expired: 'の有効期限が切れました。新しくリクエストしてください。'

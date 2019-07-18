@@ -29,13 +29,13 @@
               = f.submit "ログイン",class:"write-email-password"
             %p.forget-password パスワードをお忘れの方
         %ul.policy 
-          =link_to "https://www.mercari.com/jp/privacy/", class: "register-policy" do
+          =link_to "#", class: "register-policy" do
             プライバシーポリシー
-          =link_to "https://www.mercari.com/jp/tos/", class: "register-policy" do
+          =link_to "#", class: "register-policy" do
             メルカリ利用規約
-          =link_to "https://www.mercari.com/jp/tokutei/", class: "register-policy" do
+          =link_to "#", class: "register-policy" do
             特定商取引に関する表記
         .back-to-mercari
-          = link_to("https://www.mercari.com/jp/") do
+          = link_to root_path do
             = image_tag("logo-mercari3.svg")
         %p.back-to-mercari-messe © 2019 Mercari

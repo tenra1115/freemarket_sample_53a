@@ -2,7 +2,7 @@
   .flame_box
     .content_box__wrapper
       .content_box__mercari-icon
-        =link_to("https://www.mercari.com/jp/") do
+        =link_to root_path do
           =image_tag "logo.svg",size:"185x49",class:'content_box__mercari-icon'
       %section.content_box
       =form_for(@product, url: products_path, method: :post) do |f|
@@ -126,13 +126,13 @@
               もどる
         .content_bottom
           %ul.content_bottom__list
-            = link_to "https://www.mercari.com/jp/privacy/", class: "list_privacy" do
+            = link_to "#", class: "list_privacy" do
               プライバシーポリシー
-            = link_to "https://www.mercari.com/jp/tos/", class: "list__terms" do
+            = link_to "#", class: "list__terms" do
               メルカリ利用規約
-            = link_to "https://www.mercari.com/jp/tokutei/", class: "list_notation" do
+            = link_to "#", class: "list_notation" do
               特定商取引に関する表記
           .back-image-mercari
-            = link_to("https://www.mercari.com/jp/") do
+            = link_to root_path do
               = image_tag "logo-mercari3.svg", class:"back-image-mercari"
             %p.back-image-mercari__message © 2019 Mercari

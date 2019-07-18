@@ -17,7 +17,7 @@ class ProductsController < ApplicationController
   
   def create
     @product = Product.new(products_params)
-    if @product.save
+    if @product.save 
       redirect_to product_path(@product)
     else
       @address = Prefecture.all

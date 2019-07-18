@@ -25,7 +25,6 @@ class CardController < ApplicationController
       else
         redirect_to action: "pay"
       end
-      # binding.pry
     end
   end
 

@@ -28,4 +28,14 @@ module ProductsHelper
       )
     end
   end
+
+  def error_image(resource)
+    if resource.errors[:images].count > 0
+      I18n.t(
+        "errors.messages.image",
+        count: resource.errors.count,
+        resource: resource.class.model_name.human.downcase
+      )
+    end
+  end
 end

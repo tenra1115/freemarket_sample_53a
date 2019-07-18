@@ -1,10 +1,6 @@
 class ProductsController < ApplicationController
 
   before_action :authenticate_user!, only: [:show]
-
-  # before_action :check_user, only:[:edit, :update, :destroy]
-
-  # before_action :set_user, only:[:index, :show]
   
   def index
     @products = Product.limit(4)
@@ -31,38 +27,28 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
-    # @user = Product.where(saler_id : user.id)
     if @product.saler_id == current_user.id
       redirect_to controller: "products", action: "detail"
     end
-    # @category = Category.find(params[:id])
   end
 
   def detail
-    # @user = User.find(current_user.id)
     @product = Product.find_by(params[current_user.id])
     @product = Product.find(params[:id])
-    # @category = Category.find(params[:id])
   end
 
   def edit
-    # @user = User.find(current_user.id)
     @product = Product.find(params[:id])
     check_user
-    @product.categories.build
     @address = Prefecture.all
-    # @category = Category.find(params[:id])
-    
   end
   
   def update
-    
     @product = Product.find(params[:id])
     check_user
     @product.images.purge
     @product.update(products_params)
     redirect_to root_path
-    
   end
 
   def destroy 

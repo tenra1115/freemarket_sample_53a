@@ -46,9 +46,7 @@ class ProductsController < ApplicationController
   def update
     @product = Product.find(params[:id])
     check_user
-    unless products_params[:images].blank?
-      @product.images.purge
-    end
+    @product.images.purge if params[:product][:images]
     @product.update(products_params)
     redirect_to root_path
 

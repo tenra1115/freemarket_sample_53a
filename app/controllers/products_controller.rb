@@ -49,7 +49,6 @@ class ProductsController < ApplicationController
     # @user = User.find(current_user.id)
     @product = Product.find(params[:id])
     check_user
-    @product.categories.build
     @address = Prefecture.all
     # @category = Category.find(params[:id])
     

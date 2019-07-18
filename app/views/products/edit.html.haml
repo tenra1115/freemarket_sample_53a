@@ -79,14 +79,18 @@
             販売価格(300〜9,999,999)
             = fa_icon "question-circle", id: "selling_question"
           .selling_price__price
-            %h4.selling_price__price--sub
-              価格
-              %span.icon__logo 必須
-              %h4.selling_price__item--enn 
-                ¥
-                =f.number_field :price,class:"selling_price__contents--sub",id:"price"
-                = fa_icon "angle-down", id: "selling_price_angle-down"
-            
+            .input_price_box
+              .selling_price__price--sub
+                価格
+                %span.icon__logo 必須
+                .price-mark
+                  ¥
+              =f.number_field :price,class:"selling_price__contents--sub",id:"price"
+              = fa_icon "angle-down", id: "selling_price_angle-down"
+              .clear
+              .error_msg_price
+                = error_price(f.object)
+          
             .selling_price__item--fee 
               %h4.selling_price__item--fee--sub
                 販売手数料 (10%)
@@ -95,7 +99,6 @@
               %h4.selling_price__profit--sub
                 販売利益
               .js_display
-                
 
         .sell_btn_box
           .sell_btn_box__text

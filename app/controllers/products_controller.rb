@@ -3,7 +3,7 @@ class ProductsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
   
   def index
-    @products = Product.limit(4)
+    @products = Product.limit(4).order('created_at DESC')
   end
 
   def buy
